@@ -1,15 +1,6 @@
 {
   "title": "XML",
   "description": "Component to work with XML files",
-  "credentials": {
-    "fields": {
-      "name": {
-        "label": "My API Key",
-        "required": true,
-        "viewClass": "TextFieldView"
-      }
-    }
-  },
   "actions": {
     "parse": {
       "title": "Parse w. XSD",
