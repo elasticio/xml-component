@@ -33,31 +33,19 @@ Now we are ready to push it:
 $ git push elasticio master
 ```
 
-## Authentication
+## How to use
 
-Authentication is happening via OAuth2.0. In order to make OAuth work you need a new App in your XXX. 
-During app creation process you will be asked to specify
-the callback URL, to process OAuth auehtncation via elastic.io platform your callback URL should be 
+### Parse XML with XSD Schema
+Given action will parse XML that is created according to XML Schema, you would need to supply
+URI of XML Schema. XML Schema URI may include HTTP Basic parameters (username/password) via standard URI
+ `chema like ``https://username:password@foo.bar.com/schema.xsd``.
 
-```
-https://your-tenant.elastic.io/callback/oauth2
-```
+XML Payload is expected via input variable in the message (you would need to supply full XML payload). If 
+input message payload is empty then component will try to parse all attachments of incoming message.
 
-If you are testing it on default public tenant just use ``https://app.elastic.io/callback/oauth2``
-
-
-## Configure OAuth Client key/secret
-
-In the component repository you need to specify OAuth Client credentials as environment variables. You would need two variables
-
- * ```XXX_KEY``` - your OAuth client key
- * ```XXX_SECRET``` - your OAUth client secret
- 
-## Known issues & limitations
-
-### Parse with XML Schema
- * Currently a single namespace is 
-
+#### Known limitations
+* Currently a single XML Schema is supported
+* Schema validation is not enabled when parsed from XML 
 
 ## License
 
