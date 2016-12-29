@@ -53,9 +53,10 @@ In the component repository you need to specify OAuth Client credentials as envi
  * ```XXX_KEY``` - your OAuth client key
  * ```XXX_SECRET``` - your OAUth client secret
  
-## Known issues
+## Known issues & limitations
 
-No known issues are there yet.
+### Parse with XML Schema
+ * Currently a single namespace is 
 
 
 ## License

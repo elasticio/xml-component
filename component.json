@@ -1,13 +1,20 @@
 {
   "title": "XML",
   "description": "Component to work with XML files",
-  "credentials": {
-    "fields": {
-      "name": {
-        "label": "My API Key",
-        "required": true,
-        "viewClass": "TextFieldView"
-      }
+  "actions": {
+    "parse": {
+      "title": "Parse w. XSD",
+      "main": "./lib/actions/parse.js",
+      "fields": {
+        "schemaUri": {
+          "label": "XML Schema URI",
+          "viewClass": "TextFieldWithNoteView",
+          "required": true,
+          "placeholder": "https://foo.bar.com/schema.xsd",
+          "note": "Please make sure full URI is specified, including <i>http</i> or <i>https</i> etc."
+        }
+      },
+      "dynamicMetadata": true
     }
   }
 }
