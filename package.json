@@ -1,0 +1,45 @@
+{
+  "name": "xml",
+  "version": "0.0.0",
+  "description": "Integration component to work with XML fiels",
+  "homepage": "http://www.elastic.io",
+  "author": {
+    "name": "elastic.io GmbH",
+    "email": "info@elastic.io",
+    "url": "https://elastic.io"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "xml",
+    "elasticio",
+    "xsd",
+    "ipaas",
+    "elasticio-component"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "co": "^4.6.0",
+    "elasticio-node": "0.0.5",
+    "elasticio-sailor-nodejs": "1.3.0",
+    "jsonix": "^2.4.1",
+    "jsonix-schema-compiler": "^2.3.9",
+    "libxml-xsd": "^0.5.2",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.10.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "elasticio/xml",
+  "license": "Apache-2.0"
+}
