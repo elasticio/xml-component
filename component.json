@@ -23,7 +23,28 @@
           "note": "Please make sure full URI is specified, including <i>http</i> or <i>https</i> etc."
         }
       },
-      "dynamicMetadata": true
+      "metadata": {
+        "in": {
+          "type": "object",
+          "properties": {
+            "xml": {
+              "type": "string",
+              "required": false,
+              "title": "Input XML"
+            }
+          }
+        },
+        "out": {
+          "type": "object",
+          "properties": {
+            "xml": {
+              "type": "string",
+              "required": false,
+              "title": "Input XML"
+            }
+          }
+        }
+      }
     }
   }
 }
