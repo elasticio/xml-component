@@ -1,7 +1,7 @@
-# xml [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# xml-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > Integration component to work with XML fiels
 
-# xml
+# xml-component
 XML component for the [elastic.io platform](http://www.elastic.io &#34;elastic.io platform&#34;)
 
 If you plan to **deploy it into [elastic.io platform](http://www.elastic.io &#34;elastic.io platform&#34;) you must follow sets of instructions to succseed**. 
@@ -61,11 +61,11 @@ No known issues are there yet.
 ## License
 
 Apache-2.0 © [elastic.io GmbH](https://elastic.io)
+Icon made by Freepik from www.flaticon.com 
 
-
-[npm-image]: https://badge.fury.io/js/xml.svg
-[npm-url]: https://npmjs.org/package/xml
-[travis-image]: https://travis-ci.org/elasticio/xml.svg?branch=master
-[travis-url]: https://travis-ci.org/elasticio/xml
-[daviddm-image]: https://david-dm.org/elasticio/xml.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/elasticio/xml
+[npm-image]: https://badge.fury.io/js/xml-component.svg
+[npm-url]: https://npmjs.org/package/xml-component
+[travis-image]: https://travis-ci.org/elasticio/xml-component.svg?branch=master
+[travis-url]: https://travis-ci.org/elasticio/xml-component
+[daviddm-image]: https://david-dm.org/elasticio/xml-component.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/elasticio/xml-component
