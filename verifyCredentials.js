@@ -1,6 +1,7 @@
 'use strict';
 const co = require('co');
 const rp = require('request-promise');
+const exec = require('promised-exec');
 
 // This function will be called by the platform to verify credentials
 module.exports = function verifyCredentials(credentials, cb) {
@@ -9,12 +10,9 @@ module.exports = function verifyCredentials(credentials, cb) {
   co(function*() {
     console.log('Fetching user information');
 
-    const test = yield rp({
-      uri: 'https://cdn.elastic.io/test.json',
-      json: true
-    });
+    const out = yield exec("java -jar node_modules/jsonix/lib/jsonix-schema-compiler-full.jar -d mappings purchaseorder.xsd -b bindings.xjb");
 
-    console.log('Fetched JSON value=%j', test);
+    console.log('Fetched %s', out);
 
     console.log('Verification completed');
 
