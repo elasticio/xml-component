@@ -1,6 +1,6 @@
 {
   "name": "xml",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Integration component to work with XML fiels",
   "homepage": "http://www.elastic.io",
   "author": {
@@ -19,6 +19,10 @@
     "ipaas",
     "elasticio-component"
   ],
+  "scripts": {
+    "pretest": "node_modules/.bin/eslint -c ./node_modules/code-quality-js/.eslintrc.js lib spec Gruntfile.js --fix",
+    "test": "NODE_ENV=test grunt"
+  },
   "dependencies": {
     "await-lock": "^1.1.2",
     "bluebird": "^3.4.6",
@@ -33,9 +37,11 @@
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
     "eslint": "^2.1.0",
+    "code-quality-js": "2.0.2",
     "eslint-config-xo-space": "^0.10.0",
+    "grunt": "^1.0.1",
+    "grunt-jasmine-node": "^0.3.1",
     "sinon": "^1.17.6"
   },
   "eslintConfig": {
