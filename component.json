@@ -13,10 +13,7 @@
     "jsonToXml": {
       "title": "JSON to XML",
       "main": "./lib/actions/jsonToXml.js",
-      "metadata": {
-        "in": {},
-        "out": "./lib/schemas/jsonToXml.out.json"
-      }
+      "metadata": {}
     }
   }
 }
