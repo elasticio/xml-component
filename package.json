@@ -29,11 +29,14 @@
     "jsonix-schema-compiler": "^2.3.9",
     "promised-exec": "^1.0.1",
     "request": "^2.75.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^2.1.0",
-    "eslint-config-xo-space": "^0.10.0"
+    "eslint-config-xo-space": "^0.10.0",
+    "sinon": "^1.17.6"
   },
   "eslintConfig": {
     "extends": "xo-space",

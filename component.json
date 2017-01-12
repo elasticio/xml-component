@@ -36,6 +36,14 @@
           }
         }
       }
+    },
+    "xmlToJson": {
+      "title": "XML to JSON",
+      "main": "./lib/actions/xmlToJson.js",
+      "metadata": {
+        "in": "./lib/schemas/xmlToJson.in.json",
+        "out": "./lib/schemas/xmlToJson.out.json"
+      }
     }
   }
 }
