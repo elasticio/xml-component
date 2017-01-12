@@ -9,6 +9,14 @@
         "in": "./lib/schemas/xmlToJson.in.json",
         "out": "./lib/schemas/xmlToJson.out.json"
       }
+    },
+    "jsonToXml": {
+      "title": "JSON to XML",
+      "main": "./lib/actions/jsonToXml.js",
+      "metadata": {
+        "in": {},
+        "out": "./lib/schemas/jsonToXml.out.json"
+      }
     }
   }
 }
