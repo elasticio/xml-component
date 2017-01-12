@@ -8,9 +8,10 @@ describe('XML 2 JSON parser', () => {
         action.call({
             emit: (type, value) => {
                 if (type && type === 'data') {
-                    expect(value).toBeDefined();
+                    expect(value.body).toBeDefined();
+                    expect(value.body).toEqual(result);
                 } else if (type && type === 'end') {
-                    expect(value).toEqual(result);
+                    expect(value).toBeUndefined();
                     done();
                 }
             }
