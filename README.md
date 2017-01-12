@@ -1,4 +1,4 @@
-# xml-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# xml-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > Integration component to work with XML fiels
 
 # xml-component
@@ -56,5 +56,3 @@ Icon made by Freepik from www.flaticon.com
 [npm-url]: https://npmjs.org/package/xml-component
 [travis-image]: https://travis-ci.org/elasticio/xml-component.svg?branch=master
 [travis-url]: https://travis-ci.org/elasticio/xml-component
-[daviddm-image]: https://david-dm.org/elasticio/xml-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/elasticio/xml-component
