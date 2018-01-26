@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+  <platforms>
+    <windows>
+      <archs>
+        <amd64>
+          <link>/go-ipfs_v0.4.13_windows-amd64.zip</link>
+        </amd64>
+      </archs>
+      <name>windows Binary</name>
+    </windows>
+    <linux>
+      <archs>
+        <386>
+          <link>/go-ipfs_v0.4.13_linux-386.tar.gz</link>
+        </386>
+        <arm>
+          <link>/go-ipfs_v0.4.13_linux-arm.tar.gz</link>
+        </arm>
+        <amd64>
+          <link>/go-ipfs_v0.4.13_linux-amd64.tar.gz</link>
+        </amd64>
+      </archs>
+      <name>linux Binary</name>
+    </linux>
+    <freebsd>
+      <archs>
+        <amd64>
+          <link>/go-ipfs_v0.4.13_freebsd-amd64.tar.gz</link>
+        </amd64>
+      </archs>
+      <name>freebsd Binary</name>
+    </freebsd>
+    <darwin>
+      <archs>
+        <386>
+          <link>/go-ipfs_v0.4.13_darwin-386.tar.gz</link>
+        </386>
+        <amd64>
+          <link>/go-ipfs_v0.4.13_darwin-amd64.tar.gz</link>
+        </amd64>
+      </archs>
+      <name>darwin Binary</name>
+    </darwin>
+  </platforms>
+  <date>November 16, 2017</date>
+  <description>go-ipfs is the main implementation of IPFS. It includes:
+- an IPFS core implementation
+- an IPFS daemon server
+- extensive command line tooling
+- an HTTP API for controlling the node
+- an HTTP Gateway for serving content to HTTP browsers
+</description>
+  <owner>ipfs</owner>
+  <name>go-ipfs</name>
+  <releaseLink>/go-ipfs/v0.4.13</releaseLink>
+  <version>v0.4.13</version>
+  <id>go-ipfs</id>
+</root>

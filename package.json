@@ -20,8 +20,8 @@
     "elasticio-component"
   ],
   "scripts": {
-    "pretest": "node_modules/.bin/eslint -c ./node_modules/code-quality-js/.eslintrc.js lib spec Gruntfile.js --fix",
-    "test": "NODE_ENV=test grunt"
+    "pretest": "node_modules/.bin/eslint -c ./node_modules/code-quality-js/.eslintrc.js lib spec --fix",
+    "test": "NODE_ENV=test mocha --recursive spec"
   },
   "dependencies": {
     "await-lock": "^1.1.2",
@@ -37,12 +37,13 @@
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
-    "eslint": "^2.1.0",
+    "chai": "^4.1.2",
     "code-quality-js": "2.0.2",
+    "eslint": "^2.1.0",
     "eslint-config-xo-space": "^0.10.0",
-    "grunt": "^1.0.1",
-    "grunt-jasmine-node": "^0.3.1",
-    "sinon": "^1.17.6"
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^5.0.0",
+    "sinon": "^1.17.7"
   },
   "eslintConfig": {
     "extends": "xo-space",

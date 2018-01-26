@@ -1,25 +1,21 @@
 /* eslint-env node, jasmine */
-const action = require('../lib/actions/xmlToJson').process;
+'use strict';
+const xmlToJson = require('../lib/actions/xmlToJson');
+const { expect } = require('chai');
 
 describe('XML 2 JSON parser', () => {
-    const xml = require('fs').readFileSync('./spec/data/po.xml', 'utf-8');
-    const result = require('./data/po.json');
-    it('should convert XML to json', (done) => {
-        action.call({
-            emit: (type, value) => {
-                if (type && type === 'data') {
-                    expect(value.body).toBeDefined();
-                    expect(value.body).toEqual(result);
-                } else if (type && type === 'end') {
-                    expect(value).toBeUndefined();
-                    done();
-                }
-            }
-        }, {
+
+    it('should convert XML to json', async () => {
+        const xml = require('fs').readFileSync('./spec/data/body.xml', 'utf-8');
+        const result = require('./data/po.json');
+
+        const message = {
             body: {
                 xmlString: xml
             }
-        }, {});
+        };
+        const { body } = await xmlToJson.process(message, {});
+        expect(body).to.be.deep.equal(result);
     });
 
 });
