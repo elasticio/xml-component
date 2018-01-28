@@ -1,10 +1,10 @@
 {
   "purchaseOrder": {
-    "$": {
+    "_attr": {
       "orderDate": "1999-10-20"
     },
     "shipTo": {
-      "$": {
+      "_attr": {
         "country": "US"
       },
       "name": "Alice Smith",
@@ -14,7 +14,7 @@
       "zip": "90952"
     },
     "billTo": {
-      "$": {
+      "_attr": {
         "country": "US"
       },
       "name": "Robert Smith",
@@ -27,7 +27,7 @@
     "items": {
       "item": [
         {
-          "$": {
+          "_attr": {
             "partNum": "872-AA"
           },
           "productName": "Lawnmower",
@@ -36,7 +36,7 @@
           "comment": "Confirm this is electric"
         },
         {
-          "$": {
+          "_attr": {
             "partNum": "926-AA"
           },
           "productName": "Baby Monitor",

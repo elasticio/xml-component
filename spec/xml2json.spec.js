@@ -6,7 +6,7 @@ const { expect } = require('chai');
 describe('XML 2 JSON parser', () => {
 
     it('should convert XML to json', async () => {
-        const xml = require('fs').readFileSync('./spec/data/body.xml', 'utf-8');
+        const xml = require('fs').readFileSync('./spec/data/po.xml', 'utf-8');
         const result = require('./data/po.json');
 
         const message = {
