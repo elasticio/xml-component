@@ -29,7 +29,7 @@ describe('JSON 2 XML converter', () => {
         };
 
         const messageText = 'Can\'t create xml element from prop that starts with digit.'
-        + 'See https://www.w3schools.com/xml/xml_elements.asp xml naming rules';
+        + 'See xml naming rules https://www.w3schools.com/xml/xml_elements.asp';
 
         expect(jsonToXml.process.bind(null, message, {}))
             .to.throw(Error, 'Prop name is invalid for xml tag: 386. ' + messageText);
