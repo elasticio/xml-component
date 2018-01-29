@@ -1,24 +1,37 @@
 /* eslint-env node, jasmine */
-const action = require('../lib/actions/jsonToXml').process;
+const jsonToXml = require('../lib/actions/jsonToXml');
+const { expect } = require('chai');
 
 describe('JSON 2 XML converter', () => {
-    const xml = require('fs').readFileSync('./spec/data/po.xml', 'utf-8').trim();
-    const json = require('./data/po.json');
-    it('should convert json to XML', (done) => {
-        action.call({
-            emit: (type, value) => {
-                if (type && type === 'data') {
-                    expect(value).toBeDefined();
-                    expect(value.body).toBeDefined();
-                    expect(value.body.xmlString).toBeDefined();
-                    expect(value.body.xmlString).toEqual(xml);
-                } else if (type && type === 'end') {
-                    expect(value).toBeUndefined();
-                    done();
-                }
-            }
-        }, {
+
+    it('should convert XML to json', () => {
+        const xml = require('fs').readFileSync('./spec/data/po.xml', 'utf-8').trim();
+        const json = require('./data/po.json');
+
+        const message = {
             body: json
-        }, {});
+        };
+        const { xmlString } = (jsonToXml.process(message, {})).body;
+        expect(xmlString).to.be.deep.equal(xml);
+    });
+
+    it('should convert XML to json', () => {
+        const json = {
+            archs: {
+                arm: true,
+                amd64: true,
+                386: true
+            }
+        };
+
+        const message = {
+            body: json
+        };
+
+        const messageText = 'Can\'t create xml element from prop that starts with digit.'
+        + 'See xml naming rules https://www.w3schools.com/xml/xml_elements.asp';
+
+        expect(jsonToXml.process.bind(null, message, {}))
+            .to.throw(Error, 'Prop name is invalid for xml tag: 386. ' + messageText);
     });
 });
