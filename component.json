@@ -17,9 +17,9 @@
     },
     "attachmentToJson": {
       "title": "XML Attachment to Json",
-      "main": "./lib/actions/attachmentToXml.js",
+      "main": "./lib/actions/attachmentToJson.js",
       "metadata": {
-        "in": "./lib/schemas/xmlToJson.in.json",
+        "in": "./lib/schemas/attachmentToJson.in.json",
         "out": "./lib/schemas/xmlToJson.out.json"
       },
       "fields": {
