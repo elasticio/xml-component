@@ -17,21 +17,19 @@ describe('should convert XML attachment 2 JSON', () => {
     before(function testInit() {
         nock(mockSever)
           .get('/')
-          .replyWithFile(200, "spec/data/po.xml");
+          .replyWithFile(200, 'spec/data/po.xml');
     });
 
     it('Convert attachment to json', async () => {
         const msg = {
-            body: {
-                attachments: {
-                    'po.xml': {
-                        url: mockSever
-                    }
+            attachments: {
+                'po.xml': {
+                    url: mockSever
                 }
             }
         };
         const { body } = await attachmentToJson.process(msg, {});
-        console.log("XML attachment 2 JSON results: %j ", body);
+        console.log('XML attachment 2 JSON results: %j ', body);
         expect(body).to.be.deep.equal(json);
     });
 });
