@@ -32,9 +32,12 @@
     "jsonix": "^2.4.1",
     "jsonix-schema-compiler": "^2.3.9",
     "lodash": "^4.17.10",
+    "nock": "^10.0.0",
     "promised-exec": "^1.0.1",
-    "request": "^2.85.0",
+    "request": "^2.88.0",
     "request-promise": "^4.1.1",
+    "stream-string": "^2.0.1",
+    "util": "^0.11.0",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {

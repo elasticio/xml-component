@@ -14,6 +14,23 @@
       "title": "JSON to XML",
       "main": "./lib/actions/jsonToXml.js",
       "metadata": {}
+    },
+    "attachmentToJson": {
+      "title": "XML Attachment to Json",
+      "main": "./lib/actions/attachmentToXml.js",
+      "metadata": {
+        "in": "./lib/schemas/xmlToJson.in.json",
+        "out": "./lib/schemas/xmlToJson.out.json"
+      },
+      "fields": {
+        "pattern": {
+          "viewClass": "TextFieldView",
+          "label": "Pattern to Match Files",
+          "required": false,
+          "placeholder": "Pattern"
+        }
+      }
     }
   }
 }
+
