@@ -9,7 +9,6 @@ const streamString = require('stream-string');
 
 
 require('chai').should(); // expect is assertion styles used my elastic.io
-const fs = require('fs');
 
 describe('should convert XML attachment 2 JSON', () => {
     const mockSever = 'http://test.env.mock';
