@@ -63,7 +63,7 @@ Looks at the json array of attachments passed in to component and converts first
 
 ## Additional info (if any)
 ## <System> API and Documentation links (endpoints)
-[Elastic.io attachment documentations](https://support.elastic.io/support/solutions/articles/14000057806-working-with-binary-data-attachments-)
+[Elastic.io attachment documentations](https://support.elastic.io/support/solutions/articles/14000057806-working-with-binary-data-attachments-) \
 [Elastic.io attachment API documentations](https://api.elastic.io/v2/docs/#resources)
 
 
