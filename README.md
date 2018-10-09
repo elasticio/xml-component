@@ -1,18 +1,17 @@
-# xml-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
-> Integration component to work with XML fiels
 
 # xml-component
-XML component for the [elastic.io platform](http://www.elastic.io &#34;elastic.io platform&#34;)
+[![NPM version][npm-image]][npm-url]
+[![Circle CI Build Status][circle-image]][circle-url]
+[![DependencyStatus][daviddm-image]][daviddm-url]
 
-If you plan to **deploy it into [elastic.io platform](http://www.elastic.io &#34;elastic.io platform&#34;) you must follow sets of instructions to succseed**. 
+## Description
+This is an open source component for Converting XML to and from Json on elastic.io platform.
+Component to be used on the elastic.io platform, which is able to convert XML to and from Json. 
+### Purpose
+This component has 3 actions allowing users to pass in either generic but well format XML/Json string or XML attachment and produces a generic string of the other file type. The output then can be maped and used in other components. 
 
-## Before you Begin
-
-Before you can deploy any code into elastic.io **you must be a registered elastic.io platform user**. Please see our home page at [http://www.elastic.io](http://www.elastic.io) to learn how. 
-
-We&#39;ll use git and SSH public key authentication to upload your component code, therefore you must **[upload your SSH Key](http://docs.elastic.io/docs/ssh-key)**. 
-
-&gt; If you fail to upload you SSH Key you will get **permission denied** error during the deployment.
+### How works. 
+Before you can deploy any code into elastic.io you must be a registered elastic.io platform user. Please see our home page at http://www.elastic.io to learn how.
 
 ## Getting Started
 
@@ -33,19 +32,41 @@ Now we are ready to push it:
 $ git push elasticio master
 ```
 
-## How to use
+### Requirements
+#### Environment variables 
+No environment variables need to be set.
 
-### Parse XML with XSD Schema
-Given action will parse XML that is created according to XML Schema, you would need to supply
-URI of XML Schema. XML Schema URI may include HTTP Basic parameters (username/password) via standard URI
- `chema like ``https://username:password@foo.bar.com/schema.xsd``.
+## Actions
+### XML to JSON
+Takes well formatted XML string and converts it to generic Json object.
+#### Input field
+xml string: XML string to be converted. 
 
-XML Payload is expected via input variable in the message (you would need to supply full XML payload). If 
-input message payload is empty then component will try to parse all attachments of incoming message.
+#### Schemas 
+[input schema](ib/schemas/xmlToJson.in.json) \
+[output schema](ib/schemas/xmlToJson.out.json)
 
-#### Known limitations
-* Currently a single XML Schema is supported
-* Schema validation is not enabled when parsed from XML 
+
+### JSON to XML 
+Takes the body of message passed into the component and converts to generic XML string 
+
+#### Schemas 
+[output schema](ib/schemas/jsonToXml.out.json)
+
+### XML Attachment to Json
+Looks at the json array of attachments passed in to component and converts first XML to generic Json object 
+
+#### Schemas
+[input schema](lib/schemas/attachmentToJson.in.json) \
+[output schema](ib/schemas/xmlToJson.out.json)
+
+
+## Additional info (if any)
+## <System> API and Documentation links (endpoints)
+
+Elastic.io attachment documentations : https://support.elastic.io/support/solutions/articles/14000057806-working-with-binary-data-attachments-
+Elastic.io Attachment API documentations: https://api.elastic.io/v2/docs/#resources
+
 
 ## License
 
