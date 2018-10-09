@@ -10,7 +10,7 @@ Component to be used on the elastic.io platform, which is able to convert XML to
 ### Purpose
 This component has 3 actions allowing users to pass in either generic but well format XML/Json string or XML attachment and produces a generic string of the other file type. The output then can be maped and used in other components. 
 
-### How works. 
+### How it works. 
 Before you can deploy any code into elastic.io you must be a registered elastic.io platform user. Please see our home page at http://www.elastic.io to learn how.
 
 ## Getting Started
