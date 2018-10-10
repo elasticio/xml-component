@@ -32,12 +32,10 @@
     "jsonix": "^2.4.1",
     "jsonix-schema-compiler": "^2.3.9",
     "lodash": "^4.17.10",
-    "nock": "^10.0.0",
+    "object-sizeof": "^1.2.0",
     "promised-exec": "^1.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.1.1",
-    "stream-string": "^2.0.1",
-    "util": "^0.11.0",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
@@ -47,7 +45,9 @@
     "eslint-config-xo-space": "^0.10.0",
     "eslint-plugin-mocha": "^4.11.0",
     "mocha": "^5.0.0",
-    "sinon": "^1.17.7"
+    "nock": "^10.0.0",
+    "sinon": "^1.17.7",
+    "stream-string": "^2.0.1"
   },
   "eslintConfig": {
     "extends": "xo-space",

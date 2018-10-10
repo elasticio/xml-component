@@ -5,8 +5,6 @@ const attachmentToJson = require('../lib/actions/attachmentToJson');
 const json = require('./data/po.json');
 const { expect } = require('chai');
 const nock = require('nock');
-const streamString = require('stream-string');
-
 
 require('chai').should(); // expect is assertion styles used my elastic.io
 

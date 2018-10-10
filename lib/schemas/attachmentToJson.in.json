@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "attachtment": {
-      "type": "string",
+      "type": "object",
       "required": true,
       "title": "file name with extension",
       "properties": {
