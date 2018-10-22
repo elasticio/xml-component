@@ -27,7 +27,7 @@
     "await-lock": "^1.1.2",
     "bluebird": "^3.4.6",
     "co": "^4.6.0",
-    "elasticio-node": "0.0.9",
+    "elasticio-node": "0.0.8",
     "elasticio-sailor-nodejs": "2.2.1",
     "jsonix": "^2.4.1",
     "jsonix-schema-compiler": "^2.3.9",
