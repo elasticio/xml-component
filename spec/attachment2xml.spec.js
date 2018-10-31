@@ -7,9 +7,28 @@ const { expect } = require('chai');
 const nock = require('nock');
 
 require('chai').should(); // expect is assertion styles used my elastic.io
+const sinon = require('sinon');
+
+function produceString(output) {
+  //used to produce test output files
+
+    let string = "";
+
+    for (let i = 0; i < output.length; ++i) {
+        console.log(output[i].args[1].body);
+        if (i !== 0) {
+            string += ',\n';
+        }
+        string += JSON.stringify(output[i].args[1].body);
+    }
+
+    return string;
+}
 
 describe('should convert XML attachment 2 JSON', () => {
     const mockSever = 'http://test.env.mock';
+    const cfg = {};
+    let emit;
 
     before(function testInit() {
         nock(mockSever)
@@ -17,16 +36,24 @@ describe('should convert XML attachment 2 JSON', () => {
           .replyWithFile(200, 'spec/data/po.xml');
     });
 
+    beforeEach(function testInit() {
+        emit = sinon.spy();
+    });
+
     it('Convert attachment to json', async () => {
-        const msg = {
+
+        await attachmentToJson.process.bind({
+            emit
+        })({
             attachments: {
                 'po.xml': {
                     url: mockSever
                 }
             }
-        };
-        const { body } = await attachmentToJson.process(msg, {});
-        console.log('XML attachment 2 JSON results: %j ', body);
-        expect(body).to.be.deep.equal(json);
+        }, cfg);
+
+        let returnMsg = produceString(emit.getCalls());
+        console.log('XML attachment 2 JSON results: %j ', returnMsg);
+        expect(returnMsg).to.be.deep.equal(json);
     });
 });
