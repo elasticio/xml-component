@@ -1,221 +1,221 @@
-<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Root>
-  <Company name=\"bikeheads\" uuid=\"8a8286ac62a9c29e0162b4f67e480e6c\" Company_name=\"&lt;TEXT&gt;&lt;P&gt;bikeheads GmbH&lt;/P&gt;&lt;/TEXT&gt;\">
-  <Company_logo_image name=\"Company logo image\">file://bikeheads-Figur-Solo-black.png</Company_logo_image>
-<Company_logo_image name=\"Company logo image\">file://bikeheads-Figur-Solo-Teal.png</Company_logo_image>
-<Homescreen_Background_image name=\"Homescreen Background image\">file://Homescreen BG.jpg</Homescreen_Background_image>
-<Content_Collection name=\"Bikes\" uuid=\"8a8286ac62a9c29e0162b5037b9a3f42\">
-<Thumbnail name=\"Thumbnail\">file://bikeheads-Figur-Solo-black.png</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://bikeheads-Figur-Solo-Teal.png</Thumbnail>
-<Background_image name=\"Background image\">file://Homescreen BG.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Bikes 2018&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Group\" featurename=\"\">home_1</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ContentCollection_1</Attributes>
-<Attributes name=\"Order\" featurename=\"\"></Attributes>
-<Attributes name=\"Language\" featurename=\"\">de-de</Attributes>
-<Attributes name=\"Richtext description\" featurename=\"\"></Attributes>
-<Category_Product name=\"Creme\" uuid=\"8a8286ac62a9c29e0162b4ac867b0f70\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://Creme_Logo-300px.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG.jpg</Background_image>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Creme_Logo-300px.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG.jpg_preview150png.png</Attributes>
-<Attributes name=\"Markenbeschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;&lt;B&gt;CREME&lt;/B&gt; - Fahrräder waren schon immer die große Leidenschaft der Creme-Macher und - vom Mountainbike- Bereich kommend - auch lange schon ihre Profession. Eines Tages sind sie auf einem Dachboden über einen Haufen von schönen alten Fahrradteilen gestolpert und waren enttäuscht, wie viel Liebe zum Detail und Sorgfalt bei heutigen Citybikes verloren gegangen war. Kurz entschlossen beschlossen die Danziger, dass es Zeit war, diese klassische Citybike-Kunst wieder mit Leben zu versehen, und setzten ihren Traum von der eigenen Fahrradmarke in die Realität um. Creme war geboren. Creme Fahrräder werden in Europa entworfen und handgefertigt. Jedes einzelne Modell ist eine Hommage an die Liebe zum Material, den Details und der Handwerkskunst. Das kann man nicht nur sehen, sondern buchstäblich erfahren.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Herren\" uuid=\"8a8286ac62a9c29e0162b4ae5b0b1c97\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://man.png</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://man.png_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Mit den Creme Herrenrädern erfährt man den Geschwindigkeitsrausch. Es sind klassische Fixed-Gear Bahnräder, quasi die Essenz des Minimalismus. Die Creme Herrenräder verfügen über schön gemuffte Stahlrahmen und -gabeln, die in Kooperation mit Tange, dem legendären Rohrhersteller aus Japan, gebaut werden. Fahre Dein Creme Herrenrad wie Du es willst - entweder als Fixed Gear oder baue es mit Freilauf und Bremsen auf, die im Lieferumfang enthalten sind.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Vinyl Series\" uuid=\"8a8286ac62a9c29e0162b4ae6bbd206b\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://11-679.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Vinyl Singlespeed&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://11-679.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG.jpg_preview150png.png</Attributes>
-<Attributes name=\"Richtext description\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Wir nutzen belastbare Komponenten und besondere Highlights, wie Hochkammer Felgen oder ein schönes schlichtes Cockpit&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Vinyl Doppio\" uuid=\"8a8286ac62a9c29e0162b4ae8a1922dc\" Type=\"PRODUCT\">
-<Thumbnail name=\"Thumbnail\">file://2__Wahl__Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]_cut.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]2.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]1.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]3.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849].jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG.jpg</Background_image>
-<Attributes name=\"Zieltext\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das neue Cube Vinyl Doppio 2018 ist ab sofort erhältlich.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://2__Wahl__Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]_cut.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Mit dem Vinyl erfährt man den Geschwindigkeitsrausch. Es ist ein klassisches Fixed-Gear Bahnrad, quasi die Essenz des Minimalismus. Die Creme Vinyl Räder verfügen über schön gemuffte Stahlrahmen und -gabeln, die Creme in Kooperation mit Tange, dem legendären Rohrhersteller aus Japan, gebaut hat. Fahre Dein Vinyl wie Du es willst - entweder als Fixed Gear oder baue es mit Freilauf und Bremsen auf, die im Lieferumfang enthalten sind. Das Fahrrad wird bereits endmontiert geliefert. Aus verpackungstechnischen Gründen werden Pedale sowie Lenker aber noch nicht in die endgültige Position und Befestigung gebracht. Deshalb müssen diese vor dem ersten Einsatz ordnungsgemäß am Fahrrad angebracht werden. &lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">Product_1</Attributes>
-<Attributes name=\"Order\" featurename=\"\"></Attributes>
-<Attributes name=\"Type\" featurename=\"\">PRODUCT</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-<Category_Product name=\"Cube\" uuid=\"8a8286ac62a9c29e0162b4ac76090d23\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://Cube_Bikes_Logo-300px.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Cube_Bikes_Logo-300px.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Markenbeschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;CUBE - Hervorragende Bikes zu einem außergewöhnlich guten Preis erhält man bei der bayrischen Top-Marke CUBE. Ausgezeichnete Komponenten an einem rundum abgestimmten Fahrrad machen die CUBE Bikes so unglaublich beliebt bei vielen Mountainbike Liebhabern. Aber auch bei den Trekking-Rädern wird jedes Teil zu einer Gesamtheit die man als eine Fahrradsymphonie bezeichnen könnte. Widerstandsfähigkeit, Qualität, lange Garantien und Sicherheit bietet das Unternehmen in allen Produkt-Kategorien. Seit der Gründung 1993 bis heute überzeugt das Unternehmen mit einer vielfältigen und hochwertigen Produktpalette rund um das Thema Fahrrad.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Mountainbike\" uuid=\"8a8286ac62a9c29e0162b4aefaec2734\" Type=\"CATEGORY\">
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\"></Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Als &lt;B&gt;Marcus Pürner&lt;/B&gt; im Jahr 1993 die Firma Cube gründete, sprach zunächst wenig für eine erfolgreiche Zukunft des Unternehmens. In der kleinen, kaum 4.000 Einwohner zählenden Gemeinde Waldershof (Bayern) stand dem Studenten eine Produktionsfläche von nicht einmal 50 m² zur Verfügung – eingebettet in die Möbelfabrik seines Vaters. Doch die Geschichte von Cube wurde zu einer wahren Erfolgsstory und mittlerweile verkauft das Unternehmen Bikes in mehr als 50 Ländern, Tendenz steigend. Auch die Fläche für Entwicklung, Produktion und Vertrieb ist mit nunmehr 20.000 m² gewaltig gestiegen. Dabei zählen vor allem die Mountainbikes von Cube zu den Aushängeschildern des Unternehmens. Im hauseigenen Testlabor arbeiten die Mitarbeiter unaufhörlich daran, sowohl Fully MTBs als auch Hardtails weiterzuentwickeln und zu verbessern. Und der Erfolg gibt Marcus Pürner und seinem Team recht: Die Cube Mountainbikes bestechen nicht nur durch ihre einmaligen technischen Innovationen, sondern auch durch ihre elegant-moderne Optik.&lt;/P&gt;&lt;P/&gt;&lt;P&gt;Cube bietet hochqualitative Mountainbikes mit sehr guter Ausstattung zu fairen Preisen, welche immer mit einer individuellen und farbenfrohen Gestaltung aufwarten. Aus diesem Grund ist der Waldershofer Hersteller die beliebteste Mountainbike Marke in Deutschland und das bei Alt und Jung gleichermaßen.&lt;/P&gt;&lt;P/&gt;&lt;P&gt;Technisch gehören die Bikes von Cube immer zur Spitze. Aktuelle Standards wie Boost 148 und PressFit Innenlager findet man ebenso, wie hochwertige Materialien z.B das besonders strapazierfähige C:68 Carbon mit einem erhöhten Faseranteil.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Hardtail\" uuid=\"8a8286ac62a9c29e0162b4af33802d98\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://Cube_C17_02_0174.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Cube_C17_02_0174.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"\" featurename=\"\"></Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"LTD\" uuid=\"8a8286ac62a9c29e0162b4afa5753428\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://Cube_C17_02_1000.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Cube_C17_02_1000.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"\" featurename=\"\"></Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"LTD Pro\" uuid=\"8a8286ac62a9c29e0162b4b11c6544ba\" Type=\"PRODUCT\" Richtext_description=\"&lt;TEXT&gt;&lt;P&gt;Wer auf unserem LTD Pro Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/P&gt;&lt;/TEXT&gt;\">
-<Thumbnail name=\"Thumbnail\">file://LTD Pro blackline_bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://812000-H-004.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://812000-H-002.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://csm_812000-large-01-16_b994e37a6d.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://csm_812000-large-01-06_af6a8319bb.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://812000-H-001.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://csm_812000-large-01-04_07bf08ba7a.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://812000-H-003.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Zieltext\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das neue &lt;B&gt;Cube&lt;/B&gt; &lt;B&gt;LTD Pro 2018&lt;/B&gt; ist ab sofort erhältlich.&lt;/P&gt;&lt;P&gt;Mit einer &lt;B&gt;Rock Shox Recon Silver (bikeheads/Komponenten/Gabel Pool/Rock Shox Recon Silver) Gabel&lt;/B&gt;, &lt;B&gt;Shimano BR-M315 (bikeheads/Komponenten/Bremsen Pool/Shimano BR-M315) Bremsen&lt;/B&gt;, sowie einem speziell entwickelten &lt;B&gt;Cube LTD (bikeheads/Komponenten/Rahmen Pool/Cube LTD) Rahmen&lt;/B&gt;, ist es optimiert für die folgenden Einsatzgebiete:&lt;/P&gt;&lt;P/&gt;&lt;P&gt;&lt;B&gt;Land, Rennstrecke, Sand&lt;/B&gt;&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://LTD Pro blackline_bg.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Wer auf unserem LTD Pro Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">Product_1</Attributes>
-<Attributes name=\"Order\" featurename=\"\"></Attributes>
-<Attributes name=\"Type\" featurename=\"\">PRODUCT</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-  </Category_Product>
-<Category_Product name=\"LTD Race\" uuid=\"8a8286ac62a9c29e0162b4b11d1b488b\" Type=\"PRODUCT\" Richtext_description=\"&lt;TEXT&gt;&lt;P&gt;&lt;SPAN STYLE=&quot;default&quot;&gt;Wer auf unserem LTD Race Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/SPAN&gt;&lt;/P&gt;&lt;/TEXT&gt;\">
-<Thumbnail name=\"Thumbnail\">file://Original LTD Race_weiß.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Unknown-1.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Original_LTD_Race_klein.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Unknown.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Unknown-3.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://Carver_CCB_03_clearcoat_orange_05_Carbon_Rocker_X0021198_S.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Zieltext\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das neue &lt;B&gt;Cube&lt;/B&gt; &lt;B&gt;LTD Race 2018&lt;/B&gt; ist ab sofort erhältlich.&lt;/P&gt;&lt;P&gt;Mit einer &lt;B&gt;Rock Shox Recon Silver (bikeheads/Komponenten/Gabel Pool/Rock Shox Recon Silver) Gabel&lt;/B&gt;, &lt;B&gt;Shimano XT BR-M8000 (bikeheads/Komponenten/Bremsen Pool/Shimano XT BR-M8000) Bremsen&lt;/B&gt;, sowie einem speziell entwickelten &lt;B&gt;Cube LTD (bikeheads/Komponenten/Rahmen Pool/Cube LTD) Rahmen&lt;/B&gt;, ist es optimiert für die folgenden Einsatzgebiete:&lt;/P&gt;&lt;P/&gt;&lt;P&gt;&lt;B&gt;Offroad, Rennstrecke&lt;/B&gt;&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Original LTD Race_weiß.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;&lt;SPAN STYLE=\"default\"&gt;Wer auf unserem LTD Race Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/SPAN&gt;&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">Product_1</Attributes>
-<Attributes name=\"Order\" featurename=\"\"></Attributes>
-<Attributes name=\"Type\" featurename=\"\">PRODUCT</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-  </Category_Product>
-  </Category_Product>
-<Category_Product name=\"Nutrail\" uuid=\"8a8286ac62a9c29e0162b4afa6043788\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://Cube_C17_02_1030.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Cube_C17_02_1030.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"\" featurename=\"\"></Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Nutrail Race 3\" uuid=\"8a8286ac62a9c29e0162b4b12b1a4dd8\" Type=\"PRODUCT\" Richtext_description=\"&lt;TEXT&gt;&lt;P&gt;Fatbike und Race sind bei unserem Nutrail Race nur auf den ersten Blick ein Widerspruch. Denn mit seinem sehr hochwertigen und leichten HPA Rahmen darf sehr wohl gerast werden, ob in typischem Fatbike-Terrain oder auf dem Trail. Auch bei der Edelausstattung mit der sensiblen Rock Shox Federgabel und der neuen 2x11 XT Schaltung haben wir das Gewicht nicht außer Acht gelassen. Trotz aller sportlichen Ambitionen bleibt natürlich auch die Abenteuerlust nicht auf der Strecke.&lt;/P&gt;&lt;/TEXT&gt;\">
-<Thumbnail name=\"Thumbnail\">file://Nutrail Race-bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://818300-H-001-bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://818300-H-002-bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://818300-H-004-bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://818300-H-008-bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://csm_818300-large-01-04_6feb6dc9a8-bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://csm_818300-large-01-14_b9612b9af5-bg.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Zieltext\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das neue Cube Nutrail Race 3 2017 ist ab sofort erhältlich.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Nutrail Race-bg.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Fatbike und Race sind bei unserem Nutrail Race nur auf den ersten Blick ein Widerspruch. Denn mit seinem sehr hochwertigen und leichten HPA Rahmen darf sehr wohl gerast werden, ob in typischem Fatbike-Terrain oder auf dem Trail. Auch bei der Edelausstattung mit der sensiblen Rock Shox Federgabel und der neuen 2x11 XT Schaltung haben wir das Gewicht nicht außer Acht gelassen. Trotz aller sportlichen Ambitionen bleibt natürlich auch die Abenteuerlust nicht auf der Strecke.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">Product_1</Attributes>
-<Attributes name=\"Order\" featurename=\"\"></Attributes>
-<Attributes name=\"Type\" featurename=\"\">PRODUCT</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-<Category_Product name=\"Trekkingbike\" uuid=\"8a8286ac62a9c29e0162b4af0a1b2a15\" Type=\"CATEGORY\">
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\"></Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das Unternehmen Cube, mit Firmensitz im nordbayrischen Waldershof, steht seit 1993 für Qualität und Innovation. Hier findet Entwicklung, Produktion und Vertrieb der Cube-Bikes statt. Eigene Testverfahren sowie Kooperationen mit der TU München und dem Prüfinstitut Velotech.de GmbH gehen weit über die vorgegebenen Qualitätsstandards hinaus. Ein Cube-Bike ist ein widerstandsfähiges Produkt für jedes Kundenbedürfnis. Wer das Fahrrad auch am Wochenende für Ausflüge nutzen möchte, ist mit einem Cube Trekkingrad gut beraten. Dieses ist eine Zwischenstufe aus Mountainbike und Cityrad. Es ist der perfekte Begleiter für Fahrten durch Wiesen und Felder. Hier bietet Cube eine große Auswahl an Modellen, so dass jeder Kunde für seine Bedürfnisse das richtige Rad findet.&lt;/P&gt;&lt;P/&gt;&lt;P&gt;Vom Cube Hochleistungs-Trekkingrad Tonopah SL für den sportlichen Radfahrer auf anspruchsvollen Touren bis hin zum City und Trekkingbike von Cube Town Pro mit solider Technik für den Alltagsfahrer in der Stadt. Leichte Aluminiumrahmen, Shimano XT-Ausstattungen, hydraulische Scheibenbremsen und hochwertige Laufradsätze machen Cube Räder zu einem perfekten Begleiter für sportliche Ausfahrten und Alltägliche Touren. Extras wie ein Gepäckträger und sowohl Herren- als auch Damenmodelle stehen ebenfalls bei den Fahrradmodellen zur Wahl. Bei aller Hightech-Ausstattung bleibt weder Komfort noch Sicherheit auf der Strecke.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"City Wave\" uuid=\"8a8286ac62a9c29e0162b4af44063186\" Type=\"CATEGORY\">
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\"></Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"\" featurename=\"\"></Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"Easy Entry\" uuid=\"8a8286ac62a9c29e0162b4b0f7b04106\" Type=\"CATEGORY\">
-<Thumbnail name=\"Thumbnail\">file://Cube_C17_02_1377.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Description\" featurename=\"\"></Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://Cube_C17_02_1377.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"\" featurename=\"\"></Attributes>
-<Attributes name=\"Template\" featurename=\"\">ProductCategory_1</Attributes>
-<Attributes name=\"Type\" featurename=\"\">CATEGORY</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-<Category_Product name=\"EXC Easy Entry\" uuid=\"8a8286ac62a9c29e0162b4b138af5433\" Type=\"PRODUCT\" Richtext_description=\"&lt;TEXT&gt;&lt;P&gt;Das Touring EXC ist ein Alleskönner. Optimal für lange Touren, für den Alltag, für die Fitness - oder auch für alles zusammen. Die hydraulischen Scheibenbremsen und die 27 Gänge sind perfekt geeignet, um den Alltag zu meistern oder ihm einfach mal zu entfliehen. Und dank der Federgabel können Rad und Fahrer auch ab und an mal einen Abstecher ins Gelände wagen.&lt;/P&gt;&lt;/TEXT&gt;\">
-<Thumbnail name=\"Thumbnail\">file://840201E_light_zoom_bg.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://840201E-H-037.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://840201-H-016.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://840201-H-023.jpg</Thumbnail>
-<Thumbnail name=\"Thumbnail\">file://840201-H-009.jpg</Thumbnail>
-<Background_image name=\"Background image\">file://Catalog BG2.jpg</Background_image>
-<Attributes name=\"Zieltext\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das neue Cube EXC Easy Entry 2017 ist ab sofort erhältlich.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Thumbnail\" featurename=\"\">file://840201E_light_zoom_bg.jpg_preview150png.png</Attributes>
-<Attributes name=\"Background image\" featurename=\"\">file://Catalog BG2.jpg_preview150png.png</Attributes>
-<Attributes name=\"Beschreibung\" featurename=\"\">&lt;TEXT&gt;&lt;P&gt;Das Touring EXC ist ein Alleskönner. Optimal für lange Touren, für den Alltag, für die Fitness - oder auch für alles zusammen. Die hydraulischen Scheibenbremsen und die 27 Gänge sind perfekt geeignet, um den Alltag zu meistern oder ihm einfach mal zu entfliehen. Und dank der Federgabel können Rad und Fahrer auch ab und an mal einen Abstecher ins Gelände wagen.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
-<Attributes name=\"Template\" featurename=\"\">Product_1</Attributes>
-<Attributes name=\"Order\" featurename=\"\"></Attributes>
-<Attributes name=\"Type\" featurename=\"\">PRODUCT</Attributes>
-<Attributes name=\"Alignment\" featurename=\"\">Top_Left</Attributes>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-  </Category_Product>
-  </Content_Collection>
+  <Company name="bikeheads" uuid="8a8286ac62a9c29e0162b4f67e480e6c" Company_name="&lt;TEXT&gt;&lt;P&gt;bikeheads GmbH&lt;/P&gt;&lt;/TEXT&gt;">
+    <Company_logo_image name="Company logo image">file://bikeheads-Figur-Solo-black.png</Company_logo_image>
+    <Company_logo_image name="Company logo image">file://bikeheads-Figur-Solo-Teal.png</Company_logo_image>
+    <Homescreen_Background_image name="Homescreen Background image">file://Homescreen BG.jpg</Homescreen_Background_image>
+    <Content_Collection name="Bikes" uuid="8a8286ac62a9c29e0162b5037b9a3f42">
+      <Thumbnail name="Thumbnail">file://bikeheads-Figur-Solo-black.png</Thumbnail>
+      <Thumbnail name="Thumbnail">file://bikeheads-Figur-Solo-Teal.png</Thumbnail>
+      <Background_image name="Background image">file://Homescreen BG.jpg</Background_image>
+      <Attributes name="Description" featurename="">&lt;TEXT&gt;&lt;P&gt;Bikes 2018&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+      <Attributes name="Group" featurename="">home_1</Attributes>
+      <Attributes name="Template" featurename="">ContentCollection_1</Attributes>
+      <Attributes name="Order" featurename=""></Attributes>
+      <Attributes name="Language" featurename="">de-de</Attributes>
+      <Attributes name="Richtext description" featurename=""></Attributes>
+      <Category_Product name="Creme" uuid="8a8286ac62a9c29e0162b4ac867b0f70" Type="CATEGORY">
+        <Thumbnail name="Thumbnail">file://Creme_Logo-300px.jpg</Thumbnail>
+        <Background_image name="Background image">file://Catalog BG.jpg</Background_image>
+        <Attributes name="Thumbnail" featurename="">file://Creme_Logo-300px.jpg_preview150png.png</Attributes>
+        <Attributes name="Background image" featurename="">file://Catalog BG.jpg_preview150png.png</Attributes>
+        <Attributes name="Markenbeschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;&lt;B&gt;CREME&lt;/B&gt; - Fahrräder waren schon immer die große Leidenschaft der Creme-Macher und - vom Mountainbike- Bereich kommend - auch lange schon ihre Profession. Eines Tages sind sie auf einem Dachboden über einen Haufen von schönen alten Fahrradteilen gestolpert und waren enttäuscht, wie viel Liebe zum Detail und Sorgfalt bei heutigen Citybikes verloren gegangen war. Kurz entschlossen beschlossen die Danziger, dass es Zeit war, diese klassische Citybike-Kunst wieder mit Leben zu versehen, und setzten ihren Traum von der eigenen Fahrradmarke in die Realität um. Creme war geboren. Creme Fahrräder werden in Europa entworfen und handgefertigt. Jedes einzelne Modell ist eine Hommage an die Liebe zum Material, den Details und der Handwerkskunst. Das kann man nicht nur sehen, sondern buchstäblich erfahren.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+        <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+        <Attributes name="Type" featurename="">CATEGORY</Attributes>
+        <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+        <Category_Product name="Herren" uuid="8a8286ac62a9c29e0162b4ae5b0b1c97" Type="CATEGORY">
+          <Thumbnail name="Thumbnail">file://man.png</Thumbnail>
+          <Background_image name="Background image">file://Catalog BG.jpg</Background_image>
+          <Attributes name="Description" featurename=""></Attributes>
+          <Attributes name="Thumbnail" featurename="">file://man.png_preview150png.png</Attributes>
+          <Attributes name="Background image" featurename="">file://Catalog BG.jpg_preview150png.png</Attributes>
+          <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Mit den Creme Herrenrädern erfährt man den Geschwindigkeitsrausch. Es sind klassische Fixed-Gear Bahnräder, quasi die Essenz des Minimalismus. Die Creme Herrenräder verfügen über schön gemuffte Stahlrahmen und -gabeln, die in Kooperation mit Tange, dem legendären Rohrhersteller aus Japan, gebaut werden. Fahre Dein Creme Herrenrad wie Du es willst - entweder als Fixed Gear oder baue es mit Freilauf und Bremsen auf, die im Lieferumfang enthalten sind.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+          <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+          <Attributes name="Type" featurename="">CATEGORY</Attributes>
+          <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+          <Category_Product name="Vinyl Series" uuid="8a8286ac62a9c29e0162b4ae6bbd206b" Type="CATEGORY">
+            <Thumbnail name="Thumbnail">file://11-679.jpg</Thumbnail>
+            <Background_image name="Background image">file://Catalog BG.jpg</Background_image>
+            <Attributes name="Description" featurename="">&lt;TEXT&gt;&lt;P&gt;Vinyl Singlespeed&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+            <Attributes name="Thumbnail" featurename="">file://11-679.jpg_preview150png.png</Attributes>
+            <Attributes name="Background image" featurename="">file://Catalog BG.jpg_preview150png.png</Attributes>
+            <Attributes name="Richtext description" featurename="">&lt;TEXT&gt;&lt;P&gt;Wir nutzen belastbare Komponenten und besondere Highlights, wie Hochkammer Felgen oder ein schönes schlichtes Cockpit&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+            <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+            <Attributes name="Type" featurename="">CATEGORY</Attributes>
+            <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+            <Category_Product name="Vinyl Doppio" uuid="8a8286ac62a9c29e0162b4ae8a1922dc" Type="PRODUCT">
+              <Thumbnail name="Thumbnail">file://2__Wahl__Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]_cut.jpg</Thumbnail>
+              <Thumbnail name="Thumbnail">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]2.jpg</Thumbnail>
+              <Thumbnail name="Thumbnail">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]1.jpg</Thumbnail>
+              <Thumbnail name="Thumbnail">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]3.jpg</Thumbnail>
+              <Thumbnail name="Thumbnail">file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849].jpg</Thumbnail>
+              <Background_image name="Background image">file://Catalog BG.jpg</Background_image>
+              <Attributes name="Zieltext" featurename="">&lt;TEXT&gt;&lt;P&gt;Das neue Cube Vinyl Doppio 2018 ist ab sofort erhältlich.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+              <Attributes name="Thumbnail" featurename="">file://2__Wahl__Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]_cut.jpg_preview150png.png</Attributes>
+              <Attributes name="Background image" featurename="">file://Catalog BG.jpg_preview150png.png</Attributes>
+              <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Mit dem Vinyl erfährt man den Geschwindigkeitsrausch. Es ist ein klassisches Fixed-Gear Bahnrad, quasi die Essenz des Minimalismus. Die Creme Vinyl Räder verfügen über schön gemuffte Stahlrahmen und -gabeln, die Creme in Kooperation mit Tange, dem legendären Rohrhersteller aus Japan, gebaut hat. Fahre Dein Vinyl wie Du es willst - entweder als Fixed Gear oder baue es mit Freilauf und Bremsen auf, die im Lieferumfang enthalten sind. Das Fahrrad wird bereits endmontiert geliefert. Aus verpackungstechnischen Gründen werden Pedale sowie Lenker aber noch nicht in die endgültige Position und Befestigung gebracht. Deshalb müssen diese vor dem ersten Einsatz ordnungsgemäß am Fahrrad angebracht werden. &lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+              <Attributes name="Template" featurename="">Product_1</Attributes>
+              <Attributes name="Order" featurename=""></Attributes>
+              <Attributes name="Type" featurename="">PRODUCT</Attributes>
+              <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+            </Category_Product>
+          </Category_Product>
+        </Category_Product>
+      </Category_Product>
+      <Category_Product name="Cube" uuid="8a8286ac62a9c29e0162b4ac76090d23" Type="CATEGORY">
+        <Thumbnail name="Thumbnail">file://Cube_Bikes_Logo-300px.jpg</Thumbnail>
+        <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+        <Attributes name="Thumbnail" featurename="">file://Cube_Bikes_Logo-300px.jpg_preview150png.png</Attributes>
+        <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+        <Attributes name="Markenbeschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;CUBE - Hervorragende Bikes zu einem außergewöhnlich guten Preis erhält man bei der bayrischen Top-Marke CUBE. Ausgezeichnete Komponenten an einem rundum abgestimmten Fahrrad machen die CUBE Bikes so unglaublich beliebt bei vielen Mountainbike Liebhabern. Aber auch bei den Trekking-Rädern wird jedes Teil zu einer Gesamtheit die man als eine Fahrradsymphonie bezeichnen könnte. Widerstandsfähigkeit, Qualität, lange Garantien und Sicherheit bietet das Unternehmen in allen Produkt-Kategorien. Seit der Gründung 1993 bis heute überzeugt das Unternehmen mit einer vielfältigen und hochwertigen Produktpalette rund um das Thema Fahrrad.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+        <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+        <Attributes name="Type" featurename="">CATEGORY</Attributes>
+        <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+        <Category_Product name="Mountainbike" uuid="8a8286ac62a9c29e0162b4aefaec2734" Type="CATEGORY">
+          <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+          <Attributes name="Description" featurename=""></Attributes>
+          <Attributes name="Thumbnail" featurename=""></Attributes>
+          <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+          <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Als &lt;B&gt;Marcus Pürner&lt;/B&gt; im Jahr 1993 die Firma Cube gründete, sprach zunächst wenig für eine erfolgreiche Zukunft des Unternehmens. In der kleinen, kaum 4.000 Einwohner zählenden Gemeinde Waldershof (Bayern) stand dem Studenten eine Produktionsfläche von nicht einmal 50 m² zur Verfügung – eingebettet in die Möbelfabrik seines Vaters. Doch die Geschichte von Cube wurde zu einer wahren Erfolgsstory und mittlerweile verkauft das Unternehmen Bikes in mehr als 50 Ländern, Tendenz steigend. Auch die Fläche für Entwicklung, Produktion und Vertrieb ist mit nunmehr 20.000 m² gewaltig gestiegen. Dabei zählen vor allem die Mountainbikes von Cube zu den Aushängeschildern des Unternehmens. Im hauseigenen Testlabor arbeiten die Mitarbeiter unaufhörlich daran, sowohl Fully MTBs als auch Hardtails weiterzuentwickeln und zu verbessern. Und der Erfolg gibt Marcus Pürner und seinem Team recht: Die Cube Mountainbikes bestechen nicht nur durch ihre einmaligen technischen Innovationen, sondern auch durch ihre elegant-moderne Optik.&lt;/P&gt;&lt;P/&gt;&lt;P&gt;Cube bietet hochqualitative Mountainbikes mit sehr guter Ausstattung zu fairen Preisen, welche immer mit einer individuellen und farbenfrohen Gestaltung aufwarten. Aus diesem Grund ist der Waldershofer Hersteller die beliebteste Mountainbike Marke in Deutschland und das bei Alt und Jung gleichermaßen.&lt;/P&gt;&lt;P/&gt;&lt;P&gt;Technisch gehören die Bikes von Cube immer zur Spitze. Aktuelle Standards wie Boost 148 und PressFit Innenlager findet man ebenso, wie hochwertige Materialien z.B das besonders strapazierfähige C:68 Carbon mit einem erhöhten Faseranteil.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+          <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+          <Attributes name="Type" featurename="">CATEGORY</Attributes>
+          <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+          <Category_Product name="Hardtail" uuid="8a8286ac62a9c29e0162b4af33802d98" Type="CATEGORY">
+            <Thumbnail name="Thumbnail">file://Cube_C17_02_0174.jpg</Thumbnail>
+            <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+            <Attributes name="Description" featurename=""></Attributes>
+            <Attributes name="Thumbnail" featurename="">file://Cube_C17_02_0174.jpg_preview150png.png</Attributes>
+            <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+            <Attributes name="" featurename=""></Attributes>
+            <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+            <Attributes name="Type" featurename="">CATEGORY</Attributes>
+            <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+            <Category_Product name="LTD" uuid="8a8286ac62a9c29e0162b4afa5753428" Type="CATEGORY">
+              <Thumbnail name="Thumbnail">file://Cube_C17_02_1000.jpg</Thumbnail>
+              <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+              <Attributes name="Description" featurename=""></Attributes>
+              <Attributes name="Thumbnail" featurename="">file://Cube_C17_02_1000.jpg_preview150png.png</Attributes>
+              <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+              <Attributes name="" featurename=""></Attributes>
+              <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+              <Attributes name="Type" featurename="">CATEGORY</Attributes>
+              <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              <Category_Product name="LTD Pro" uuid="8a8286ac62a9c29e0162b4b11c6544ba" Type="PRODUCT" Richtext_description="&lt;TEXT&gt;&lt;P&gt;Wer auf unserem LTD Pro Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/P&gt;&lt;/TEXT&gt;">
+                <Thumbnail name="Thumbnail">file://LTD Pro blackline_bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://812000-H-004.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://812000-H-002.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://csm_812000-large-01-16_b994e37a6d.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://csm_812000-large-01-06_af6a8319bb.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://812000-H-001.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://csm_812000-large-01-04_07bf08ba7a.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://812000-H-003.jpg</Thumbnail>
+                <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+                <Attributes name="Zieltext" featurename="">&lt;TEXT&gt;&lt;P&gt;Das neue &lt;B&gt;Cube&lt;/B&gt; &lt;B&gt;LTD Pro 2018&lt;/B&gt; ist ab sofort erhältlich.&lt;/P&gt;&lt;P&gt;Mit einer &lt;B&gt;Rock Shox Recon Silver (bikeheads/Komponenten/Gabel Pool/Rock Shox Recon Silver) Gabel&lt;/B&gt;, &lt;B&gt;Shimano BR-M315 (bikeheads/Komponenten/Bremsen Pool/Shimano BR-M315) Bremsen&lt;/B&gt;, sowie einem speziell entwickelten &lt;B&gt;Cube LTD (bikeheads/Komponenten/Rahmen Pool/Cube LTD) Rahmen&lt;/B&gt;, ist es optimiert für die folgenden Einsatzgebiete:&lt;/P&gt;&lt;P/&gt;&lt;P&gt;&lt;B&gt;Land, Rennstrecke, Sand&lt;/B&gt;&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Thumbnail" featurename="">file://LTD Pro blackline_bg.jpg_preview150png.png</Attributes>
+                <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+                <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Wer auf unserem LTD Pro Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Template" featurename="">Product_1</Attributes>
+                <Attributes name="Order" featurename=""></Attributes>
+                <Attributes name="Type" featurename="">PRODUCT</Attributes>
+                <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              </Category_Product>
+              <Category_Product name="LTD Race" uuid="8a8286ac62a9c29e0162b4b11d1b488b" Type="PRODUCT" Richtext_description="&lt;TEXT&gt;&lt;P&gt;&lt;SPAN STYLE=&quot;default&quot;&gt;Wer auf unserem LTD Race Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/SPAN&gt;&lt;/P&gt;&lt;/TEXT&gt;">
+                <Thumbnail name="Thumbnail">file://Original LTD Race_weiß.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://Unknown-1.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://Original_LTD_Race_klein.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://Unknown.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://Unknown-3.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://Carver_CCB_03_clearcoat_orange_05_Carbon_Rocker_X0021198_S.jpg</Thumbnail>
+                <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+                <Attributes name="Zieltext" featurename="">&lt;TEXT&gt;&lt;P&gt;Das neue &lt;B&gt;Cube&lt;/B&gt; &lt;B&gt;LTD Race 2018&lt;/B&gt; ist ab sofort erhältlich.&lt;/P&gt;&lt;P&gt;Mit einer &lt;B&gt;Rock Shox Recon Silver (bikeheads/Komponenten/Gabel Pool/Rock Shox Recon Silver) Gabel&lt;/B&gt;, &lt;B&gt;Shimano XT BR-M8000 (bikeheads/Komponenten/Bremsen Pool/Shimano XT BR-M8000) Bremsen&lt;/B&gt;, sowie einem speziell entwickelten &lt;B&gt;Cube LTD (bikeheads/Komponenten/Rahmen Pool/Cube LTD) Rahmen&lt;/B&gt;, ist es optimiert für die folgenden Einsatzgebiete:&lt;/P&gt;&lt;P/&gt;&lt;P&gt;&lt;B&gt;Offroad, Rennstrecke&lt;/B&gt;&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Thumbnail" featurename="">file://Original LTD Race_weiß.jpg_preview150png.png</Attributes>
+                <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+                <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;&lt;SPAN STYLE="default"&gt;Wer auf unserem LTD Race Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.&lt;/SPAN&gt;&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Template" featurename="">Product_1</Attributes>
+                <Attributes name="Order" featurename=""></Attributes>
+                <Attributes name="Type" featurename="">PRODUCT</Attributes>
+                <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              </Category_Product>
+            </Category_Product>
+            <Category_Product name="Nutrail" uuid="8a8286ac62a9c29e0162b4afa6043788" Type="CATEGORY">
+              <Thumbnail name="Thumbnail">file://Cube_C17_02_1030.jpg</Thumbnail>
+              <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+              <Attributes name="Description" featurename=""></Attributes>
+              <Attributes name="Thumbnail" featurename="">file://Cube_C17_02_1030.jpg_preview150png.png</Attributes>
+              <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+              <Attributes name="" featurename=""></Attributes>
+              <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+              <Attributes name="Type" featurename="">CATEGORY</Attributes>
+              <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              <Category_Product name="Nutrail Race 3" uuid="8a8286ac62a9c29e0162b4b12b1a4dd8" Type="PRODUCT" Richtext_description="&lt;TEXT&gt;&lt;P&gt;Fatbike und Race sind bei unserem Nutrail Race nur auf den ersten Blick ein Widerspruch. Denn mit seinem sehr hochwertigen und leichten HPA Rahmen darf sehr wohl gerast werden, ob in typischem Fatbike-Terrain oder auf dem Trail. Auch bei der Edelausstattung mit der sensiblen Rock Shox Federgabel und der neuen 2x11 XT Schaltung haben wir das Gewicht nicht außer Acht gelassen. Trotz aller sportlichen Ambitionen bleibt natürlich auch die Abenteuerlust nicht auf der Strecke.&lt;/P&gt;&lt;/TEXT&gt;">
+                <Thumbnail name="Thumbnail">file://Nutrail Race-bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://818300-H-001-bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://818300-H-002-bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://818300-H-004-bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://818300-H-008-bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://csm_818300-large-01-04_6feb6dc9a8-bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://csm_818300-large-01-14_b9612b9af5-bg.jpg</Thumbnail>
+                <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+                <Attributes name="Zieltext" featurename="">&lt;TEXT&gt;&lt;P&gt;Das neue Cube Nutrail Race 3 2017 ist ab sofort erhältlich.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Thumbnail" featurename="">file://Nutrail Race-bg.jpg_preview150png.png</Attributes>
+                <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+                <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Fatbike und Race sind bei unserem Nutrail Race nur auf den ersten Blick ein Widerspruch. Denn mit seinem sehr hochwertigen und leichten HPA Rahmen darf sehr wohl gerast werden, ob in typischem Fatbike-Terrain oder auf dem Trail. Auch bei der Edelausstattung mit der sensiblen Rock Shox Federgabel und der neuen 2x11 XT Schaltung haben wir das Gewicht nicht außer Acht gelassen. Trotz aller sportlichen Ambitionen bleibt natürlich auch die Abenteuerlust nicht auf der Strecke.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Template" featurename="">Product_1</Attributes>
+                <Attributes name="Order" featurename=""></Attributes>
+                <Attributes name="Type" featurename="">PRODUCT</Attributes>
+                <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              </Category_Product>
+            </Category_Product>
+          </Category_Product>
+        </Category_Product>
+        <Category_Product name="Trekkingbike" uuid="8a8286ac62a9c29e0162b4af0a1b2a15" Type="CATEGORY">
+          <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+          <Attributes name="Description" featurename=""></Attributes>
+          <Attributes name="Thumbnail" featurename=""></Attributes>
+          <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+          <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Das Unternehmen Cube, mit Firmensitz im nordbayrischen Waldershof, steht seit 1993 für Qualität und Innovation. Hier findet Entwicklung, Produktion und Vertrieb der Cube-Bikes statt. Eigene Testverfahren sowie Kooperationen mit der TU München und dem Prüfinstitut Velotech.de GmbH gehen weit über die vorgegebenen Qualitätsstandards hinaus. Ein Cube-Bike ist ein widerstandsfähiges Produkt für jedes Kundenbedürfnis. Wer das Fahrrad auch am Wochenende für Ausflüge nutzen möchte, ist mit einem Cube Trekkingrad gut beraten. Dieses ist eine Zwischenstufe aus Mountainbike und Cityrad. Es ist der perfekte Begleiter für Fahrten durch Wiesen und Felder. Hier bietet Cube eine große Auswahl an Modellen, so dass jeder Kunde für seine Bedürfnisse das richtige Rad findet.&lt;/P&gt;&lt;P/&gt;&lt;P&gt;Vom Cube Hochleistungs-Trekkingrad Tonopah SL für den sportlichen Radfahrer auf anspruchsvollen Touren bis hin zum City und Trekkingbike von Cube Town Pro mit solider Technik für den Alltagsfahrer in der Stadt. Leichte Aluminiumrahmen, Shimano XT-Ausstattungen, hydraulische Scheibenbremsen und hochwertige Laufradsätze machen Cube Räder zu einem perfekten Begleiter für sportliche Ausfahrten und Alltägliche Touren. Extras wie ein Gepäckträger und sowohl Herren- als auch Damenmodelle stehen ebenfalls bei den Fahrradmodellen zur Wahl. Bei aller Hightech-Ausstattung bleibt weder Komfort noch Sicherheit auf der Strecke.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+          <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+          <Attributes name="Type" featurename="">CATEGORY</Attributes>
+          <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+          <Category_Product name="City Wave" uuid="8a8286ac62a9c29e0162b4af44063186" Type="CATEGORY">
+            <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+            <Attributes name="Description" featurename=""></Attributes>
+            <Attributes name="Thumbnail" featurename=""></Attributes>
+            <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+            <Attributes name="" featurename=""></Attributes>
+            <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+            <Attributes name="Type" featurename="">CATEGORY</Attributes>
+            <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+            <Category_Product name="Easy Entry" uuid="8a8286ac62a9c29e0162b4b0f7b04106" Type="CATEGORY">
+              <Thumbnail name="Thumbnail">file://Cube_C17_02_1377.jpg</Thumbnail>
+              <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+              <Attributes name="Description" featurename=""></Attributes>
+              <Attributes name="Thumbnail" featurename="">file://Cube_C17_02_1377.jpg_preview150png.png</Attributes>
+              <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+              <Attributes name="" featurename=""></Attributes>
+              <Attributes name="Template" featurename="">ProductCategory_1</Attributes>
+              <Attributes name="Type" featurename="">CATEGORY</Attributes>
+              <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              <Category_Product name="EXC Easy Entry" uuid="8a8286ac62a9c29e0162b4b138af5433" Type="PRODUCT" Richtext_description="&lt;TEXT&gt;&lt;P&gt;Das Touring EXC ist ein Alleskönner. Optimal für lange Touren, für den Alltag, für die Fitness - oder auch für alles zusammen. Die hydraulischen Scheibenbremsen und die 27 Gänge sind perfekt geeignet, um den Alltag zu meistern oder ihm einfach mal zu entfliehen. Und dank der Federgabel können Rad und Fahrer auch ab und an mal einen Abstecher ins Gelände wagen.&lt;/P&gt;&lt;/TEXT&gt;">
+                <Thumbnail name="Thumbnail">file://840201E_light_zoom_bg.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://840201E-H-037.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://840201-H-016.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://840201-H-023.jpg</Thumbnail>
+                <Thumbnail name="Thumbnail">file://840201-H-009.jpg</Thumbnail>
+                <Background_image name="Background image">file://Catalog BG2.jpg</Background_image>
+                <Attributes name="Zieltext" featurename="">&lt;TEXT&gt;&lt;P&gt;Das neue Cube EXC Easy Entry 2017 ist ab sofort erhältlich.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Thumbnail" featurename="">file://840201E_light_zoom_bg.jpg_preview150png.png</Attributes>
+                <Attributes name="Background image" featurename="">file://Catalog BG2.jpg_preview150png.png</Attributes>
+                <Attributes name="Beschreibung" featurename="">&lt;TEXT&gt;&lt;P&gt;Das Touring EXC ist ein Alleskönner. Optimal für lange Touren, für den Alltag, für die Fitness - oder auch für alles zusammen. Die hydraulischen Scheibenbremsen und die 27 Gänge sind perfekt geeignet, um den Alltag zu meistern oder ihm einfach mal zu entfliehen. Und dank der Federgabel können Rad und Fahrer auch ab und an mal einen Abstecher ins Gelände wagen.&lt;/P&gt;&lt;/TEXT&gt;</Attributes>
+                <Attributes name="Template" featurename="">Product_1</Attributes>
+                <Attributes name="Order" featurename=""></Attributes>
+                <Attributes name="Type" featurename="">PRODUCT</Attributes>
+                <Attributes name="Alignment" featurename="">Top_Left</Attributes>
+              </Category_Product>
+            </Category_Product>
+          </Category_Product>
+        </Category_Product>
+      </Category_Product>
+    </Content_Collection>
   </Company>
-  </Root>
+</Root>

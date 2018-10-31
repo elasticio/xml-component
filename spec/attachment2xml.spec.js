@@ -29,7 +29,9 @@ function produceString(output) {
 
 describe('should convert XML attachment 2 JSON', () => {
     const mockSever = 'http://test.env.mock';
-    const cfg = {};
+    const cfg = {
+        pattern: '(.xml)'
+    };
     let emit;
 
     before(function testInit() {
