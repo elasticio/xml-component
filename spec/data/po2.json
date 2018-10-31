@@ -1,0 +1,1379 @@
+{
+  "Root": {
+    "Company": {
+      "Content_Collection": {
+        "Category_Product": [
+          {
+            "Category_Product": {
+              "Category_Product": {
+                "Category_Product": {
+                  "Attributes": [
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Zieltext"
+                      },
+                      "_": "<TEXT><P>Das neue Cube Vinyl Doppio 2018 ist ab sofort erhältlich.</P></TEXT>"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://2__Wahl__Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]_cut.jpg_preview150png.png"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Background image"
+                      },
+                      "_": "file://Catalog BG.jpg_preview150png.png"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Beschreibung"
+                      },
+                      "_": "<TEXT><P>Mit dem Vinyl erfährt man den Geschwindigkeitsrausch. Es ist ein klassisches Fixed-Gear Bahnrad, quasi die Essenz des Minimalismus. Die Creme Vinyl Räder verfügen über schön gemuffte Stahlrahmen und -gabeln, die Creme in Kooperation mit Tange, dem legendären Rohrhersteller aus Japan, gebaut hat. Fahre Dein Vinyl wie Du es willst - entweder als Fixed Gear oder baue es mit Freilauf und Bremsen auf, die im Lieferumfang enthalten sind. Das Fahrrad wird bereits endmontiert geliefert. Aus verpackungstechnischen Gründen werden Pedale sowie Lenker aber noch nicht in die endgültige Position und Befestigung gebracht. Deshalb müssen diese vor dem ersten Einsatz ordnungsgemäß am Fahrrad angebracht werden. </P></TEXT>"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Template"
+                      },
+                      "_": "Product_1"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Order"
+                      }
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Type"
+                      },
+                      "_": "PRODUCT"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Alignment"
+                      },
+                      "_": "Top_Left"
+                    }
+                  ],
+                  "Background_image": {
+                    "_attr": {
+                      "name": "Background image"
+                    },
+                    "_": "file://Catalog BG.jpg"
+                  },
+                  "Thumbnail": [
+                    {
+                      "_attr": {
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://2__Wahl__Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]_cut.jpg"
+                    },
+                    {
+                      "_attr": {
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]2.jpg"
+                    },
+                    {
+                      "_attr": {
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]1.jpg"
+                    },
+                    {
+                      "_attr": {
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849]3.jpg"
+                    },
+                    {
+                      "_attr": {
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://Creme_Cycles_Vinyl_Doppio_singlespeed_fixed_gear_dark_green[1470x849].jpg"
+                    }
+                  ],
+                  "_attr": {
+                    "Type": "PRODUCT",
+                    "uuid": "8a8286ac62a9c29e0162b4ae8a1922dc",
+                    "name": "Vinyl Doppio"
+                  }
+                },
+                "Attributes": [
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Description"
+                    },
+                    "_": "<TEXT><P>Vinyl Singlespeed</P></TEXT>"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Thumbnail"
+                    },
+                    "_": "file://11-679.jpg_preview150png.png"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Background image"
+                    },
+                    "_": "file://Catalog BG.jpg_preview150png.png"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Richtext description"
+                    },
+                    "_": "<TEXT><P>Wir nutzen belastbare Komponenten und besondere Highlights, wie Hochkammer Felgen oder ein schönes schlichtes Cockpit</P></TEXT>"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Template"
+                    },
+                    "_": "ProductCategory_1"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Type"
+                    },
+                    "_": "CATEGORY"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Alignment"
+                    },
+                    "_": "Top_Left"
+                  }
+                ],
+                "Background_image": {
+                  "_attr": {
+                    "name": "Background image"
+                  },
+                  "_": "file://Catalog BG.jpg"
+                },
+                "Thumbnail": {
+                  "_attr": {
+                    "name": "Thumbnail"
+                  },
+                  "_": "file://11-679.jpg"
+                },
+                "_attr": {
+                  "Type": "CATEGORY",
+                  "uuid": "8a8286ac62a9c29e0162b4ae6bbd206b",
+                  "name": "Vinyl Series"
+                }
+              },
+              "Attributes": [
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Description"
+                  }
+                },
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Thumbnail"
+                  },
+                  "_": "file://man.png_preview150png.png"
+                },
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Background image"
+                  },
+                  "_": "file://Catalog BG.jpg_preview150png.png"
+                },
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Beschreibung"
+                  },
+                  "_": "<TEXT><P>Mit den Creme Herrenrädern erfährt man den Geschwindigkeitsrausch. Es sind klassische Fixed-Gear Bahnräder, quasi die Essenz des Minimalismus. Die Creme Herrenräder verfügen über schön gemuffte Stahlrahmen und -gabeln, die in Kooperation mit Tange, dem legendären Rohrhersteller aus Japan, gebaut werden. Fahre Dein Creme Herrenrad wie Du es willst - entweder als Fixed Gear oder baue es mit Freilauf und Bremsen auf, die im Lieferumfang enthalten sind.</P></TEXT>"
+                },
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Template"
+                  },
+                  "_": "ProductCategory_1"
+                },
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Type"
+                  },
+                  "_": "CATEGORY"
+                },
+                {
+                  "_attr": {
+                    "featurename": "",
+                    "name": "Alignment"
+                  },
+                  "_": "Top_Left"
+                }
+              ],
+              "Background_image": {
+                "_attr": {
+                  "name": "Background image"
+                },
+                "_": "file://Catalog BG.jpg"
+              },
+              "Thumbnail": {
+                "_attr": {
+                  "name": "Thumbnail"
+                },
+                "_": "file://man.png"
+              },
+              "_attr": {
+                "Type": "CATEGORY",
+                "uuid": "8a8286ac62a9c29e0162b4ae5b0b1c97",
+                "name": "Herren"
+              }
+            },
+            "Attributes": [
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Thumbnail"
+                },
+                "_": "file://Creme_Logo-300px.jpg_preview150png.png"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Background image"
+                },
+                "_": "file://Catalog BG.jpg_preview150png.png"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Markenbeschreibung"
+                },
+                "_": "<TEXT><P><B>CREME</B> - Fahrräder waren schon immer die große Leidenschaft der Creme-Macher und - vom Mountainbike- Bereich kommend - auch lange schon ihre Profession. Eines Tages sind sie auf einem Dachboden über einen Haufen von schönen alten Fahrradteilen gestolpert und waren enttäuscht, wie viel Liebe zum Detail und Sorgfalt bei heutigen Citybikes verloren gegangen war. Kurz entschlossen beschlossen die Danziger, dass es Zeit war, diese klassische Citybike-Kunst wieder mit Leben zu versehen, und setzten ihren Traum von der eigenen Fahrradmarke in die Realität um. Creme war geboren. Creme Fahrräder werden in Europa entworfen und handgefertigt. Jedes einzelne Modell ist eine Hommage an die Liebe zum Material, den Details und der Handwerkskunst. Das kann man nicht nur sehen, sondern buchstäblich erfahren.</P></TEXT>"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Template"
+                },
+                "_": "ProductCategory_1"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Type"
+                },
+                "_": "CATEGORY"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Alignment"
+                },
+                "_": "Top_Left"
+              }
+            ],
+            "Background_image": {
+              "_attr": {
+                "name": "Background image"
+              },
+              "_": "file://Catalog BG.jpg"
+            },
+            "Thumbnail": {
+              "_attr": {
+                "name": "Thumbnail"
+              },
+              "_": "file://Creme_Logo-300px.jpg"
+            },
+            "_attr": {
+              "Type": "CATEGORY",
+              "uuid": "8a8286ac62a9c29e0162b4ac867b0f70",
+              "name": "Creme"
+            }
+          },
+          {
+            "Category_Product": [
+              {
+                "Category_Product": {
+                  "Category_Product": [
+                    {
+                      "Category_Product": [
+                        {
+                          "Attributes": [
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Zieltext"
+                              },
+                              "_": "<TEXT><P>Das neue <B>Cube</B> <B>LTD Pro 2018</B> ist ab sofort erhältlich.</P><P>Mit einer <B>Rock Shox Recon Silver (bikeheads/Komponenten/Gabel Pool/Rock Shox Recon Silver) Gabel</B>, <B>Shimano BR-M315 (bikeheads/Komponenten/Bremsen Pool/Shimano BR-M315) Bremsen</B>, sowie einem speziell entwickelten <B>Cube LTD (bikeheads/Komponenten/Rahmen Pool/Cube LTD) Rahmen</B>, ist es optimiert für die folgenden Einsatzgebiete:</P><P/><P><B>Land, Rennstrecke, Sand</B></P></TEXT>"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://LTD Pro blackline_bg.jpg_preview150png.png"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Background image"
+                              },
+                              "_": "file://Catalog BG2.jpg_preview150png.png"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Beschreibung"
+                              },
+                              "_": "<TEXT><P>Wer auf unserem LTD Pro Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.</P></TEXT>"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Template"
+                              },
+                              "_": "Product_1"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Order"
+                              }
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Type"
+                              },
+                              "_": "PRODUCT"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Alignment"
+                              },
+                              "_": "Top_Left"
+                            }
+                          ],
+                          "Background_image": {
+                            "_attr": {
+                              "name": "Background image"
+                            },
+                            "_": "file://Catalog BG2.jpg"
+                          },
+                          "Thumbnail": [
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://LTD Pro blackline_bg.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://812000-H-004.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://812000-H-002.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://csm_812000-large-01-16_b994e37a6d.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://csm_812000-large-01-06_af6a8319bb.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://812000-H-001.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://csm_812000-large-01-04_07bf08ba7a.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://812000-H-003.jpg"
+                            }
+                          ],
+                          "_attr": {
+                            "Richtext_description": "<TEXT><P>Wer auf unserem LTD Pro Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.</P></TEXT>",
+                            "Type": "PRODUCT",
+                            "uuid": "8a8286ac62a9c29e0162b4b11c6544ba",
+                            "name": "LTD Pro"
+                          }
+                        },
+                        {
+                          "Attributes": [
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Zieltext"
+                              },
+                              "_": "<TEXT><P>Das neue <B>Cube</B> <B>LTD Race 2018</B> ist ab sofort erhältlich.</P><P>Mit einer <B>Rock Shox Recon Silver (bikeheads/Komponenten/Gabel Pool/Rock Shox Recon Silver) Gabel</B>, <B>Shimano XT BR-M8000 (bikeheads/Komponenten/Bremsen Pool/Shimano XT BR-M8000) Bremsen</B>, sowie einem speziell entwickelten <B>Cube LTD (bikeheads/Komponenten/Rahmen Pool/Cube LTD) Rahmen</B>, ist es optimiert für die folgenden Einsatzgebiete:</P><P/><P><B>Offroad, Rennstrecke</B></P></TEXT>"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Original LTD Race_weiß.jpg_preview150png.png"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Background image"
+                              },
+                              "_": "file://Catalog BG2.jpg_preview150png.png"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Beschreibung"
+                              },
+                              "_": "<TEXT><P><SPAN STYLE=\"default\">Wer auf unserem LTD Race Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.</SPAN></P></TEXT>"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Template"
+                              },
+                              "_": "Product_1"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Order"
+                              }
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Type"
+                              },
+                              "_": "PRODUCT"
+                            },
+                            {
+                              "_attr": {
+                                "featurename": "",
+                                "name": "Alignment"
+                              },
+                              "_": "Top_Left"
+                            }
+                          ],
+                          "Background_image": {
+                            "_attr": {
+                              "name": "Background image"
+                            },
+                            "_": "file://Catalog BG2.jpg"
+                          },
+                          "Thumbnail": [
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Original LTD Race_weiß.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Unknown-1.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Original_LTD_Race_klein.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Unknown.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Unknown-3.jpg"
+                            },
+                            {
+                              "_attr": {
+                                "name": "Thumbnail"
+                              },
+                              "_": "file://Carver_CCB_03_clearcoat_orange_05_Carbon_Rocker_X0021198_S.jpg"
+                            }
+                          ],
+                          "_attr": {
+                            "Richtext_description": "<TEXT><P><SPAN STYLE=\"default\">Wer auf unserem LTD Race Platz nimmt, schnürt besser die Schuhe fester. Nicht nur, dass dieses Bike einen der besten Alu-Rahmen hat, den unsere Ingenieure je entworfen haben. Dank Size Split hat man die Wahl des bevorzugten Laufradformats. Auch bei den voll renntauglichen Komponenten mit 2x11 Shimano SLX/XT Antrieb, der Luftfedergabel oder den hydraulischen Scheibenbremsen setzt das LTD Race klare Ziele. Ein Aluminium-Hardtail, das sich nicht nur auf dem Trail wohlfühlt, sondern auch auf der Rennstrecke mit den Hufen scharrt.</SPAN></P></TEXT>",
+                            "Type": "PRODUCT",
+                            "uuid": "8a8286ac62a9c29e0162b4b11d1b488b",
+                            "name": "LTD Race"
+                          }
+                        }
+                      ],
+                      "Attributes": [
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Description"
+                          }
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://Cube_C17_02_1000.jpg_preview150png.png"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Background image"
+                          },
+                          "_": "file://Catalog BG2.jpg_preview150png.png"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": ""
+                          }
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Template"
+                          },
+                          "_": "ProductCategory_1"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Type"
+                          },
+                          "_": "CATEGORY"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Alignment"
+                          },
+                          "_": "Top_Left"
+                        }
+                      ],
+                      "Background_image": {
+                        "_attr": {
+                          "name": "Background image"
+                        },
+                        "_": "file://Catalog BG2.jpg"
+                      },
+                      "Thumbnail": {
+                        "_attr": {
+                          "name": "Thumbnail"
+                        },
+                        "_": "file://Cube_C17_02_1000.jpg"
+                      },
+                      "_attr": {
+                        "Type": "CATEGORY",
+                        "uuid": "8a8286ac62a9c29e0162b4afa5753428",
+                        "name": "LTD"
+                      }
+                    },
+                    {
+                      "Category_Product": {
+                        "Attributes": [
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Zieltext"
+                            },
+                            "_": "<TEXT><P>Das neue Cube Nutrail Race 3 2017 ist ab sofort erhältlich.</P></TEXT>"
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://Nutrail Race-bg.jpg_preview150png.png"
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Background image"
+                            },
+                            "_": "file://Catalog BG2.jpg_preview150png.png"
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Beschreibung"
+                            },
+                            "_": "<TEXT><P>Fatbike und Race sind bei unserem Nutrail Race nur auf den ersten Blick ein Widerspruch. Denn mit seinem sehr hochwertigen und leichten HPA Rahmen darf sehr wohl gerast werden, ob in typischem Fatbike-Terrain oder auf dem Trail. Auch bei der Edelausstattung mit der sensiblen Rock Shox Federgabel und der neuen 2x11 XT Schaltung haben wir das Gewicht nicht außer Acht gelassen. Trotz aller sportlichen Ambitionen bleibt natürlich auch die Abenteuerlust nicht auf der Strecke.</P></TEXT>"
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Template"
+                            },
+                            "_": "Product_1"
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Order"
+                            }
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Type"
+                            },
+                            "_": "PRODUCT"
+                          },
+                          {
+                            "_attr": {
+                              "featurename": "",
+                              "name": "Alignment"
+                            },
+                            "_": "Top_Left"
+                          }
+                        ],
+                        "Background_image": {
+                          "_attr": {
+                            "name": "Background image"
+                          },
+                          "_": "file://Catalog BG2.jpg"
+                        },
+                        "Thumbnail": [
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://Nutrail Race-bg.jpg"
+                          },
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://818300-H-001-bg.jpg"
+                          },
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://818300-H-002-bg.jpg"
+                          },
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://818300-H-004-bg.jpg"
+                          },
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://818300-H-008-bg.jpg"
+                          },
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://csm_818300-large-01-04_6feb6dc9a8-bg.jpg"
+                          },
+                          {
+                            "_attr": {
+                              "name": "Thumbnail"
+                            },
+                            "_": "file://csm_818300-large-01-14_b9612b9af5-bg.jpg"
+                          }
+                        ],
+                        "_attr": {
+                          "Richtext_description": "<TEXT><P>Fatbike und Race sind bei unserem Nutrail Race nur auf den ersten Blick ein Widerspruch. Denn mit seinem sehr hochwertigen und leichten HPA Rahmen darf sehr wohl gerast werden, ob in typischem Fatbike-Terrain oder auf dem Trail. Auch bei der Edelausstattung mit der sensiblen Rock Shox Federgabel und der neuen 2x11 XT Schaltung haben wir das Gewicht nicht außer Acht gelassen. Trotz aller sportlichen Ambitionen bleibt natürlich auch die Abenteuerlust nicht auf der Strecke.</P></TEXT>",
+                          "Type": "PRODUCT",
+                          "uuid": "8a8286ac62a9c29e0162b4b12b1a4dd8",
+                          "name": "Nutrail Race 3"
+                        }
+                      },
+                      "Attributes": [
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Description"
+                          }
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://Cube_C17_02_1030.jpg_preview150png.png"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Background image"
+                          },
+                          "_": "file://Catalog BG2.jpg_preview150png.png"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": ""
+                          }
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Template"
+                          },
+                          "_": "ProductCategory_1"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Type"
+                          },
+                          "_": "CATEGORY"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Alignment"
+                          },
+                          "_": "Top_Left"
+                        }
+                      ],
+                      "Background_image": {
+                        "_attr": {
+                          "name": "Background image"
+                        },
+                        "_": "file://Catalog BG2.jpg"
+                      },
+                      "Thumbnail": {
+                        "_attr": {
+                          "name": "Thumbnail"
+                        },
+                        "_": "file://Cube_C17_02_1030.jpg"
+                      },
+                      "_attr": {
+                        "Type": "CATEGORY",
+                        "uuid": "8a8286ac62a9c29e0162b4afa6043788",
+                        "name": "Nutrail"
+                      }
+                    }
+                  ],
+                  "Attributes": [
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Description"
+                      }
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://Cube_C17_02_0174.jpg_preview150png.png"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Background image"
+                      },
+                      "_": "file://Catalog BG2.jpg_preview150png.png"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": ""
+                      }
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Template"
+                      },
+                      "_": "ProductCategory_1"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Type"
+                      },
+                      "_": "CATEGORY"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Alignment"
+                      },
+                      "_": "Top_Left"
+                    }
+                  ],
+                  "Background_image": {
+                    "_attr": {
+                      "name": "Background image"
+                    },
+                    "_": "file://Catalog BG2.jpg"
+                  },
+                  "Thumbnail": {
+                    "_attr": {
+                      "name": "Thumbnail"
+                    },
+                    "_": "file://Cube_C17_02_0174.jpg"
+                  },
+                  "_attr": {
+                    "Type": "CATEGORY",
+                    "uuid": "8a8286ac62a9c29e0162b4af33802d98",
+                    "name": "Hardtail"
+                  }
+                },
+                "Attributes": [
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Description"
+                    }
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Thumbnail"
+                    }
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Background image"
+                    },
+                    "_": "file://Catalog BG2.jpg_preview150png.png"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Beschreibung"
+                    },
+                    "_": "<TEXT><P>Als <B>Marcus Pürner</B> im Jahr 1993 die Firma Cube gründete, sprach zunächst wenig für eine erfolgreiche Zukunft des Unternehmens. In der kleinen, kaum 4.000 Einwohner zählenden Gemeinde Waldershof (Bayern) stand dem Studenten eine Produktionsfläche von nicht einmal 50 m² zur Verfügung – eingebettet in die Möbelfabrik seines Vaters. Doch die Geschichte von Cube wurde zu einer wahren Erfolgsstory und mittlerweile verkauft das Unternehmen Bikes in mehr als 50 Ländern, Tendenz steigend. Auch die Fläche für Entwicklung, Produktion und Vertrieb ist mit nunmehr 20.000 m² gewaltig gestiegen. Dabei zählen vor allem die Mountainbikes von Cube zu den Aushängeschildern des Unternehmens. Im hauseigenen Testlabor arbeiten die Mitarbeiter unaufhörlich daran, sowohl Fully MTBs als auch Hardtails weiterzuentwickeln und zu verbessern. Und der Erfolg gibt Marcus Pürner und seinem Team recht: Die Cube Mountainbikes bestechen nicht nur durch ihre einmaligen technischen Innovationen, sondern auch durch ihre elegant-moderne Optik.</P><P/><P>Cube bietet hochqualitative Mountainbikes mit sehr guter Ausstattung zu fairen Preisen, welche immer mit einer individuellen und farbenfrohen Gestaltung aufwarten. Aus diesem Grund ist der Waldershofer Hersteller die beliebteste Mountainbike Marke in Deutschland und das bei Alt und Jung gleichermaßen.</P><P/><P>Technisch gehören die Bikes von Cube immer zur Spitze. Aktuelle Standards wie Boost 148 und PressFit Innenlager findet man ebenso, wie hochwertige Materialien z.B das besonders strapazierfähige C:68 Carbon mit einem erhöhten Faseranteil.</P></TEXT>"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Template"
+                    },
+                    "_": "ProductCategory_1"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Type"
+                    },
+                    "_": "CATEGORY"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Alignment"
+                    },
+                    "_": "Top_Left"
+                  }
+                ],
+                "Background_image": {
+                  "_attr": {
+                    "name": "Background image"
+                  },
+                  "_": "file://Catalog BG2.jpg"
+                },
+                "_attr": {
+                  "Type": "CATEGORY",
+                  "uuid": "8a8286ac62a9c29e0162b4aefaec2734",
+                  "name": "Mountainbike"
+                }
+              },
+              {
+                "Category_Product": {
+                  "Category_Product": {
+                    "Category_Product": {
+                      "Attributes": [
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Zieltext"
+                          },
+                          "_": "<TEXT><P>Das neue Cube EXC Easy Entry 2017 ist ab sofort erhältlich.</P></TEXT>"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://840201E_light_zoom_bg.jpg_preview150png.png"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Background image"
+                          },
+                          "_": "file://Catalog BG2.jpg_preview150png.png"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Beschreibung"
+                          },
+                          "_": "<TEXT><P>Das Touring EXC ist ein Alleskönner. Optimal für lange Touren, für den Alltag, für die Fitness - oder auch für alles zusammen. Die hydraulischen Scheibenbremsen und die 27 Gänge sind perfekt geeignet, um den Alltag zu meistern oder ihm einfach mal zu entfliehen. Und dank der Federgabel können Rad und Fahrer auch ab und an mal einen Abstecher ins Gelände wagen.</P></TEXT>"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Template"
+                          },
+                          "_": "Product_1"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Order"
+                          }
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Type"
+                          },
+                          "_": "PRODUCT"
+                        },
+                        {
+                          "_attr": {
+                            "featurename": "",
+                            "name": "Alignment"
+                          },
+                          "_": "Top_Left"
+                        }
+                      ],
+                      "Background_image": {
+                        "_attr": {
+                          "name": "Background image"
+                        },
+                        "_": "file://Catalog BG2.jpg"
+                      },
+                      "Thumbnail": [
+                        {
+                          "_attr": {
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://840201E_light_zoom_bg.jpg"
+                        },
+                        {
+                          "_attr": {
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://840201E-H-037.jpg"
+                        },
+                        {
+                          "_attr": {
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://840201-H-016.jpg"
+                        },
+                        {
+                          "_attr": {
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://840201-H-023.jpg"
+                        },
+                        {
+                          "_attr": {
+                            "name": "Thumbnail"
+                          },
+                          "_": "file://840201-H-009.jpg"
+                        }
+                      ],
+                      "_attr": {
+                        "Richtext_description": "<TEXT><P>Das Touring EXC ist ein Alleskönner. Optimal für lange Touren, für den Alltag, für die Fitness - oder auch für alles zusammen. Die hydraulischen Scheibenbremsen und die 27 Gänge sind perfekt geeignet, um den Alltag zu meistern oder ihm einfach mal zu entfliehen. Und dank der Federgabel können Rad und Fahrer auch ab und an mal einen Abstecher ins Gelände wagen.</P></TEXT>",
+                        "Type": "PRODUCT",
+                        "uuid": "8a8286ac62a9c29e0162b4b138af5433",
+                        "name": "EXC Easy Entry"
+                      }
+                    },
+                    "Attributes": [
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": "Description"
+                        }
+                      },
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": "Thumbnail"
+                        },
+                        "_": "file://Cube_C17_02_1377.jpg_preview150png.png"
+                      },
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": "Background image"
+                        },
+                        "_": "file://Catalog BG2.jpg_preview150png.png"
+                      },
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": ""
+                        }
+                      },
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": "Template"
+                        },
+                        "_": "ProductCategory_1"
+                      },
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": "Type"
+                        },
+                        "_": "CATEGORY"
+                      },
+                      {
+                        "_attr": {
+                          "featurename": "",
+                          "name": "Alignment"
+                        },
+                        "_": "Top_Left"
+                      }
+                    ],
+                    "Background_image": {
+                      "_attr": {
+                        "name": "Background image"
+                      },
+                      "_": "file://Catalog BG2.jpg"
+                    },
+                    "Thumbnail": {
+                      "_attr": {
+                        "name": "Thumbnail"
+                      },
+                      "_": "file://Cube_C17_02_1377.jpg"
+                    },
+                    "_attr": {
+                      "Type": "CATEGORY",
+                      "uuid": "8a8286ac62a9c29e0162b4b0f7b04106",
+                      "name": "Easy Entry"
+                    }
+                  },
+                  "Attributes": [
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Description"
+                      }
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Thumbnail"
+                      }
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Background image"
+                      },
+                      "_": "file://Catalog BG2.jpg_preview150png.png"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": ""
+                      }
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Template"
+                      },
+                      "_": "ProductCategory_1"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Type"
+                      },
+                      "_": "CATEGORY"
+                    },
+                    {
+                      "_attr": {
+                        "featurename": "",
+                        "name": "Alignment"
+                      },
+                      "_": "Top_Left"
+                    }
+                  ],
+                  "Background_image": {
+                    "_attr": {
+                      "name": "Background image"
+                    },
+                    "_": "file://Catalog BG2.jpg"
+                  },
+                  "_attr": {
+                    "Type": "CATEGORY",
+                    "uuid": "8a8286ac62a9c29e0162b4af44063186",
+                    "name": "City Wave"
+                  }
+                },
+                "Attributes": [
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Description"
+                    }
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Thumbnail"
+                    }
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Background image"
+                    },
+                    "_": "file://Catalog BG2.jpg_preview150png.png"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Beschreibung"
+                    },
+                    "_": "<TEXT><P>Das Unternehmen Cube, mit Firmensitz im nordbayrischen Waldershof, steht seit 1993 für Qualität und Innovation. Hier findet Entwicklung, Produktion und Vertrieb der Cube-Bikes statt. Eigene Testverfahren sowie Kooperationen mit der TU München und dem Prüfinstitut Velotech.de GmbH gehen weit über die vorgegebenen Qualitätsstandards hinaus. Ein Cube-Bike ist ein widerstandsfähiges Produkt für jedes Kundenbedürfnis. Wer das Fahrrad auch am Wochenende für Ausflüge nutzen möchte, ist mit einem Cube Trekkingrad gut beraten. Dieses ist eine Zwischenstufe aus Mountainbike und Cityrad. Es ist der perfekte Begleiter für Fahrten durch Wiesen und Felder. Hier bietet Cube eine große Auswahl an Modellen, so dass jeder Kunde für seine Bedürfnisse das richtige Rad findet.</P><P/><P>Vom Cube Hochleistungs-Trekkingrad Tonopah SL für den sportlichen Radfahrer auf anspruchsvollen Touren bis hin zum City und Trekkingbike von Cube Town Pro mit solider Technik für den Alltagsfahrer in der Stadt. Leichte Aluminiumrahmen, Shimano XT-Ausstattungen, hydraulische Scheibenbremsen und hochwertige Laufradsätze machen Cube Räder zu einem perfekten Begleiter für sportliche Ausfahrten und Alltägliche Touren. Extras wie ein Gepäckträger und sowohl Herren- als auch Damenmodelle stehen ebenfalls bei den Fahrradmodellen zur Wahl. Bei aller Hightech-Ausstattung bleibt weder Komfort noch Sicherheit auf der Strecke.</P></TEXT>"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Template"
+                    },
+                    "_": "ProductCategory_1"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Type"
+                    },
+                    "_": "CATEGORY"
+                  },
+                  {
+                    "_attr": {
+                      "featurename": "",
+                      "name": "Alignment"
+                    },
+                    "_": "Top_Left"
+                  }
+                ],
+                "Background_image": {
+                  "_attr": {
+                    "name": "Background image"
+                  },
+                  "_": "file://Catalog BG2.jpg"
+                },
+                "_attr": {
+                  "Type": "CATEGORY",
+                  "uuid": "8a8286ac62a9c29e0162b4af0a1b2a15",
+                  "name": "Trekkingbike"
+                }
+              }
+            ],
+            "Attributes": [
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Thumbnail"
+                },
+                "_": "file://Cube_Bikes_Logo-300px.jpg_preview150png.png"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Background image"
+                },
+                "_": "file://Catalog BG2.jpg_preview150png.png"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Markenbeschreibung"
+                },
+                "_": "<TEXT><P>CUBE - Hervorragende Bikes zu einem außergewöhnlich guten Preis erhält man bei der bayrischen Top-Marke CUBE. Ausgezeichnete Komponenten an einem rundum abgestimmten Fahrrad machen die CUBE Bikes so unglaublich beliebt bei vielen Mountainbike Liebhabern. Aber auch bei den Trekking-Rädern wird jedes Teil zu einer Gesamtheit die man als eine Fahrradsymphonie bezeichnen könnte. Widerstandsfähigkeit, Qualität, lange Garantien und Sicherheit bietet das Unternehmen in allen Produkt-Kategorien. Seit der Gründung 1993 bis heute überzeugt das Unternehmen mit einer vielfältigen und hochwertigen Produktpalette rund um das Thema Fahrrad.</P></TEXT>"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Template"
+                },
+                "_": "ProductCategory_1"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Type"
+                },
+                "_": "CATEGORY"
+              },
+              {
+                "_attr": {
+                  "featurename": "",
+                  "name": "Alignment"
+                },
+                "_": "Top_Left"
+              }
+            ],
+            "Background_image": {
+              "_attr": {
+                "name": "Background image"
+              },
+              "_": "file://Catalog BG2.jpg"
+            },
+            "Thumbnail": {
+              "_attr": {
+                "name": "Thumbnail"
+              },
+              "_": "file://Cube_Bikes_Logo-300px.jpg"
+            },
+            "_attr": {
+              "Type": "CATEGORY",
+              "uuid": "8a8286ac62a9c29e0162b4ac76090d23",
+              "name": "Cube"
+            }
+          }
+        ],
+        "Attributes": [
+          {
+            "_attr": {
+              "featurename": "",
+              "name": "Description"
+            },
+            "_": "<TEXT><P>Bikes 2018</P></TEXT>"
+          },
+          {
+            "_attr": {
+              "featurename": "",
+              "name": "Group"
+            },
+            "_": "home_1"
+          },
+          {
+            "_attr": {
+              "featurename": "",
+              "name": "Template"
+            },
+            "_": "ContentCollection_1"
+          },
+          {
+            "_attr": {
+              "featurename": "",
+              "name": "Order"
+            }
+          },
+          {
+            "_attr": {
+              "featurename": "",
+              "name": "Language"
+            },
+            "_": "de-de"
+          },
+          {
+            "_attr": {
+              "featurename": "",
+              "name": "Richtext description"
+            }
+          }
+        ],
+        "Background_image": {
+          "_attr": {
+            "name": "Background image"
+          },
+          "_": "file://Homescreen BG.jpg"
+        },
+        "Thumbnail": [
+          {
+            "_attr": {
+              "name": "Thumbnail"
+            },
+            "_": "file://bikeheads-Figur-Solo-black.png"
+          },
+          {
+            "_attr": {
+              "name": "Thumbnail"
+            },
+            "_": "file://bikeheads-Figur-Solo-Teal.png"
+          }
+        ],
+        "_attr": {
+          "uuid": "8a8286ac62a9c29e0162b5037b9a3f42",
+          "name": "Bikes"
+        }
+      },
+      "Homescreen_Background_image": {
+        "_attr": {
+          "name": "Homescreen Background image"
+        },
+        "_": "file://Homescreen BG.jpg"
+      },
+      "Company_logo_image": [
+        {
+          "_attr": {
+            "name": "Company logo image"
+          },
+          "_": "file://bikeheads-Figur-Solo-black.png"
+        },
+        {
+          "_attr": {
+            "name": "Company logo image"
+          },
+          "_": "file://bikeheads-Figur-Solo-Teal.png"
+        }
+      ],
+      "_attr": {
+        "Company_name": "<TEXT><P>bikeheads GmbH</P></TEXT>",
+        "uuid": "8a8286ac62a9c29e0162b4f67e480e6c",
+        "name": "bikeheads"
+      }
+    }
+  }
+}

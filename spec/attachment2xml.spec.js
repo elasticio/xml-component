@@ -2,7 +2,7 @@
 'use strict';
 
 const attachmentToJson = require('../lib/actions/attachmentToJson');
-const json = require('./data/po.json');
+const json = require('./data/po2.json');
 const { expect } = require('chai');
 const nock = require('nock');
 
@@ -35,7 +35,7 @@ describe('should convert XML attachment 2 JSON', () => {
     before(function testInit() {
         nock(mockSever)
           .get('/')
-          .replyWithFile(200, 'spec/data/po.xml');
+          .replyWithFile(200, 'spec/data/po2.xml');
     });
 
     beforeEach(function testInit() {
