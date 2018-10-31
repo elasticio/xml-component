@@ -37,6 +37,7 @@ $ git push elasticio master
 No environment variables need to be set.
 
 ## Actions
+
 ### XML to JSON
 Takes well formatted XML string and converts it to generic Json object.
 #### Input field
@@ -54,7 +55,7 @@ Takes the body of message passed into the component and converts to generic XML 
 [output schema](ib/schemas/jsonToXml.out.json)
 
 ### XML Attachment to Json
-Looks at the json array of attachments passed in to component and converts first XML to generic Json object 
+Looks at the json array of attachments passed in to component and converts all XML found to generic Json object 
 
 #### Schemas
 [input schema](lib/schemas/attachmentToJson.in.json) \
