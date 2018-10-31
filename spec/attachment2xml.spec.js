@@ -9,20 +9,19 @@ const nock = require('nock');
 require('chai').should(); // expect is assertion styles used my elastic.io
 const sinon = require('sinon');
 
-async function produceString(output) {
+function produceString(output) {
   //used to produce test output files
 
     let string = '';
-    let outputResuslts;
+    //let outputResuslts;
 
     for (let i = 0; i < output.length; ++i) {
-        outputResuslts = await output[i].args[1];
-        console.log(outputResuslts.body);
+        console.log(output[i].args[1].body);
 
         if (i !== 0) {
             string += ',\n';
         }
-        string += JSON.stringify(outputResuslts.body);
+        string += JSON.stringify(output[i].args[1].body);
     }
 
     return string;
@@ -55,7 +54,7 @@ describe('should convert XML attachment 2 JSON', () => {
             }
         }, cfg);
 
-        const results = await produceString(emit.getCalls());
+        const results = produceString(emit.getCalls());
         console.log('XML attachment 2 JSON results: %j ', results);
         expect(JSON.parse(results)).to.be.deep.equal(json);
     });
