@@ -13,7 +13,7 @@ function produceString(output) {
   //used to produce test output files
 
     let string = '';
-    //let outputResuslts;
+  //let outputResuslts;
 
     for (let i = 0; i < output.length; ++i) {
         console.log(output[i].args[1].body);
@@ -29,20 +29,131 @@ function produceString(output) {
 
 describe('should convert XML attachment 2 JSON', () => {
     const mockSever = 'http://test.env.mock';
-    const cfg = {
+    let cfg = {
         pattern: '(.xml)'
     };
     let emit;
 
     before(function testInit() {
         nock(mockSever)
-          .get('/')
-          .replyWithFile(200, 'spec/data/po.xml');
+      .get('/')
+      .replyWithFile(200, 'spec/data/po.xml');
     });
 
     beforeEach(function testInit() {
         emit = sinon.spy();
+        cfg = {
+            pattern: '(.xml)'
+        };
     });
+
+
+    it('FileName undefined ', async () => {
+        let error;
+        try {
+            await attachmentToJson.process.bind({
+                emit
+            })({
+                attachments: {
+                    'undefined': {
+                        url: mockSever
+                    }
+                }
+            }, cfg);
+        } catch (e) {
+            error = e;
+        }
+        expect(error.message).to.be.include('No XML files that match');
+
+    });
+
+
+    it('FileName dose not match pattern ', async () => {
+        cfg = {
+            pattern: '(test.xml)'
+        };
+        let error;
+        try {
+            await attachmentToJson.process.bind({
+                emit
+            })({
+                attachments: {
+                    'po.xml': {
+                        url: mockSever
+                    }
+                }
+            }, cfg);
+        } catch (e) {
+            error = e;
+        }
+        expect(error.message).to.be.include('No XML files that match');
+
+    });
+
+
+    it('FileName is not a xml ', async () => {
+        cfg = {
+            pattern: ''
+        };
+        let error;
+        try {
+            await attachmentToJson.process.bind({
+                emit
+            })({
+                attachments: {
+                    'po.txt': {
+                        url: mockSever
+                    }
+                }
+            }, cfg);
+        } catch (e) {
+            error = e;
+        }
+        expect(error.message).to.be.include('No XML files that match');
+
+    });
+
+    it('XML to large', async () => {
+        let error;
+        try {
+            await attachmentToJson.process.bind({
+                emit
+            })({
+                attachments: {
+                    'po.xml': {
+                        url: mockSever,
+                        'size': '5242881'
+                    }
+                }
+            }, cfg);
+        } catch (e) {
+            error = e;
+        }
+        expect(error.message).to.be.include('Attachment is to large');
+
+    });
+
+    it('Response Error', async () => {
+        let error;
+        let failURL = 'http://steward.marathon.mesos:8091/files/1cfc3a71-d7a7-44e6-a15e-ae18860d537c';
+
+        try {
+            await attachmentToJson.process.bind({
+                emit
+            })({
+                attachments: {
+                    'po.xml': {
+                        url: failURL
+                    }
+                }
+            }, cfg);
+        } catch (e) {
+            error = e;
+        }
+        expect(error.message).to.exist;
+
+    });
+
 
     it('Convert attachment to json', async () => {
 
