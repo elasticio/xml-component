@@ -1,8 +1,6 @@
 
 # xml-component
 [![NPM version][npm-image]][npm-url]
-[![Circle CI Build Status][circle-image]][circle-url]
-[![DependencyStatus][daviddm-image]][daviddm-url]
 
 ## Description
 This is an open source component for Converting XML to and from Json on elastic.io platform.
@@ -44,15 +42,15 @@ Takes well formatted XML string and converts it to generic Json object.
 xml string: XML string to be converted. 
 
 #### Schemas 
-[input schema](ib/schemas/xmlToJson.in.json) \
-[output schema](ib/schemas/xmlToJson.out.json)
+[input schema](lib/schemas/xmlToJson.in.json) \
+[output schema](lib/schemas/xmlToJson.out.json)
 
 
 ### JSON to XML 
 Takes the body of message passed into the component and converts to generic XML string 
 
 #### Schemas 
-[output schema](ib/schemas/jsonToXml.out.json)
+[output schema](lib/  schemas/jsonToXml.out.json)
 
 ### XML Attachment to Json
 Looks at the json array of attachments passed in to component and converts all XML found to generic Json object 
