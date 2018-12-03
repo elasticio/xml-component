@@ -18,10 +18,15 @@
     "attachmentToJson": {
       "title": "XML Attachment to Json",
       "main": "./lib/actions/attachmentToJson.js",
-      "metadata": {
-        "in": "./lib/schemas/attachmentToJson.in.json",
-        "out": "./lib/schemas/xmlToJson.out.json"
-      }
+      "fields": {
+        "pattern": {
+          "label": "Pattern to Match Files",
+          "required": false,
+          "viewClass": "TextFieldView",
+          "placeholder": "Pattern"
+        }
+      },
+      "metadata": {}
     }
   }
 }
