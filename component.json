@@ -31,7 +31,7 @@
       },
       "metadata": {
         "in": {},
-        "out": {}
+        "out": "./lib/schemas/attachmentToJson.out.json"
       }
     }
   }
