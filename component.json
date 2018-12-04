@@ -13,10 +13,13 @@
     "jsonToXml": {
       "title": "JSON to XML",
       "main": "./lib/actions/jsonToXml.js",
-      "metadata": {}
+      "metadata": {
+        "in": {},
+        "out": "./lib/schemas/jsonToXml.out.json"
+      }
     },
     "attachmentToJson": {
-      "title": "XML Attachment to Json",
+      "title": "XML Attachment to JSON",
       "main": "./lib/actions/attachmentToJson.js",
       "fields": {
         "pattern": {
@@ -26,7 +29,10 @@
           "placeholder": "Pattern"
         }
       },
-      "metadata": {}
+      "metadata": {
+        "in": {},
+        "out": {}
+      }
     }
   }
 }
