@@ -55,9 +55,14 @@ Takes the body of message passed into the component and converts to generic XML 
 ### XML Attachment to Json
 Looks at the json array of attachments passed in to component and converts all XML found to generic Json object 
 
+#### Input field
+**Pattern to Match Files** - enter pattern for filtering files by name or leave this field empty for processing all incoming *.xml files.
+
 #### Schemas
-[input schema](lib/schemas/attachmentToJson.in.json) \
 [output schema](ib/schemas/xmlToJson.out.json)
+
+#### Known limitations
+Action does not support local agents due to current platform limitations.
   
 ## <System> API and Documentation links (endpoints)
 [Elastic.io attachment documentations](https://support.elastic.io/support/solutions/articles/14000057806-working-with-binary-data-attachments-) \
