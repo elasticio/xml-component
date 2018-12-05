@@ -39,7 +39,7 @@ Looks at the json array of attachments passed in to component and converts all X
 [output schema](lib/schemas/xmlToJson.out.json)
 
 #### Known limitations
- - The maximum size of incoming file for processing is 5 MiB. If the size of incoming file will be more than 5 MiB, action will throw error `Attachment is to large. Attachment was to large to be processed my XML component. File limit is 5 MiB, file given was 'fileSize'`. 
+ - The maximum size of incoming file for processing is 5 MiB. If the size of incoming file will be more than 5 MiB, action will throw error `Attachment *.xml is to large to be processed my XML component. File limit is: 5242880 byte, file given was: * byte.`. 
  - Action does not support local agents due to current platform limitations.
 
 ## License
