@@ -1,58 +1,48 @@
-# xml-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
-> Integration component to work with XML fiels
 
 # xml-component
-XML component for the [elastic.io platform](http://www.elastic.io &#34;elastic.io platform&#34;)
 
-If you plan to **deploy it into [elastic.io platform](http://www.elastic.io &#34;elastic.io platform&#34;) you must follow sets of instructions to succseed**. 
+## Description
+This is an open source component for Converting XML to and from JSON on elastic.io platform.
+Component to be used on the elastic.io platform, which is able to convert XML to and from JSON. 
+### Purpose
+This component has 3 actions allowing users to pass in either generic but well format XML/JSON string or XML attachment and produces a generic string of the other file type. The output then can be maped and used in other components. 
 
-## Before you Begin
+### How it works. 
+Before you can deploy any code into elastic.io you must be a registered elastic.io platform user. Please see our home page at http://www.elastic.io to learn how.
 
-Before you can deploy any code into elastic.io **you must be a registered elastic.io platform user**. Please see our home page at [http://www.elastic.io](http://www.elastic.io) to learn how. 
+### Requirements
+#### Environment variables 
+No environment variables need to be set.
 
-We&#39;ll use git and SSH public key authentication to upload your component code, therefore you must **[upload your SSH Key](http://docs.elastic.io/docs/ssh-key)**. 
+## Actions
 
-&gt; If you fail to upload you SSH Key you will get **permission denied** error during the deployment.
+### XML to JSON
+Takes XML string and converts it to generic JSON object.
 
-## Getting Started
+#### Schemas 
+[input schema](lib/schemas/xmlToJson.in.json) \
+[output schema](lib/schemas/xmlToJson.out.json)
 
-After registration and uploading of your SSH Key you can proceed to deploy it into our system. At this stage we suggest you to:
-* [Create a team](http://docs.elastic.io/docs/teams) to work on your new component. This is not required but will be automatically created using random naming by our system so we suggest you name your team accordingly.
-* [Create a repository](http://docs.elastic.io/docs/component-repositories) where your new component is going to *reside* inside the team that you have just created.
+### JSON to XML 
+Takes the body of message passed into the component and converts to generic XML string 
 
-Now as you have a team name and component repository name you can add a new git remote where code shall be pushed to. It is usually displayed on the empty repository page:
+#### Schemas 
+[output schema](lib/schemas/jsonToXml.out.json)
 
-```bash
-$ git remote add elasticio your-team@git.elastic.io:your-repository.git
-```
+### XML Attachment to Json
+Looks at the json array of attachments passed in to component and converts all XML found to generic JSON object 
 
-Obviously the naming of your team and repository is entirely upto you and if you do not put any corresponding naming our system will auto generate it for you but the naming might not entirely correspond to your project requirements.
-Now we are ready to push it:
+#### Input field
+**Pattern to Match Files** - enter pattern for filtering files by name or leave this field empty for processing all incoming *.xml files.
 
-```bash
-$ git push elasticio master
-```
-
-## How to use
-
-### Parse XML with XSD Schema
-Given action will parse XML that is created according to XML Schema, you would need to supply
-URI of XML Schema. XML Schema URI may include HTTP Basic parameters (username/password) via standard URI
- `chema like ``https://username:password@foo.bar.com/schema.xsd``.
-
-XML Payload is expected via input variable in the message (you would need to supply full XML payload). If 
-input message payload is empty then component will try to parse all attachments of incoming message.
+#### Schemas
+[output schema](lib/schemas/xmlToJson.out.json)
 
 #### Known limitations
-* Currently a single XML Schema is supported
-* Schema validation is not enabled when parsed from XML 
+ - The maximum size of incoming file for processing is 5 MiB. If the size of incoming file will be more than 5 MiB, action will throw error `Attachment *.xml is to large to be processed my XML component. File limit is: 5242880 byte, file given was: * byte.`. 
+ - Action does not support local agents due to current platform limitations.
 
 ## License
 
 Apache-2.0 © [elastic.io GmbH](https://elastic.io)
 Icon made by Freepik from www.flaticon.com 
-
-[npm-image]: https://badge.fury.io/js/xml-component.svg
-[npm-url]: https://npmjs.org/package/xml-component
-[travis-image]: https://travis-ci.org/elasticio/xml-component.svg?branch=master
-[travis-url]: https://travis-ci.org/elasticio/xml-component

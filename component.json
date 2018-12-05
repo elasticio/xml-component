@@ -5,6 +5,7 @@
     "xmlToJson": {
       "title": "XML to JSON",
       "main": "./lib/actions/xmlToJson.js",
+      "description": "Takes XML string and converts it to generic JSON object",
       "metadata": {
         "in": "./lib/schemas/xmlToJson.in.json",
         "out": "./lib/schemas/xmlToJson.out.json"
@@ -13,7 +14,29 @@
     "jsonToXml": {
       "title": "JSON to XML",
       "main": "./lib/actions/jsonToXml.js",
-      "metadata": {}
+      "description": "Takes the body of message passed into the component and converts to generic XML string",
+      "metadata": {
+        "in": {},
+        "out": "./lib/schemas/jsonToXml.out.json"
+      }
+    },
+    "attachmentToJson": {
+      "title": "XML Attachment to JSON",
+      "main": "./lib/actions/attachmentToJson.js",
+      "description": "Looks at the JSON array of attachments passed in to component and converts all XML found to generic JSON object",
+      "fields": {
+        "pattern": {
+          "label": "Pattern to Match Files",
+          "required": false,
+          "viewClass": "TextFieldView",
+          "placeholder": "Pattern"
+        }
+      },
+      "metadata": {
+        "in": {},
+        "out": "./lib/schemas/attachmentToJson.out.json"
+      }
     }
   }
 }
+
