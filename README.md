@@ -17,7 +17,7 @@ No environment variables need to be set.
 ## Actions
 
 ### XML to JSON
-Takes well formatted XML string and converts it to generic JSON object.
+Takes XML string and converts it to generic JSON object.
 
 #### Schemas 
 [input schema](lib/schemas/xmlToJson.in.json) \
