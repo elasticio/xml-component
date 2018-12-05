@@ -107,7 +107,7 @@ describe('should convert XML attachment 2 JSON', () => {
         } catch (e) {
             error = e;
         }
-        expect(error.message).to.be.include('File limit is: 5242880, file given was: 5242881.');
+        expect(error.message).to.be.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
 
     });
 
