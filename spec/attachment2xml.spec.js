@@ -55,7 +55,7 @@ describe('should convert XML attachment 2 JSON', () => {
                 emit
             })({
                 attachments: {
-                    'undefined': {
+                    undefined: {
                         url: mockSever
                     }
                 }
@@ -122,7 +122,7 @@ describe('should convert XML attachment 2 JSON', () => {
                 attachments: {
                     'po.xml': {
                         url: mockSever,
-                        'size': '5242881'
+                        size: '5242881'
                     }
                 }
             }, cfg);
@@ -150,7 +150,7 @@ describe('should convert XML attachment 2 JSON', () => {
         } catch (e) {
             error = e;
         }
-        expect(error.message).to.exist;
+        expect(error.message).to.be.exist;
 
     });
 
