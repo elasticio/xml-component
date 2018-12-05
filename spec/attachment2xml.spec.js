@@ -49,22 +49,16 @@ describe('should convert XML attachment 2 JSON', () => {
 
 
     it('FileName undefined ', async () => {
-        let error;
-        try {
-            await attachmentToJson.process.bind({
-                emit
-            })({
-                attachments: {
-                    undefined: {
-                        url: mockSever
-                    }
+        await attachmentToJson.process.bind({
+            emit
+        })({
+            attachments: {
+                undefined: {
+                    url: mockSever
                 }
-            }, cfg);
-        } catch (e) {
-            error = e;
-        }
-        expect(error.message).to.be.include('No XML files that match');
-
+            }
+        }, cfg);
+        expect(emit.getCalls()).to.deep.eql([]);
     });
 
 
@@ -72,21 +66,16 @@ describe('should convert XML attachment 2 JSON', () => {
         cfg = {
             pattern: '(test.xml)'
         };
-        let error;
-        try {
-            await attachmentToJson.process.bind({
-                emit
-            })({
-                attachments: {
-                    'po.xml': {
-                        url: mockSever
-                    }
+        await attachmentToJson.process.bind({
+            emit
+        })({
+            attachments: {
+                'po.xml': {
+                    url: mockSever
                 }
-            }, cfg);
-        } catch (e) {
-            error = e;
-        }
-        expect(error.message).to.be.include('No XML files that match');
+            }
+        }, cfg);
+        expect(emit.getCalls()).to.deep.eql([]);
 
     });
 
@@ -95,21 +84,16 @@ describe('should convert XML attachment 2 JSON', () => {
         cfg = {
             pattern: ''
         };
-        let error;
-        try {
-            await attachmentToJson.process.bind({
-                emit
-            })({
-                attachments: {
-                    'po.txt': {
-                        url: mockSever
-                    }
+        await attachmentToJson.process.bind({
+            emit
+        })({
+            attachments: {
+                'po.txt': {
+                    url: mockSever
                 }
-            }, cfg);
-        } catch (e) {
-            error = e;
-        }
-        expect(error.message).to.be.include('No XML files that match');
+            }
+        }, cfg);
+        expect(emit.getCalls()).to.deep.eql([]);
 
     });
 
