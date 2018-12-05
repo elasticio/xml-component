@@ -10,20 +10,14 @@ require('chai').should(); // expect is assertion styles used my elastic.io
 const sinon = require('sinon');
 
 function produceString(output) {
-  //used to produce test output files
-
     let string = '';
-  //let outputResuslts;
-
     for (let i = 0; i < output.length; ++i) {
         console.log(output[i].args[1].body);
-
         if (i !== 0) {
             string += ',\n';
         }
         string += JSON.stringify(output[i].args[1].body);
     }
-
     return string;
 }
 
@@ -113,7 +107,7 @@ describe('should convert XML attachment 2 JSON', () => {
         } catch (e) {
             error = e;
         }
-        expect(error.message).to.be.include('Attachment is to large');
+        expect(error.message).to.be.include('File limit is: 5242880, file given was: 5242881.');
 
     });
 
