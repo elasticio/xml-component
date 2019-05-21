@@ -18,5 +18,19 @@ describe('XML 2 JSON parser', () => {
         expect(body).to.be.deep.equal(result);
     });
 
+    it('should fail due to an invalid json', async () => {
+        const xml = require('fs').readFileSync('./spec/data/invalidXml.xml', 'utf-8');
+
+        const message = {
+            body: {
+                xmlString: xml
+            }
+        };
+        const messageText = 'Given XML is not valid or the file can not be read. '
+          + 'See xml naming rules https://www.w3schools.com/xml/xml_elements.asp';
+
+        expect(xmlToJson.process.bind(null, message, {}))
+    .to.throw(messageText);
+    });
 });
 
