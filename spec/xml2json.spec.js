@@ -29,8 +29,9 @@ describe('XML 2 JSON parser', () => {
         const messageText = 'Given XML is not valid or the file can not be read. '
           + 'See xml naming rules https://www.w3schools.com/xml/xml_elements.asp';
 
-        expect(xmlToJson.process.bind(null, message, {}))
-    .to.throw(messageText);
+        await xmlToJson.process(message, {}).catch((error) => {
+            expect(error.message).to.be.equal(messageText);
+        });
     });
 });
 
