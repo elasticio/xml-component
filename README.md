@@ -11,6 +11,8 @@ This component has 3 actions allowing users to pass in either generic but well f
 Before you can deploy any code into elastic.io you must be a registered elastic.io platform user. Please see our home page at http://www.elastic.io to learn how.
 
 ### Requirements
+Provided XML document (for `XML to JSON`) should be [well-formed](https://en.wikipedia.org/wiki/Well-formed_document) in order to be parsed correctly.
+You will get an error otherwise. 
 #### Environment variables 
 No environment variables need to be set.
 
