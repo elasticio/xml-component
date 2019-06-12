@@ -1,24 +1,26 @@
-# xml-component
+# XML Component
 
 ## Description
-Component to convert file types. 
+Component to convert between XML and JSON data. 
 
 ### Purpose
-Allows users to convert attachments to JSON or XML to and from JSON
+Allows users to convert XML attachments and strings to and from JSON
 This component has 3 actions allowing users to pass in either generic but well format XML/JSON string or XML attachment 
 and produces a generic string of the other file type. The output then can be maped and used in other components.
+
+### Requirements
+Provided XML document (for `XML to JSON`) should be [well-formed](https://en.wikipedia.org/wiki/Well-formed_document) 
+in order to be parsed correctly. You will get an error otherwise.
 
 ## Actions
 
 ### XML to JSON
-Takes XML string and converts it to generic JSON object. The provided XML should be 
-[well-formed](https://en.wikipedia.org/wiki/Well-formed_document) in order to be parsed correctly. 
-You will get an error otherwise. 
+Takes XML string and converts it to generic JSON object.
 
 ### XML Attachment to JSON
-Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects
-As input, the user can enter a patter pattern for filtering files by name or leave this field empty for processing all 
-incoming *.xml files.  
+Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects 
+and produces one outbound message per matching attachment. As input, the user can enter a patter pattern for filtering 
+files by name or leave this field empty for processing all incoming *.xml files.  
 
 ### JSON to XML 
 Treats incoming message body as JSON and converts it to a generic XML string.
