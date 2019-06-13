@@ -12,6 +12,9 @@ and produces a generic string of the other file type. The output then can be map
 Provided XML document (for `XML to JSON`) should be [well-formed](https://en.wikipedia.org/wiki/Well-formed_document) 
 in order to be parsed correctly. You will get an error otherwise.
 
+#### Environment variables 
+No environment variables need to be set.
+
 ## Actions
 
 ### XML to JSON
