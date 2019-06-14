@@ -1,7 +1,7 @@
 # XML Component
 
 ## Description
-Component to convert between XML and JSON data. 
+elastic.io iPaaS component to convert between XML and JSON data. 
 
 ### Purpose
 Allows users to convert XML attachments and strings to and from JSON
@@ -34,7 +34,7 @@ Treats incoming message body as JSON and converts it to a generic XML string.
  file given was: * byte.`. 
  - `XML Attachemnt to JSON` action does not support local agents due to current platform limitations.
  
- ##Additional Info
+## Additional Info
 Icon made by Freepik from www.flaticon.com 
 
 ## License
