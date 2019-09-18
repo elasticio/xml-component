@@ -1,10 +1,12 @@
 /* eslint-env node, jasmine */
 const { expect } = require('chai');
+const fs = require('fs');
 const xmlToJson = require('../lib/actions/xmlToJson');
 
 describe('XML 2 JSON parser', () => {
     it('should convert XML to json', async () => {
-        const xml = require('fs').readFileSync('./spec/data/po.xml', 'utf-8');
+        const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8');
+        // eslint-disable-next-line global-require
         const result = require('./data/po.json');
 
         const message = {
@@ -17,7 +19,7 @@ describe('XML 2 JSON parser', () => {
     });
 
     it('should fail due to an invalid json', async () => {
-        const xml = require('fs').readFileSync('./spec/data/invalidXml.xml', 'utf-8');
+        const xml = fs.readFileSync('./spec/data/invalidXml.xml', 'utf-8');
 
         const message = {
             body: {

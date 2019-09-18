@@ -9,7 +9,7 @@ const attachmentToJson = require('../lib/actions/attachmentToJson');
 
 function produceString(output) {
     let string = '';
-    for (let i = 0; i < output.length; ++i) {
+    for (let i = 0; i < output.length; i += 1) {
         console.log(output[i].args[1].body);
         if (i !== 0) {
             string += ',\n';
@@ -123,6 +123,7 @@ describe('should convert XML attachment 2 JSON', () => {
         } catch (e) {
             error = e;
         }
+        // eslint-disable-next-line no-unused-expressions
         expect(error.message).to.be.exist;
     });
 

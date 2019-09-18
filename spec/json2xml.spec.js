@@ -1,12 +1,13 @@
 /* eslint-env node, jasmine */
 const { expect } = require('chai');
+const fs = require('fs');
 const jsonToXml = require('../lib/actions/jsonToXml');
 
 describe('JSON 2 XML converter', () => {
     it('should convert JSON to XML 1', () => {
-        const xml = require('fs').readFileSync('./spec/data/po.xml', 'utf-8').trim();
+        const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim();
+        // eslint-disable-next-line global-require
         const json = require('./data/po.json');
-
         const message = {
             body: json,
         };
