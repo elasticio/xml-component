@@ -18,7 +18,7 @@ module.exports = {
     'plugins': [
         'mocha'
     ],
-    'extends': 'eslint:recommended',
+    'extends': 'airbnb-base',
     'rules': {
         'indent': [
             ERROR,
