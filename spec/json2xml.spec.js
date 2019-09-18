@@ -12,7 +12,7 @@ describe('JSON 2 XML converter', () => {
             body: json,
         };
         const { xmlString } = (jsonToXml.process(message, {})).body;
-        expect(xmlString).to.be.deep.equal(xml);
+        expect(xmlString).to.deep.equal(xml);
     });
 
     it('should convert JSON to XML 2', () => {
@@ -28,10 +28,10 @@ describe('JSON 2 XML converter', () => {
             body: json,
         };
 
-        const messageText = 'Can\'t create xml element from prop that starts with digit.'
-        + 'See xml naming rules https://www.w3schools.com/xml/xml_elements.asp';
+        const messageText = 'Can\'t create XML element from prop that starts with digit.'
+        + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
 
         expect(jsonToXml.process.bind(null, message, {}))
-            .to.throw(Error, `Prop name is invalid for xml tag: 386. ${messageText}`);
+            .to.throw(Error, `Prop name is invalid for XML tag: 386. ${messageText}`);
     });
 });

@@ -1,7 +1,7 @@
 {
   "name": "xml",
   "version": "1.0.0",
-  "description": "Integration component to work with XML fiels",
+  "description": "Integration component to work with XML files",
   "homepage": "http://www.elastic.io",
   "author": {
     "name": "elastic.io GmbH",
@@ -58,6 +58,9 @@
       "mocha": true
     }
   },
-  "repository": "elasticio/xml",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elasticio/xml-component.git"
+  },
   "license": "Apache-2.0"
 }

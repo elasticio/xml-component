@@ -71,7 +71,7 @@ describe('should convert XML attachment 2 JSON', () => {
     });
 
 
-    it('FileName is not a xml ', async () => {
+    it('fileName is not .xml ', async () => {
         cfg = {
             pattern: '',
         };
@@ -87,7 +87,7 @@ describe('should convert XML attachment 2 JSON', () => {
         expect(emit.getCalls()).to.deep.eql([]);
     });
 
-    it('XML to large', async () => {
+    it('XML too large', async () => {
         let error;
         try {
             await attachmentToJson.process.bind({
@@ -103,7 +103,7 @@ describe('should convert XML attachment 2 JSON', () => {
         } catch (e) {
             error = e;
         }
-        expect(error.message).to.be.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
+        expect(error.message).to.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
     });
 
     it('Response Error', async () => {
@@ -124,11 +124,11 @@ describe('should convert XML attachment 2 JSON', () => {
             error = e;
         }
         // eslint-disable-next-line no-unused-expressions
-        expect(error.message).to.be.exist;
+        expect(error.message).to.exist;
     });
 
 
-    it('Convert attachment to json', async () => {
+    it('Convert attachment to JSON', async () => {
         await attachmentToJson.process.bind({
             emit,
         })({
@@ -141,6 +141,6 @@ describe('should convert XML attachment 2 JSON', () => {
 
         const results = produceString(emit.getCalls());
         console.log('XML attachment 2 JSON results: %j ', results);
-        expect(JSON.parse(results)).to.be.deep.equal(json);
+        expect(JSON.parse(results)).to.deep.equal(json);
     });
 });

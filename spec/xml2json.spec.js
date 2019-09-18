@@ -4,7 +4,7 @@ const fs = require('fs');
 const xmlToJson = require('../lib/actions/xmlToJson');
 
 describe('XML 2 JSON parser', () => {
-    it('should convert XML to json', async () => {
+    it('should convert XML to JSON', async () => {
         const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8');
         // eslint-disable-next-line global-require
         const result = require('./data/po.json');
@@ -15,10 +15,10 @@ describe('XML 2 JSON parser', () => {
             },
         };
         const { body } = await xmlToJson.process(message, {});
-        expect(body).to.be.deep.equal(result);
+        expect(body).to.deep.equal(result);
     });
 
-    it('should fail due to an invalid json', async () => {
+    it('should fail due to an invalid JSON', async () => {
         const xml = fs.readFileSync('./spec/data/invalidXml.xml', 'utf-8');
 
         const message = {
@@ -27,10 +27,10 @@ describe('XML 2 JSON parser', () => {
             },
         };
         const messageText = 'Given XML is not valid or the file can not be read. '
-          + 'See xml naming rules https://www.w3schools.com/xml/xml_elements.asp';
+          + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
 
         await xmlToJson.process(message, {}).catch((error) => {
-            expect(error.message).to.be.equal(messageText);
+            expect(error.message).to.equal(messageText);
         });
     });
 });
