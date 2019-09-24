@@ -1,13 +1,14 @@
 /* eslint-env node, jasmine */
 'use strict';
 
-const attachmentToJson = require('../lib/actions/attachmentToJson');
 const json = require('./data/po.json');
 const { expect } = require('chai');
 const nock = require('nock');
 
 require('chai').should(); // expect is assertion styles used my elastic.io
 const sinon = require('sinon');
+
+const attachmentToJson = require('../lib/actions/attachmentToJson');
 
 function produceString(output) {
     let string = '';
@@ -21,7 +22,11 @@ function produceString(output) {
     return string;
 }
 
-describe('should convert XML attachment 2 JSON', () => {
+// eslint-disable-next-line func-names
+describe('should convert XML attachment 2 JSON', function () {
+// eslint-disable-next-line no-invalid-this
+    this.timeout(60000);
+
     const mockSever = 'http://test.env.mock';
     let cfg = {
         pattern: '(.xml)'
@@ -30,8 +35,8 @@ describe('should convert XML attachment 2 JSON', () => {
 
     before(function testInit() {
         nock(mockSever)
-      .get('/')
-      .replyWithFile(200, 'spec/data/po.xml');
+            .get('/')
+            .replyWithFile(200, 'spec/data/po.xml');
     });
 
     beforeEach(function testInit() {
