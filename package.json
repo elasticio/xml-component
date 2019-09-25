@@ -20,7 +20,7 @@
     "elasticio-component"
   ],
   "scripts": {
-    "pretest": "node_modules/.bin/eslint -c ./node_modules/code-quality-js/.eslintrc.js lib spec --fix",
+    "pretest": "eslint lib spec --fix",
     "test": "NODE_ENV=test mocha --recursive spec"
   },
   "dependencies": {
@@ -42,8 +42,10 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "code-quality-js": "2.0.2",
-    "eslint": "^2.13.1",
+    "eslint": "6.4.0",
+    "eslint-config-airbnb-base": "14.0.0",
     "eslint-config-xo-space": "^0.10.0",
+    "eslint-plugin-import": "2.18.2",
     "eslint-plugin-mocha": "^4.12.1",
     "mocha": "^5.2.0",
     "nock": "^10.0.2",
@@ -57,6 +59,9 @@
       "mocha": true
     }
   },
-  "repository": "elasticio/xml",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elasticio/xml-component.git"
+  },
   "license": "Apache-2.0"
 }
