@@ -1,4 +1,4 @@
-# XML Component
+# XML Component [![CircleCI](https://circleci.com/gh/elasticio/xml-component.svg?style=svg)](https://circleci.com/gh/elasticio/xml-component)
 
 ## Description
 elastic.io iPaaS component to convert between XML and JSON data. 
