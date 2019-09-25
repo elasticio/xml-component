@@ -1,9 +1,11 @@
 /* eslint-env node, jasmine */
+
 const { expect } = require('chai');
 const nock = require('nock');
 
 require('chai').should(); // expect is assertion styles used my elastic.io
 const sinon = require('sinon');
+
 const json = require('./data/po.json');
 const attachmentToJson = require('../lib/actions/attachmentToJson');
 
@@ -19,7 +21,11 @@ function produceString(output) {
     return string;
 }
 
-describe('should convert XML attachment 2 JSON', () => {
+// eslint-disable-next-line func-names
+describe('should convert XML attachment 2 JSON', function () {
+// eslint-disable-next-line no-invalid-this
+    this.timeout(60000);
+
     const mockSever = 'http://test.env.mock';
     let cfg = {
         pattern: '(.xml)',
