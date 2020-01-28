@@ -6,147 +6,141 @@ const nock = require('nock');
 require('chai').should(); // expect is assertion styles used my elastic.io
 const sinon = require('sinon');
 
+const logger = require('@elastic.io/component-logger')();
+
 const json = require('./data/po.json');
 const attachmentToJson = require('../lib/actions/attachmentToJson');
 
-function produceString(output) {
-    let string = '';
-    for (let i = 0; i < output.length; i += 1) {
-        console.log(output[i].args[1].body);
-        if (i !== 0) {
-            string += ',\n';
-        }
-        string += JSON.stringify(output[i].args[1].body);
+function produceString(log, output) {
+  let string = '';
+  for (let i = 0; i < output.length; i += 1) {
+    log.info(output[i].args[1].body);
+    if (i !== 0) {
+      string += ',\n';
     }
-    return string;
+    string += JSON.stringify(output[i].args[1].body);
+  }
+  return string;
 }
 
 // eslint-disable-next-line func-names
 describe('should convert XML attachment 2 JSON', function () {
 // eslint-disable-next-line no-invalid-this
-    this.timeout(60000);
+  this.timeout(60000);
 
-    const mockSever = 'http://test.env.mock';
-    let cfg = {
-        pattern: '(.xml)',
+  const mockSever = 'http://test.env.mock';
+  let cfg = {
+    pattern: '(.xml)',
+  };
+  let self;
+
+  before(() => {
+    nock(mockSever)
+      .get('/')
+      .replyWithFile(200, 'spec/data/po.xml');
+  });
+
+  beforeEach(() => {
+    self = {
+      emit: sinon.spy(),
+      logger,
     };
-    let emit;
 
-    before(() => {
-        nock(mockSever)
-            .get('/')
-            .replyWithFile(200, 'spec/data/po.xml');
-    });
-
-    beforeEach(() => {
-        emit = sinon.spy();
-        cfg = {
-            pattern: '(.xml)',
-        };
-    });
+    cfg = {
+      pattern: '(.xml)',
+    };
+  });
 
 
-    it('FileName undefined ', async () => {
-        await attachmentToJson.process.bind({
-            emit,
-        })({
-            attachments: {
-                undefined: {
-                    url: mockSever,
-                },
-            },
-        }, cfg);
-        expect(emit.getCalls()).to.deep.eql([]);
-    });
+  it('FileName undefined ', async () => {
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        undefined: {
+          url: mockSever,
+        },
+      },
+    }, cfg);
+    expect(self.emit.getCalls()).to.deep.eql([]);
+  });
 
 
-    it('FileName dose not match pattern ', async () => {
-        cfg = {
-            pattern: '(test.xml)',
-        };
-        await attachmentToJson.process.bind({
-            emit,
-        })({
-            attachments: {
-                'po.xml': {
-                    url: mockSever,
-                },
-            },
-        }, cfg);
-        expect(emit.getCalls()).to.deep.eql([]);
-    });
+  it('FileName does not match pattern ', async () => {
+    cfg = {
+      pattern: '(test.xml)',
+    };
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+        },
+      },
+    }, cfg);
+    expect(self.emit.getCalls()).to.deep.eql([]);
+  });
 
 
-    it('fileName is not .xml ', async () => {
-        cfg = {
-            pattern: '',
-        };
-        await attachmentToJson.process.bind({
-            emit,
-        })({
-            attachments: {
-                'po.txt': {
-                    url: mockSever,
-                },
-            },
-        }, cfg);
-        expect(emit.getCalls()).to.deep.eql([]);
-    });
+  it('fileName is not .xml ', async () => {
+    cfg = {
+      pattern: '',
+    };
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.txt': {
+          url: mockSever,
+        },
+      },
+    }, cfg);
+    expect(self.emit.getCalls()).to.deep.eql([]);
+  });
 
-    it('XML too large', async () => {
-        let error;
-        try {
-            await attachmentToJson.process.bind({
-                emit,
-            })({
-                attachments: {
-                    'po.xml': {
-                        url: mockSever,
-                        size: '5242881',
-                    },
-                },
-            }, cfg);
-        } catch (e) {
-            error = e;
-        }
-        expect(error.message).to.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
-    });
+  it('XML too large', async () => {
+    let error;
+    try {
+      await attachmentToJson.process.bind(self)({
+        attachments: {
+          'po.xml': {
+            url: mockSever,
+            size: '5242881',
+          },
+        },
+      }, cfg);
+    } catch (e) {
+      error = e;
+    }
+    expect(error.message).to.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
+  });
 
-    it('Response Error', async () => {
-        let error;
-        const failURL = 'http://steward.marathon.mesos:8091/files/1cfc3a71-d7a7-44e6-a15e-ae18860d537c';
+  it('Response Error', async () => {
+    let error;
+    const failURL = 'http://steward.marathon.mesos:8091/files/1cfc3a71-d7a7-44e6-a15e-ae18860d537c';
 
-        try {
-            await attachmentToJson.process.bind({
-                emit,
-            })({
-                attachments: {
-                    'po.xml': {
-                        url: failURL,
-                    },
-                },
-            }, cfg);
-        } catch (e) {
-            error = e;
-        }
-        // eslint-disable-next-line no-unused-expressions
-        expect(error.message).to.exist;
-    });
+    try {
+      await attachmentToJson.process.bind(self)({
+        attachments: {
+          'po.xml': {
+            url: failURL,
+          },
+        },
+      }, cfg);
+    } catch (e) {
+      error = e;
+    }
+    // eslint-disable-next-line no-unused-expressions
+    expect(error.message).to.exist;
+  });
 
 
-    it('Convert attachment to JSON', async () => {
-        await attachmentToJson.process.bind({
-            emit,
-        })({
-            attachments: {
-                'po.xml': {
-                    url: mockSever,
-                },
-            },
-        }, cfg);
+  it('Convert attachment to JSON', async () => {
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+        },
+      },
+    }, cfg);
 
-        const results = produceString(emit.getCalls());
-        console.log('XML attachment 2 JSON results: %j ', results);
-        expect(JSON.parse(results)).to.deep.equal(json);
-    });
+    const results = produceString(self.logger, self.emit.getCalls());
+    self.logger.info('XML attachment 2 JSON results: %j ', results);
+    expect(JSON.parse(results)).to.deep.equal(json);
+  });
 });
