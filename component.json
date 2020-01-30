@@ -1,6 +1,7 @@
 {
   "title": "XML",
   "description": "Component to work with XML files",
+  "buildType": "docker",
   "actions": {
     "xmlToJson": {
       "title": "XML to JSON",

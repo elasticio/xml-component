@@ -1,3 +1,9 @@
+## 1.2.0 (January 30, 2020)
+
+* Update sailor version to 2.6.1
+* Refactor console.log to built in sailor logger
+* Change build type to docker
+
 ## 1.1.1 (September 25, 2019)
 
 * Upload attachments with component commons library
