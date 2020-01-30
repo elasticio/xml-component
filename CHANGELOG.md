@@ -1,4 +1,4 @@
-## 1.2.0 (January 27, 2020)
+## 1.2.0 (January 30, 2020)
 
 * Update sailor version to 2.6.1
 * Refactor console.log to built in sailor logger
