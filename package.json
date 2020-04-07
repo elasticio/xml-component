@@ -37,11 +37,11 @@
     "promised-exec": "1.0.1",
     "request": "2.88.2",
     "request-promise": "4.2.2",
-    "xml-js": "^1.6.11",
-    "xml2js": "0.4.19"
+    "xml2js": "0.4.23"
   },
   "devDependencies": {
     "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
     "code-quality-js": "2.0.2",
     "eslint": "6.4.0",
     "eslint-config-airbnb-base": "14.0.0",
