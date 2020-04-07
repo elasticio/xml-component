@@ -45,7 +45,6 @@
     "code-quality-js": "2.0.2",
     "eslint": "6.4.0",
     "eslint-config-airbnb-base": "14.0.0",
-    "eslint-config-xo-space": "0.10.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-mocha": "4.12.1",
     "mocha": "5.2.0",
@@ -54,12 +53,6 @@
     "sinon": "1.17.7",
     "stream-string": "2.0.1",
     "@elastic.io/component-logger": "0.0.1"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
   },
   "repository": {
     "type": "git",
