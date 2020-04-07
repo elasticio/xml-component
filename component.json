@@ -13,12 +13,57 @@
       }
     },
     "jsonToXml": {
-      "title": "JSON to XML",
-      "main": "./lib/actions/jsonToXml.js",
+      "title": "JSON to XML (Deprecated)",
+      "main": "./lib/actions/jsonToXmlOld.js",
+      "deprecated": true,
       "description": "Takes the body of message passed into the component and converts to generic XML string",
       "metadata": {
         "in": {},
         "out": "./lib/schemas/jsonToXml.out.json"
+      }
+    },
+    "jsonToXmlV2": {
+      "title": "JSON to XML",
+      "main": "./lib/actions/jsonToXml.js",
+      "description": "Takes the result of a JSONata expression and creates corresponding XML as either a string or an attachment",
+      "fields": {
+        "uploadToAttachment": {
+          "label": "Upload XML as file to attachments",
+          "viewClass": "CheckBoxView"
+        }
+      },
+      "metadata": {
+        "in": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "title": "JSON to convert",
+              "type": "object",
+              "required": true,
+              "maxLength": 1000
+            }
+          }
+        },
+        "out": {
+          "type": "object",
+          "properties": {
+            "xmlString": {
+              "type": "string",
+              "required": false,
+              "title": "XML String"
+            },
+            "attachmentUrl": {
+              "title": "Attachment URL",
+              "type": "string",
+              "required": false
+            },
+            "attachmentSize": {
+              "title": "Attachment Size (in bytes)",
+              "type": "number",
+              "required": false
+            }
+          }
+        }
       }
     },
     "attachmentToJson": {

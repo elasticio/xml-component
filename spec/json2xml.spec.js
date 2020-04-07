@@ -2,7 +2,7 @@
 const { expect } = require('chai');
 const fs = require('fs');
 const logger = require('@elastic.io/component-logger')();
-const jsonToXml = require('../lib/actions/jsonToXml');
+const jsonToXml = require('../lib/actions/jsonToXmlOld');
 
 describe('JSON 2 XML converter', () => {
   let self;

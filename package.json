@@ -1,7 +1,7 @@
 {
   "name": "xml",
   "version": "1.2.1",
-  "description": "Integration component to work with XML fiels",
+  "description": "Integration component to work with XML files",
   "homepage": "http://www.elastic.io",
   "author": {
     "name": "elastic.io GmbH",
