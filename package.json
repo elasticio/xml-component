@@ -24,7 +24,7 @@
     "test": "NODE_ENV=test mocha --recursive spec"
   },
   "dependencies": {
-    "@elastic.io/component-commons-library": "0.0.7",
+    "@elastic.io/component-commons-library": "1.1.2",
     "await-lock": "1.1.3",
     "bluebird": "3.5.3",
     "co": "4.6.0",
