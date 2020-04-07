@@ -1,46 +1,46 @@
-/* eslint-env node, jasmine */
+const logger = require('@elastic.io/component-commons-library/lib/logger/logger').getLogger();
+const sinon = require('sinon');
 const { expect } = require('chai');
-const fs = require('fs');
-const logger = require('@elastic.io/component-logger')();
-const jsonToXml = require('../lib/actions/jsonToXmlOld');
+// const { AttachmentProcessor } = require('@elastic.io/component-commons-library');
 
-describe('JSON 2 XML converter', () => {
-  let self;
+const json2xml = require('../lib/actions/jsonToXml');
 
-  beforeEach(() => {
-    self = {
-      logger,
-    };
+const context = {
+  emit: sinon.spy(),
+  logger,
+};
+
+
+describe('JSON to XML', () => {
+  afterEach(() => {
+    context.emit.resetHistory();
   });
 
-  it('should convert JSON to XML 1', () => {
-    const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim();
-    // eslint-disable-next-line global-require
-    const json = require('./data/po.json');
-    const message = {
-      body: json,
-    };
-    const { xmlString } = (jsonToXml.process.bind(self)(message, {})).body;
-    expect(xmlString).to.deep.equal(xml);
-  });
-
-  it('should convert JSON to XML 2', () => {
-    const json = {
-      archs: {
-        arm: true,
-        amd64: true,
-        386: true,
+  it('Send as body', async () => {
+    const msg = {
+      body: {
+        input: {
+          ORDERRESPONSE: {
+            _attr: {
+              'xmlns:ns2': 'http://www.bmecat.org/bmecat/2005',
+              version: '2.1',
+            },
+            ORDERRESPONSE_HEADER: {
+              ORDERRESPONSE_INFO: {
+                ORDERRESPONSE_DATE: '2020-04-07T09:07:45.188Z',
+                ORDER_ID: '1234',
+              },
+            },
+            ORDERRESPONSE_ITEM_LIST: {},
+          },
+        },
       },
     };
 
-    const message = {
-      body: json,
-    };
+    const cfg = {};
 
-    const messageText = 'Can\'t create XML element from prop that starts with digit.'
-      + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
-
-    expect(jsonToXml.process.bind(self, message, {}))
-      .to.throw(Error, `Prop name is invalid for XML tag: 386. ${messageText}`);
+    await json2xml.process.call(context, msg, cfg, {});
+    expect(context.emit.getCalls().length).to.be.eql(1);
+    expect(context.emit.getCall(0).args[1].body).to.deep.eql('');
   });
 });

@@ -50,7 +50,7 @@
     "mocha": "5.2.0",
     "nock": "10.0.2",
     "nyc": "13.1.0",
-    "sinon": "1.17.7",
+    "sinon": "9.0.1",
     "stream-string": "2.0.1",
     "@elastic.io/component-logger": "0.0.1"
   },
