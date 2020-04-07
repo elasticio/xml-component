@@ -19,7 +19,7 @@
       "description": "Takes the body of message passed into the component and converts to generic XML string",
       "metadata": {
         "in": {},
-        "out": "./lib/schemas/jsonToXml.out.json"
+        "out": "./lib/schemas/jsonToXmlOld.out.json"
       }
     },
     "jsonToXmlV2": {
