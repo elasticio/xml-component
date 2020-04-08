@@ -31,8 +31,8 @@
           "label": "Upload XML as file to attachments",
           "viewClass": "CheckBoxView"
         },
-        "includeXmlHeader": {
-          "label": "Include XML Header/Description",
+        "excludeXmlHeader": {
+          "label": "Exclude XML Header/Description",
           "viewClass": "CheckBoxView"
         },
         "headerStandalone": {

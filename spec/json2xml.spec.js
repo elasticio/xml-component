@@ -47,7 +47,7 @@ describe('JSON to XML', () => {
 
     const cfg = {
       uploadToAttachment: false,
-      includeXmlHeader: true,
+      excludeXmlHeader: false,
       headerStandalone: false,
     };
 
@@ -63,7 +63,7 @@ describe('JSON to XML', () => {
 
     const cfg = {
       uploadToAttachment: true,
-      includeXmlHeader: false,
+      excludeXmlHeader: true,
       headerStandalone: false,
     };
 
@@ -94,10 +94,39 @@ describe('JSON to XML', () => {
 
     const cfg = {
       uploadToAttachment: true,
-      includeXmlHeader: false,
+      excludeXmlHeader: false,
       headerStandalone: false,
     };
 
     expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('XML data is 15728658 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes');
+  });
+
+  it('Non object input', async () => {
+    const msg = {
+      body: {
+        input: [{
+          example: 'something',
+        }, {
+          foo: 'bar',
+        }],
+      },
+    };
+    const cfg = {};
+
+    expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
+  });
+
+  it('Too many keys input', async () => {
+    const msg = {
+      body: {
+        input: {
+          foo: 'bar',
+          bar: 'baz',
+        },
+      },
+    };
+    const cfg = {};
+
+    expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
   });
 });
