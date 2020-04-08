@@ -2,6 +2,7 @@ const logger = require('@elastic.io/component-commons-library/lib/logger/logger'
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
+const fs = require('fs');
 
 const { AttachmentProcessor } = require('@elastic.io/component-commons-library');
 
@@ -34,7 +35,7 @@ const inputMessage = {
     },
   },
 };
-const expectedOutputStringWithHeaders = '<?xml version="1.0" standalone="no"?>\n<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
+const expectedOutputStringWithHeaders = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
 const expectedOutputStringWithoutHeaders = '<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
 
 describe('JSON to XML', () => {
@@ -98,7 +99,7 @@ describe('JSON to XML', () => {
       headerStandalone: false,
     };
 
-    expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('XML data is 15728658 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('XML data is 15728713 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes');
   });
 
   it('Non object input', async () => {
@@ -113,7 +114,7 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
   });
 
   it('Too many keys input', async () => {
@@ -127,6 +128,46 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
+  });
+
+  it('Invalid xml tag name', async () => {
+    const msg = {
+      body: {
+        input: {
+          archs: {
+            arm: true,
+            amd64: true,
+            386: true,
+          },
+        },
+      },
+    };
+    const cfg = {};
+
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Invalid character in name: 386');
+  });
+
+  it('should convert JSON to XML 1', async () => {
+    const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim();
+    // eslint-disable-next-line global-require
+    const json = require('./data/po.json');
+    const msg = {
+      body: {
+        input: json,
+      },
+    };
+
+    const cfg = {
+      uploadToAttachment: false,
+      excludeXmlHeader: false,
+      headerStandalone: true,
+    };
+
+    await json2xml.process.call(context, msg, cfg, {});
+    expect(context.emit.getCalls().length).to.be.eql(1);
+    expect(context.emit.getCall(0).args[1].body).to.deep.eql({
+      xmlString: xml,
+    });
   });
 });
