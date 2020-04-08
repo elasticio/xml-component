@@ -37,7 +37,7 @@
     "promised-exec": "1.0.1",
     "request": "2.88.2",
     "request-promise": "4.2.2",
-    "xml2js": "git+ssh://git@github.com/elasticio/node-xml2js.git#update-xmlbuilder"
+    "xml2js": "0.4.23"
   },
   "devDependencies": {
     "chai": "4.2.0",
