@@ -114,7 +114,7 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with exactly one key.');
   });
 
   it('Too many keys input', async () => {
@@ -128,7 +128,7 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with at most one key.');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with exactly one key.');
   });
 
   it('Invalid xml tag name', async () => {
@@ -145,7 +145,7 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Invalid character in name: 386');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Invalid character in name');
   });
 
   it('should convert JSON to XML 1', async () => {
