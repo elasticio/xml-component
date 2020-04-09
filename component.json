@@ -56,8 +56,7 @@
             "input": {
               "title": "JSON to convert",
               "type": "object",
-              "required": true,
-              "maxLength": 1000
+              "required": true
             }
           }
         },
