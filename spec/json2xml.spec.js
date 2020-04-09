@@ -170,4 +170,31 @@ describe('JSON to XML', () => {
       xmlString: xml,
     });
   });
+
+  it('Readme demo code', async () => {
+    const msg = {
+      body: {
+        input: {
+          someTag: {
+            _attr: {
+              id: 'my id',
+            },
+            _: 'my inner text',
+          },
+        },
+      },
+    };
+
+    const cfg = {
+      uploadToAttachment: false,
+      excludeXmlHeader: true,
+      headerStandalone: true,
+    };
+
+    await json2xml.process.call(context, msg, cfg, {});
+    expect(context.emit.getCalls().length).to.be.eql(1);
+    expect(context.emit.getCall(0).args[1].body).to.deep.eql({
+      xmlString: '<someTag id="my id">my inner text</someTag>',
+    });
+  });
 });
