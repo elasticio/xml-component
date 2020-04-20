@@ -4,6 +4,7 @@
     "link":  "/components/xml/",
     "description": "Component to convert between XML and JSON data"
   },
+  "description": "Component to convert between XML and JSON data",
   "buildType": "docker",
   "actions": {
     "xmlToJson": {
@@ -16,7 +17,7 @@
       }
     },
     "jsonToXml": {
-      "title": "JSON to XML (Deprecated)",
+      "title": "JSON to XML",
       "main": "./lib/actions/jsonToXmlOld.js",
       "deprecated": true,
       "description": "Takes the body of message passed into the component and converts to generic XML string",
