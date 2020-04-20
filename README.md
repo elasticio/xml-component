@@ -62,6 +62,20 @@ When this box is not checked, the resulting XML will be provided in the `xmlStri
 * **Exclude XML Header/Description**: When checked, no XML header of the form `<?xml version="1.0" encoding="UTF-8" standalone="no"?>` will be prepended to the XML output.
 * **Is the XML file standalone**: When checked, the xml header/description will have a value of `yes` for standalone. Otherwise, the value will be `no`. Has no effect when XML header/description is excluded.
 
+The incoming message should have a single field `input`. When using integrator mode, this appears as the input **JSON to convert** When building mappings in developper mode, one must set the `input` property. E.g.:
+```
+{
+  "input": {
+             "someTag": {
+               "_attr": {
+                 "id": "my id"
+               },
+               "_": "my inner text"
+             }
+           }
+}
+```
+
 ## Known limitations
  - The maximum size of incoming file for processing is 5 MiB. If the size of incoming file will be more than 5 MiB, 
  action will throw error `Attachment *.xml is to large to be processed by XML component. File limit is: 5242880 byte, 
