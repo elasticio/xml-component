@@ -1,6 +1,10 @@
 {
   "title": "XML",
-  "description": "Component to work with XML files",
+  "help": {
+    "link":  "/components/xml/",
+    "description": "Component to convert between XML and JSON data"
+  },
+  "description": "Component to convert between XML and JSON data",
   "buildType": "docker",
   "actions": {
     "xmlToJson": {
@@ -14,11 +18,69 @@
     },
     "jsonToXml": {
       "title": "JSON to XML",
-      "main": "./lib/actions/jsonToXml.js",
+      "main": "./lib/actions/jsonToXmlOld.js",
+      "deprecated": true,
       "description": "Takes the body of message passed into the component and converts to generic XML string",
       "metadata": {
         "in": {},
-        "out": "./lib/schemas/jsonToXml.out.json"
+        "out": "./lib/schemas/jsonToXmlOld.out.json"
+      }
+    },
+    "jsonToXmlV2": {
+      "title": "JSON to XML",
+      "main": "./lib/actions/jsonToXml.js",
+      "help": {
+        "link":  "#json-to-xml",
+        "description": "Takes the result of a JSONata expression and creates corresponding XML as either a string or an attachment"
+      },
+      "fields": {
+        "uploadToAttachment": {
+          "order": 3,
+          "label": "Upload XML as file to attachments",
+          "viewClass": "CheckBoxView"
+        },
+        "excludeXmlHeader": {
+          "order": 2,
+          "label": "Exclude XML Header/Description",
+          "viewClass": "CheckBoxView"
+        },
+        "headerStandalone": {
+          "order": 1,
+          "label": "Is the XML file standalone",
+          "viewClass": "CheckBoxView"
+        }
+      },
+      "metadata": {
+        "in": {
+          "type": "object",
+          "properties": {
+            "input": {
+              "title": "JSON to convert",
+              "type": "object",
+              "required": true
+            }
+          }
+        },
+        "out": {
+          "type": "object",
+          "properties": {
+            "xmlString": {
+              "type": "string",
+              "required": false,
+              "title": "XML String"
+            },
+            "attachmentUrl": {
+              "title": "Attachment URL",
+              "type": "string",
+              "required": false
+            },
+            "attachmentSize": {
+              "title": "Attachment Size (in bytes)",
+              "type": "number",
+              "required": false
+            }
+          }
+        }
       }
     },
     "attachmentToJson": {

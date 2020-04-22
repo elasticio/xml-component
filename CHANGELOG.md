@@ -1,6 +1,11 @@
+## 1.3.0 (April 23, 2020)
+* Update dependencies
+* Create new JSON to XML action
+* Add help links
+
 ## 1.2.1 (March 30, 2020)
 
-* Minor logs impovements in "XML to JSON" action
+* Minor logs improvements in "XML to JSON" action
 
 ## 1.2.0 (January 30, 2020)
 
