@@ -148,7 +148,7 @@ describe('should convert XML attachment 2 JSON', function () {
       error = e;
     }
     // eslint-disable-next-line no-unused-expressions
-    expect(error.message).to.be.equal('Empty Attachment received for file po.xml');
+    expect(error.message).to.be.equal('Empty attachment received for file po.xml');
   });
 
 
