@@ -38,6 +38,10 @@ describe('should convert XML attachment 2 JSON', function () {
     nock(mockSever)
       .get('/')
       .replyWithFile(200, 'spec/data/po.xml');
+
+    nock(mockSever)
+      .get('/EmptyFile')
+      .reply(200);
   });
 
   beforeEach(() => {
@@ -127,6 +131,24 @@ describe('should convert XML attachment 2 JSON', function () {
     }
     // eslint-disable-next-line no-unused-expressions
     expect(error.message).to.exist;
+  });
+
+  it('Empty attachment', async () => {
+    let error;
+
+    try {
+      await attachmentToJson.process.bind(self)({
+        attachments: {
+          'po.xml': {
+            url: `${mockSever}/EmptyFile`,
+          },
+        },
+      }, cfg);
+    } catch (e) {
+      error = e;
+    }
+    // eslint-disable-next-line no-unused-expressions
+    expect(error.message).to.be.equal('Empty attachment received for file po.xml');
   });
 
 

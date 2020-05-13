@@ -1,6 +1,9 @@
-## 1.3.1 (May 13, 2020)
+## 1.3.1 (May 22, 2020)
 
 * Update sailor version to 2.6.7
+* Correctly handle incoming attachments that are empty.
+* Update dependencies.
+* Add debug log statements.
 
 ## 1.3.0 (April 23, 2020)
 
