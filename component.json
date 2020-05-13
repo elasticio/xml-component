@@ -20,7 +20,7 @@
       "main": "./lib/actions/jsonToXmlOld.js",
       "deprecated": true,
       "help": {
-        "description": "Takes the body of message passed into the component and converts to generic XML string",
+        "description": "Takes the body of message passed into the component and converts to generic XML string"
       },
       "metadata": {
         "in": {},
