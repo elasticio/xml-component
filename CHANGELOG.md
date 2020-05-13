@@ -1,4 +1,9 @@
+## 1.3.1 (May 13, 2020)
+
+* Update sailor version to 2.6.7
+
 ## 1.3.0 (April 23, 2020)
+
 * Update dependencies
 * Create new JSON to XML action
 * Add help links
