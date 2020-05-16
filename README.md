@@ -46,6 +46,33 @@ Defaults to 10 MB where 1 MB = 1024 * 1024 bytes.
 ### XML to JSON
 Takes XML string and converts it to generic JSON object.
 
+**Limitation:**
+Value inside xml tags will be converting into string only, e.g.:   
+
+given xml
+```xml
+<note>
+  <date>2015-09-01</date>
+  <hour>08:30</hour>
+  <to>Tove</to>
+  <from>Jani</from>
+  <body>Don't forget me this weekend!</body>
+</note>
+```
+
+will be converted into:
+```json
+{
+  "note": {
+    "id": "322",
+    "to": "Tove",
+    "from": "Jani",
+    "heading": "Reminder",
+    "body": "Don't forget me this weekend!"
+  }
+}
+```
+
 ### XML Attachment to JSON
 Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects 
 and produces one outbound message per matching attachment. As input, the user can enter a patter pattern for filtering 
