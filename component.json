@@ -1,16 +1,15 @@
 {
   "title": "XML",
-  "help": {
-    "link":  "/components/xml/",
-    "description": "Component to convert between XML and JSON data"
-  },
   "description": "Component to convert between XML and JSON data",
   "buildType": "docker",
   "actions": {
     "xmlToJson": {
       "title": "XML to JSON",
       "main": "./lib/actions/xmlToJson.js",
-      "description": "Takes XML string and converts it to generic JSON object",
+      "help": {
+        "description": "Takes XML string and converts it to generic JSON object",
+        "link":  "/components/xml/index.html#xml-to-json"
+      },
       "metadata": {
         "in": "./lib/schemas/xmlToJson.in.json",
         "out": "./lib/schemas/xmlToJson.out.json"
@@ -20,7 +19,9 @@
       "title": "JSON to XML",
       "main": "./lib/actions/jsonToXmlOld.js",
       "deprecated": true,
-      "description": "Takes the body of message passed into the component and converts to generic XML string",
+      "help": {
+        "description": "Takes the body of message passed into the component and converts to generic XML string"
+      },
       "metadata": {
         "in": {},
         "out": "./lib/schemas/jsonToXmlOld.out.json"
@@ -30,7 +31,7 @@
       "title": "JSON to XML",
       "main": "./lib/actions/jsonToXml.js",
       "help": {
-        "link":  "#json-to-xml",
+        "link":  "/components/xml/index.html#json-to-xml",
         "description": "Takes the result of a JSONata expression and creates corresponding XML as either a string or an attachment"
       },
       "fields": {
@@ -86,7 +87,10 @@
     "attachmentToJson": {
       "title": "XML Attachment to JSON",
       "main": "./lib/actions/attachmentToJson.js",
-      "description": "Looks at the JSON array of attachments passed in to component and converts all XML found to generic JSON object",
+      "help": {
+        "link":  "/components/xml/index.html#xml-attachment-to-json",
+        "description": "Looks at the JSON array of attachments passed in to component and converts all XML found to generic JSON object"
+      },
       "fields": {
         "pattern": {
           "label": "Pattern to Match Files",
