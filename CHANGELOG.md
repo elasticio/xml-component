@@ -1,6 +1,7 @@
 ## 1.3.3 (October 30, 2020)
 
-Upgrade to sailor 2.6.18
+* Upgrade to sailor 2.6.18
+* Annual audit of the component code to check if it exposes a sensitive data in the logs
 
 ## 1.3.2 (June 6, 2020)
 
