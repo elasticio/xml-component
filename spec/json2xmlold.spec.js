@@ -18,9 +18,9 @@ describe('JSON 2 XML converter (Old)', () => {
     // eslint-disable-next-line global-require
     const json = require('./data/po.json');
     const message = {
-      body: json,
+      data: json,
     };
-    const { xmlString } = (jsonToXml.process.bind(self)(message, {})).body;
+    const { xmlString } = (jsonToXml.process.bind(self)(message, {})).data;
     expect(xmlString).to.deep.equal(xml);
   });
 
@@ -34,7 +34,7 @@ describe('JSON 2 XML converter (Old)', () => {
     };
 
     const message = {
-      body: json,
+      data: json,
     };
 
     const messageText = 'Can\'t create XML element from prop that starts with digit.'

@@ -1,4 +1,4 @@
-const logger = require('@elastic.io/component-commons-library/lib/logger/logger').getLogger();
+const logger = require('@elastic.io/component-logger')();
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
@@ -17,7 +17,7 @@ const context = {
 };
 
 const inputMessage = {
-  body: {
+  data: {
     input: {
       ORDERRESPONSE: {
         _attr: {
@@ -54,7 +54,7 @@ describe('JSON to XML', () => {
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
-    expect(context.emit.getCall(0).args[1].body).to.deep.eql({
+    expect(context.emit.getCall(0).args[1].data).to.deep.eql({
       xmlString: expectedOutputStringWithHeaders,
     });
   });
@@ -76,7 +76,7 @@ describe('JSON to XML', () => {
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
-    expect(context.emit.getCall(0).args[1].body).to.deep.eql({
+    expect(context.emit.getCall(0).args[1].data).to.deep.eql({
       attachmentUrl: 'someUrl',
       attachmentSize: 327,
     });
@@ -86,7 +86,7 @@ describe('JSON to XML', () => {
   it('Too Long Attachment', async () => {
     const reallyLongString = new Array(15 * 1024 * 1024).join('a');
     const msg = {
-      body: {
+      data: {
         input: {
           example: reallyLongString,
         },
@@ -104,7 +104,7 @@ describe('JSON to XML', () => {
 
   it('Non object input', async () => {
     const msg = {
-      body: {
+      data: {
         input: [{
           example: 'something',
         }, {
@@ -119,7 +119,7 @@ describe('JSON to XML', () => {
 
   it('Too many keys input', async () => {
     const msg = {
-      body: {
+      data: {
         input: {
           foo: 'bar',
           bar: 'baz',
@@ -133,7 +133,7 @@ describe('JSON to XML', () => {
 
   it('Invalid xml tag name', async () => {
     const msg = {
-      body: {
+      data: {
         input: {
           archs: {
             arm: true,
@@ -153,7 +153,7 @@ describe('JSON to XML', () => {
     // eslint-disable-next-line global-require
     const json = require('./data/po.json');
     const msg = {
-      body: {
+      data: {
         input: json,
       },
     };
@@ -166,14 +166,14 @@ describe('JSON to XML', () => {
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
-    expect(context.emit.getCall(0).args[1].body).to.deep.eql({
+    expect(context.emit.getCall(0).args[1].data).to.deep.eql({
       xmlString: xml,
     });
   });
 
   it('Readme demo code', async () => {
     const msg = {
-      body: {
+      data: {
         input: {
           someTag: {
             _attr: {
@@ -193,7 +193,7 @@ describe('JSON to XML', () => {
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
-    expect(context.emit.getCall(0).args[1].body).to.deep.eql({
+    expect(context.emit.getCall(0).args[1].data).to.deep.eql({
       xmlString: '<someTag id="my id">my inner text</someTag>',
     });
   });
