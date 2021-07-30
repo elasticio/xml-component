@@ -73,6 +73,11 @@ will be converted into:
 }
 ```
 
+The following additional options are supported:
+* **Split Result**: When the splitResult configuration is enabled, if the result is an array, each element of the array will be emitted individually. 
+* **Custom JSONata**: The customJsonata configuration allows you to pass in a custom JSONata expression to be applied to the result. Otherwise, the default configuration will be used.
+* **Child Array**: When the childArray configuration is enabled, each child element of the JSON object will be converted to an array, regardless of the number of elements. 
+
 ### XML Attachment to JSON
 Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects 
 and produces one outbound message per matching attachment. As input, the user can enter a patter pattern for filtering 
