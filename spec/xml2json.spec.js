@@ -5,7 +5,7 @@ const sinon = require('sinon');
 const logger = require('@elastic.io/component-logger')();
 const xmlToJson = require('../lib/actions/xmlToJson');
 
-xdescribe('XML 2 JSON parser', () => {
+describe('XML 2 JSON parser', () => {
   let self;
 
   beforeEach(() => {

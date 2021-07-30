@@ -4,7 +4,7 @@ const fs = require('fs');
 const logger = require('@elastic.io/component-logger')();
 const jsonToXml = require('../lib/actions/jsonToXmlOld');
 
-xdescribe('JSON 2 XML converter (Old)', () => {
+describe('JSON 2 XML converter (Old)', () => {
   let self;
 
   beforeEach(() => {
