@@ -14,11 +14,11 @@ const attachmentToJson = require('../lib/actions/attachmentToJson');
 function produceString(log, output) {
   let string = '';
   for (let i = 0; i < output.length; i += 1) {
-    log.info(output[i].args[1].body);
+    log.info(output[i].args[1].data);
     if (i !== 0) {
       string += ',\n';
     }
-    string += JSON.stringify(output[i].args[1].body);
+    string += JSON.stringify(output[i].args[1].data);
   }
   return string;
 }
