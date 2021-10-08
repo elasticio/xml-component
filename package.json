@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@elastic.io/component-commons-library": "1.1.5",
-    "@openintegrationhub/ferryman": "^1.5.7",
+    "@openintegrationhub/ferryman": "~1.5.7",
     "await-lock": "1.1.3",
     "bluebird": "3.5.3",
     "co": "4.6.0",
