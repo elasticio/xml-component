@@ -1,0 +1,70 @@
+{
+  "batchGiven": {
+    "records": {
+      "record": [
+        {
+          "name": "Alice Smith",
+          "street": "123 Maple Street",
+          "city": "Mill Valley",
+          "state": "CA",
+          "zip": "90952"
+        },
+        {
+          "name": "Robert Smith",
+          "street": "8 Oak Avenue",
+          "city": "Old Town",
+          "state": "PA",
+          "zip": "95819"
+        },
+        {
+          "name": "Joe Smith",
+          "street": "10 Main Road",
+          "city": "Springfield",
+          "state": "MO",
+          "zip": "90875"
+        }
+      ]
+    }
+  },
+  "batchNotGiven": [
+    {
+      "records": {
+        "record": [
+          {
+            "name": "Alice Smith",
+            "street": "123 Maple Street",
+            "city": "Mill Valley",
+            "state": "CA",
+            "zip": "90952"
+          }
+        ]
+      }
+    },
+    {
+      "records": {
+        "record": [
+          {
+            "name": "Robert Smith",
+            "street": "8 Oak Avenue",
+            "city": "Old Town",
+            "state": "PA",
+            "zip": "95819"
+          }
+        ]
+      }
+    },
+    {
+      "records": {
+        "record": [
+          {
+            "name": "Joe Smith",
+            "street": "10 Main Road",
+            "city": "Springfield",
+            "state": "MO",
+            "zip": "90875"
+          }
+        ]
+      }
+    }
+  ]
+}
