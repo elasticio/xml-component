@@ -9,6 +9,8 @@ const sinon = require('sinon');
 const logger = require('@elastic.io/component-logger')();
 
 const json = require('./data/po.json');
+const jsonChildArray = require('./data/pochildArray.json');
+const jsonSplit = require('./data/poSplit.json');
 const attachmentToJson = require('../lib/actions/attachmentToJson');
 
 function produceString(log, output) {
@@ -36,12 +38,19 @@ describe('should convert XML attachment 2 JSON', function () {
 
   before(() => {
     nock(mockSever)
+      .persist()
       .get('/')
       .replyWithFile(200, 'spec/data/po.xml');
 
     nock(mockSever)
+      .persist()
       .get('/EmptyFile')
       .reply(200);
+
+    nock(mockSever)
+      .persist()
+      .get('/Split')
+      .replyWithFile(200, 'spec/data/poSplit.xml');
   });
 
   beforeEach(() => {
@@ -104,14 +113,46 @@ describe('should convert XML attachment 2 JSON', function () {
         attachments: {
           'po.xml': {
             url: mockSever,
-            size: '5242881',
+            size: '26214473',
           },
         },
       }, cfg);
     } catch (e) {
       error = e;
     }
-    expect(error.message).to.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
+    expect(error.message).to.include('File limit is: 20971520 byte, file given was: 26214473 byte.');
+  });
+
+  it('Lower Max File Size - XML too large', async () => {
+    let error;
+    cfg.maxFileSize = 10971520;
+    try {
+      await attachmentToJson.process.bind(self)({
+        attachments: {
+          'po.xml': {
+            url: mockSever,
+            size: '16214473',
+          },
+        },
+      }, cfg);
+    } catch (e) {
+      error = e;
+    }
+    expect(error.message).to.include('File limit is: 10971520 byte, file given was: 16214473 byte.');
+  });
+
+  it('Higher Max File Size - Convert attachment to JSON', async () => {
+    cfg.maxFileSize = 30971520;
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+          size: '26214473',
+        },
+      },
+    }, cfg);
+    const results = produceString(self.logger, self.emit.getCalls());
+    expect(JSON.parse(results)).to.deep.equal(json);
   });
 
   it('Response Error', async () => {
@@ -151,6 +192,71 @@ describe('should convert XML attachment 2 JSON', function () {
     expect(error.message).to.be.equal('Empty attachment received for file po.xml');
   });
 
+  it('Custom JSONata transformation', async () => {
+    cfg.customJsonata = '$$.purchaseOrder';
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+        },
+      },
+    }, cfg);
+
+    const results = produceString(self.logger, self.emit.getCalls());
+    expect(JSON.parse(results)).to.deep.equal(json.purchaseOrder);
+  });
+
+  it('Child Array Configuration', async () => {
+    cfg.childArray = true;
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+        },
+      },
+    }, cfg);
+
+    const results = produceString(self.logger, self.emit.getCalls());
+    expect(JSON.parse(results)).to.deep.equal(jsonChildArray);
+  });
+
+  it('Split Functionality - No batch size given', async () => {
+    cfg.splitResult = {
+      arrayWrapperName: 'records',
+      arrayElementName: 'record',
+    };
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'poSplit.xml': {
+          url: `${mockSever}/Split`,
+        },
+      },
+    }, cfg);
+
+    const results = await self.emit.getCalls();
+    expect(results[0].args[1].data).to.deep.equal(jsonSplit.batchNotGiven[0]);
+    expect(results[1].args[1].data).to.deep.equal(jsonSplit.batchNotGiven[1]);
+    expect(results[2].args[1].data).to.deep.equal(jsonSplit.batchNotGiven[2]);
+  });
+
+  it('Split Functionality - Batch size given', async () => {
+    cfg.splitResult = {
+      arrayWrapperName: 'records',
+      arrayElementName: 'record',
+      batchSize: 3,
+    };
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'poSplit.xml': {
+          url: `${mockSever}/Split`,
+        },
+      },
+    }, cfg);
+
+    const results = self.emit.getCalls();
+    expect(results[0].args[1].data).to.deep.equal(jsonSplit.batchGiven);
+  });
+
 
   it('Convert attachment to JSON', async () => {
     await attachmentToJson.process.bind(self)({
@@ -162,7 +268,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(JSON.parse(results)).to.deep.equal(json);
   });
 });

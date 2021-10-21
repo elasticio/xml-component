@@ -73,15 +73,94 @@ will be converted into:
 }
 ```
 
-The following additional options are supported:
-* **Split Result**: When the splitResult configuration is enabled, if the result is an array, each element of the array will be emitted individually. 
-* **Custom JSONata**: The customJsonata configuration allows you to pass in a custom JSONata expression to be applied to the result. Otherwise, the default configuration will be used.
-* **Child Array**: When the childArray configuration is enabled, each child element of the JSON object will be converted to an array, regardless of the number of elements. 
+The following configuration options are supported: 
+* **customJsonata**: Accepts a JSONata expression to be applied to JSON result. 
+* **childArray**: A boolean value. If true, all child elements in JSON result will be in an array, regardless of the number of elements. i.e.,
+```json
+{
+  "address": "123 Main Street"
+}
+```
+will be converted to:
+```json
+{
+  "address": [ "123 Main Street" ]
+}
+```
+* **splitResult**: An object containing `arrayWrapperName`, `arrayElementName`, and `batchSize`. The splitResult allows the user to select an array of individual records from the resulting JSON object and emit the records in batches. 
+
+For example, the below XML file and configuration object will result in 3 separate messages. 
+
+**Incoming XML File**
+```xml
+<records>
+  <record>
+    <name>Alice Smith</name>
+  </record>
+  <record>
+    <name>Robert Smith</name>
+  </record>
+  <record>
+    <name>Joe Smith</name>
+  </record>
+</records>
+```
+**JSON configuration**
+```json
+{
+  "splitResult": {
+    "arrayWrapperName": "records",
+    "arrayElementName": "record",
+    "batchSize": 1
+  }
+}
+```
+**Resulting Messages**
+```json
+{
+  "body": {
+    "records": {
+      "record": ["Alice Smith"]
+    }
+  }
+}
+{
+  "body": {
+    "records": {
+      "record": ["Robert Smith"]
+    }
+  }
+}
+{
+  "body": {
+    "records": {
+      "record": ["Joe Smith"]
+    }
+  }
+}
+```
 
 ### XML Attachment to JSON
 Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects 
 and produces one outbound message per matching attachment. As input, the user can enter a patter pattern for filtering 
 files by name or leave this field empty for processing all incoming *.xml files.  
+
+The following configuration options are supported: 
+* **customJsonata**: Accepts a JSONata expression to be applied to JSON result. 
+* **childArray**: A boolean value. If true, all child elements in JSON result will be in an array, regardless of the number of elements. i.e.,
+```json
+{
+  "address": "123 Main Street"
+}
+```
+will be converted to:
+```json
+{
+  "address": [ "123 Main Street" ]
+}
+```
+* **maxFileSize**: If provided, overwrites the existing `MAX_FILE_SIZE` variable which controls the maximum size of an attachment to be written in MB
+* **splitResult**: Refer to XML to JSON step for usage instructions
 
 ### JSON to XML 
 Provides an input where a user provides a JSONata expression that should evaluate to an object to convert to JSON. 
