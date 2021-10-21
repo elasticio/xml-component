@@ -152,7 +152,6 @@ describe('should convert XML attachment 2 JSON', function () {
       },
     }, cfg);
     const results = produceString(self.logger, self.emit.getCalls());
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(JSON.parse(results)).to.deep.equal(json);
   });
 
@@ -204,7 +203,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(JSON.parse(results)).to.deep.equal(json.purchaseOrder);
   });
 
@@ -219,11 +217,9 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(JSON.parse(results)).to.deep.equal(jsonChildArray);
   });
 
-  // Test Still In Progress
   it('Split Functionality - No batch size given', async () => {
     cfg.splitResult = {
       arrayWrapperName: 'records',
@@ -238,7 +234,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
 
     const results = await self.emit.getCalls();
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(results[0].args[1].data).to.deep.equal(jsonSplit.batchNotGiven[0]);
     expect(results[1].args[1].data).to.deep.equal(jsonSplit.batchNotGiven[1]);
     expect(results[2].args[1].data).to.deep.equal(jsonSplit.batchNotGiven[2]);
@@ -259,7 +254,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
 
     const results = self.emit.getCalls();
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(results[0].args[1].data).to.deep.equal(jsonSplit.batchGiven);
   });
 
@@ -274,7 +268,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
-    self.logger.info('XML attachment 2 JSON results: %j ', results);
     expect(JSON.parse(results)).to.deep.equal(json);
   });
 });
