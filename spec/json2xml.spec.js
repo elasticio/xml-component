@@ -1,4 +1,4 @@
-const logger = require('@elastic.io/component-commons-library/lib/logger/logger').getLogger();
+const logger = require('@elastic.io/component-commons-library').getLogger();
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
