@@ -1,4 +1,4 @@
-## 1.3.5 (April 22, 2022)
+## 1.3.5 (April 13, 2022)
 
 * Update Sailor version to 2.6.27
 * Get rid of vulnerabilities in dependencies
