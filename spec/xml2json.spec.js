@@ -2,7 +2,6 @@
 const { expect } = require('chai');
 const fs = require('fs');
 const sinon = require('sinon');
-const logger = require('@elastic.io/component-logger')();
 const xmlToJson = require('../lib/actions/xmlToJson');
 
 describe('XML 2 JSON parser', () => {
@@ -10,7 +9,9 @@ describe('XML 2 JSON parser', () => {
 
   beforeEach(() => {
     self = {
-      logger,
+      logger: {
+        info: sinon.spy(),
+      },
       emit: sinon.spy(),
     };
   });
