@@ -1,6 +1,6 @@
 {
   "name": "xml",
-  "version": "1.3.4",
+  "version": "2.0.0",
   "description": "Integration component to work with XML files",
   "homepage": "http://www.elastic.io",
   "author": {
@@ -27,7 +27,7 @@
     "test": "NODE_ENV=test mocha --recursive spec"
   },
   "dependencies": {
-    "@blendededge/ferryman-extensions": "^1.0.4",
+    "@blendededge/ferryman-extensions": "^1.1.0",
     "@openintegrationhub/ferryman": "~2.1.0",
     "await-lock": "1.1.3",
     "bluebird": "3.5.3",
