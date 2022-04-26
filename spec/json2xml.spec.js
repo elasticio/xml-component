@@ -1,10 +1,9 @@
-const logger = require('@elastic.io/component-logger')();
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const fs = require('fs');
 
-const { AttachmentProcessor } = require('@elastic.io/component-commons-library');
+const { AttachmentProcessor } = require('@blendededge/ferryman-extensions');
 
 chai.use(chaiAsPromised);
 const { expect } = chai;
@@ -13,7 +12,10 @@ const json2xml = require('../lib/actions/jsonToXml');
 
 const context = {
   emit: sinon.spy(),
-  logger,
+  logger: {
+    debug: () => {},
+    info: () => {},
+  },
 };
 
 const inputMessage = {

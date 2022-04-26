@@ -6,8 +6,6 @@ const nock = require('nock');
 require('chai').should(); // expect is assertion styles used my elastic.io
 const sinon = require('sinon');
 
-// const logger = require('@elastic.io/component-logger')();
-
 const json = require('./data/po.json');
 const jsonChildArray = require('./data/pochildArray.json');
 const jsonSplit = require('./data/poSplit.json');
