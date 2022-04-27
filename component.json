@@ -15,6 +15,9 @@
         "out": "./lib/schemas/xmlToJson.out.json"
       },
       "fields": {
+        "attachmentServiceUrl": {
+          "label": "The URL for the Attachment Storage Service"
+        },
         "splitResult": {
           "label": "Split Result if it is an Array",
           "viewClass": "CheckBoxView",
@@ -38,6 +41,11 @@
       "metadata": {
         "in": {},
         "out": "./lib/schemas/jsonToXmlOld.out.json"
+      },
+      "fields": {
+        "attachmentServiceUrl": {
+          "label": "The URL for the Attachment Storage Service"
+        }
       }
     },
     "jsonToXmlV2": {
@@ -48,6 +56,9 @@
         "description": "Takes the result of a JSONata expression and creates corresponding XML as either a string or an attachment"
       },
       "fields": {
+        "attachmentServiceUrl": {
+          "label": "The URL for the Attachment Storage Service"
+        },
         "uploadToAttachment": {
           "order": 3,
           "label": "Upload XML as file to attachments",
@@ -105,6 +116,9 @@
         "description": "Looks at the JSON array of attachments passed in to component and converts all XML found to generic JSON object"
       },
       "fields": {
+        "attachmentServiceUrl": {
+          "label": "The URL for the Attachment Storage Service"
+        },
         "pattern": {
           "label": "Pattern to Match Files",
           "required": false,
