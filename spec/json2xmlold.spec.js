@@ -1,7 +1,6 @@
 /* eslint-env node, jasmine */
 const { expect } = require('chai');
 const fs = require('fs');
-const logger = require('@elastic.io/component-logger')();
 const jsonToXml = require('../lib/actions/jsonToXmlOld');
 
 describe('JSON 2 XML converter (Old)', () => {
@@ -9,7 +8,10 @@ describe('JSON 2 XML converter (Old)', () => {
 
   beforeEach(() => {
     self = {
-      logger,
+      logger: {
+        debug: () => {},
+        info: () => {},
+      },
     };
   });
 
