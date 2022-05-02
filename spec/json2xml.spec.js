@@ -38,7 +38,7 @@ const inputMessage = {
 const expectedOutputStringWithHeaders = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
 const expectedOutputStringWithoutHeaders = '<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
 
-xdescribe('JSON to XML', () => {
+describe('JSON to XML', () => {
   afterEach(() => {
     context.emit.resetHistory();
   });
@@ -70,14 +70,15 @@ xdescribe('JSON to XML', () => {
 
     const attachmentStub = sinon.stub(AttachmentProcessor.prototype, 'uploadAttachment').returns({
       config: {
-        url: 'someUrl',
+        url: 'http://example.com/get_url/',
       },
+      data: { objectId: 'id' },
     });
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
     expect(context.emit.getCall(0).args[1].body).to.deep.eql({
-      attachmentUrl: 'someUrl',
+      attachmentUrl: 'http://example.com/get_url/id?storage_type=maester',
       attachmentSize: 327,
     });
     expect(attachmentStub.getCall(0).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
