@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+          fetch-depth: 0
       - run: git config --global user.name 'Blended Edge'
       - run: git config --global user.email 'robb@blendededge.com'
       - name: NPM Increment Version
