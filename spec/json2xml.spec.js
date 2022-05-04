@@ -1,4 +1,4 @@
-const logger = require('@elastic.io/component-commons-library/lib/logger/logger').getLogger();
+const logger = require('@elastic.io/component-commons-library').getLogger();
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
@@ -70,14 +70,15 @@ describe('JSON to XML', () => {
 
     const attachmentStub = sinon.stub(AttachmentProcessor.prototype, 'uploadAttachment').returns({
       config: {
-        url: 'someUrl',
+        url: 'http://example.com/get_url/',
       },
+      data: { objectId: 'id' },
     });
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
     expect(context.emit.getCall(0).args[1].body).to.deep.eql({
-      attachmentUrl: 'someUrl',
+      attachmentUrl: 'http://example.com/get_url/id?storage_type=maester',
       attachmentSize: 327,
     });
     expect(attachmentStub.getCall(0).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
