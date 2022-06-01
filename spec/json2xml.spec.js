@@ -1,3 +1,4 @@
+const logger = require('@elastic.io/component-logger')();
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
@@ -12,10 +13,7 @@ const json2xml = require('../lib/actions/jsonToXml');
 
 const context = {
   emit: sinon.spy(),
-  logger: {
-    debug: () => {},
-    info: () => {},
-  },
+  logger,
 };
 
 const inputMessage = {
@@ -61,6 +59,12 @@ describe('JSON to XML', () => {
     });
   });
 
+  const attachmentStub = sinon.stub(AttachmentProcessor.prototype, 'uploadAttachment').returns({
+    config: {
+      url: 'someUrl',
+    },
+  });
+
   it('Send as Attachment', async () => {
     const msg = JSON.parse(JSON.stringify(inputMessage));
 
@@ -70,12 +74,6 @@ describe('JSON to XML', () => {
       headerStandalone: false,
     };
 
-    const attachmentStub = sinon.stub(AttachmentProcessor.prototype, 'uploadAttachment').returns({
-      config: {
-        url: 'someUrl',
-      },
-    });
-
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
     expect(context.emit.getCall(0).args[1].data).to.deep.eql({
@@ -83,6 +81,26 @@ describe('JSON to XML', () => {
       attachmentSize: 327,
     });
     expect(attachmentStub.getCall(0).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
+  });
+
+
+  it('Send as Attachment with custom file name', async () => {
+    const msg = JSON.parse(JSON.stringify(inputMessage));
+
+    const cfg = {
+      uploadToAttachment: true,
+      excludeXmlHeader: true,
+      headerStandalone: false,
+      filenameJsonata: '"testName.xml"',
+    };
+
+    await json2xml.process.call(context, msg, cfg, {});
+    expect(context.emit.getCall(0).args[1].attachments['testName.xml']).to.deep.eql({
+      url: 'someUrl',
+      size: 327,
+    });
+    expect(context.emit.getCalls().length).to.be.eql(1);
+    expect(attachmentStub.getCall(1).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
   });
 
   it('Too Long Attachment', async () => {
