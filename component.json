@@ -41,6 +41,11 @@
       "metadata": {
         "in": {},
         "out": "./lib/schemas/jsonToXmlOld.out.json"
+      },
+      "fields": {
+        "attachmentServiceUrl": {
+          "label": "The URL for the Attachment Storage Service"
+        }
       }
     },
     "jsonToXmlV2": {

@@ -1,4 +1,3 @@
-const logger = require('@elastic.io/component-logger')();
 const sinon = require('sinon');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
@@ -13,7 +12,10 @@ const json2xml = require('../lib/actions/jsonToXml');
 
 const context = {
   emit: sinon.spy(),
-  logger,
+  logger: {
+    debug: () => {},
+    info: () => {},
+  },
 };
 
 const inputMessage = {
