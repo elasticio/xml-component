@@ -73,6 +73,9 @@
           "order": 1,
           "label": "Is the XML file standalone",
           "viewClass": "CheckBoxView"
+        },
+        "filenameJsonata": {
+          "label": "Accepts a JSONata expression for the file name of XML output. Defaults to jsonToXml.xml"
         }
       },
       "metadata": {
