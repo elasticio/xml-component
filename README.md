@@ -1,25 +1,19 @@
-# XML Component [![CircleCI](https://circleci.com/gh/elasticio/xml-component.svg?style=svg)](https://circleci.com/gh/elasticio/xml-component)
+# XML Component
 
-## Description
-iPaaS component to convert between XML and JSON data.
+The **XML Component** transforms XML attachments and strings to JSON and JSON to either XML strings or attachments. It is useful when using Open Integration Hub flows that interact with XML documents, because the message data being acted on during a flow is formatted as JSON.
 
-### Purpose
-Allows users to convert XML attachments and strings to and from JSON.
-This component has 3 actions allowing users to pass in either generic but well formatted XML/JSON strings or XML attachments
-and produces a generic string or attachment of the other file type. The output then can be mapped and used in other components.
+The **XML Component** requires that XML documents "in" be [well-formed](https://en.wikipedia.org/wiki/Well-formed_document) to be parsed correctly. If the XML is not well-formed, the component will emit an error.
 
-### Requirements and Conversion Behavior
-Provided XML document (for `XML to JSON`) should be [well-formed](https://en.wikipedia.org/wiki/Well-formed_document)
-in order to be parsed correctly. You will get an error otherwise.
+The JSON "in" must be a single object at the top level, because XML documents must be contained in a single "root" tag.
 
-JSON inputs must be objects with exactly one field as XML documents must be contained in a single 'root' tag.
 [JSON inputs can not have any field names which are not valid as XML tag names:](https://www.w3schools.com/xml/xml_elements.asp)
 * They must start with a letter or underscore
 * They cannot start with the letters xml (or XML, or Xml, etc)
 * They must only contain letters, digits, hyphens, underscores, and periods
 
-XML attributes on a tag can be read and set by setting an `_attr` sub-object in the JSON.
-The inner-text of an XML element can also be controlled with `#` sub-object.
+XML attributes on a tag can be defined with JSON by creating an `_attr` sub-object in the input JSON.
+
+The inner-text of an XML element can also be controlled with an underscore `_` sub-object.
 
 For example:
 ```json
@@ -37,45 +31,31 @@ is equivalent to
 <someTag id="my id">my inner text</someTag>
 ```
 
-#### Environment variables
-* `MAX_FILE_SIZE`: *optional* - Controls the maximum size of an attachment to be written in MB.
-Defaults to 10 MB where 1 MB = 1024 * 1024 bytes.
+## Functions & Configuration Fields
+The following is a complete list of configuration fields that are available on this component.
 
-## Actions
+### xmlToJson
+Takes an XML string and converts it to generic JSON object. The XML string to be converted must live at `msg.data.xmlString`. Note: The values inside xml tags will be converting into string only, e.g.:
 
-### XML to JSON
-Takes XML string and converts it to generic JSON object.
-
-**Limitation:**
-Value inside xml tags will be converting into string only, e.g.:
-
-given xml
 ```xml
-<note>
+<element>
   <date>2015-09-01</date>
-  <hour>08:30</hour>
-  <to>Tove</to>
-  <from>Jani</from>
-  <body>Don't forget me this weekend!</body>
-</note>
+  <quantity>100</quantity>
+</element>
 ```
-
 will be converted into:
 ```json
 {
-  "note": {
-    "id": "322",
-    "to": "Tove",
-    "from": "Jani",
-    "heading": "Reminder",
-    "body": "Don't forget me this weekend!"
+  "element": {
+    "date": "2015-09-01",
+    "quantity": "100"
   }
 }
 ```
 
 The following configuration options are supported:
-* **customJsonata**: Accepts a JSONata expression to be applied to JSON result.
-* **childArray**: A boolean value. If true, all child elements in JSON result will be in an array, regardless of the number of elements. i.e.,
+- **customJsonata**: Accepts a JSONata expression to be applied to JSON result to transform the data further.
+- **childArray**: A boolean value. If true, all child elements in JSON result will be in an array, regardless of the number of elements. i.e.,
 ```json
 {
   "address": "123 Main Street"
@@ -87,7 +67,8 @@ will be converted to:
   "address": [ "123 Main Street" ]
 }
 ```
-* **splitResult**: An object containing `arrayWrapperName`, `arrayElementName`, and `batchSize`. The splitResult allows the user to select an array of individual records from the resulting JSON object and emit the records in batches.
+- **pattern**: Optionally, provide a regular expression to only convert certain entries in the **attachments** object to JSON.
+- **splitResult**: An object containing `arrayWrapperName`, `arrayElementName`, and `batchSize`. The splitResult allows the user to select an array of individual records from the resulting JSON object and emit the records in batches.
 
 For example, the below XML file and configuration object will result in 3 separate messages.
 
@@ -118,21 +99,21 @@ For example, the below XML file and configuration object will result in 3 separa
 **Resulting Messages**
 ```json
 {
-  "body": {
+  "data": {
     "records": {
       "record": ["Alice Smith"]
     }
   }
 }
 {
-  "body": {
+  "data": {
     "records": {
       "record": ["Robert Smith"]
     }
   }
 }
 {
-  "body": {
+  "data": {
     "records": {
       "record": ["Joe Smith"]
     }
@@ -140,41 +121,32 @@ For example, the below XML file and configuration object will result in 3 separa
 }
 ```
 
-### XML Attachment to JSON
-Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects
-and produces one outbound message per matching attachment. As input, the user can enter a patter pattern for filtering
-files by name or leave this field empty for processing all incoming *.xml files.
+### attachmentToJson
+Looks at the JSON array of attachments passed in to component and converts all XML that it finds to JSON objects. It then produces one outbound message per matching attachment. As input, the user can enter a pattern for filtering files by name or leave this field empty for processing all incoming *.xml files.
 
 The following configuration options are supported:
-* **customJsonata**: Accepts a JSONata expression to be applied to JSON result.
-* **childArray**: A boolean value. If true, all child elements in JSON result will be in an array, regardless of the number of elements. i.e.,
-```json
-{
-  "address": "123 Main Street"
-}
-```
-will be converted to:
-```json
-{
-  "address": [ "123 Main Street" ]
-}
-```
-* **maxFileSize**: If provided, overwrites the existing `MAX_FILE_SIZE` variable which controls the maximum size of an attachment to be written in MB
-* **splitResult**: Refer to XML to JSON step for usage instructions
+* **customJsonata**: Refer to **xmlToJson** step for usage instructions.
+* **childArray**: Refer to **xmlToJson** step for usage instructions.
+* **maxFileSize**: If provided, overwrites the existing `MAX_FILE_SIZE` variable which controls the maximum size of an attachment to be written in MB.
+* **splitResult**: Refer to **xmlToJson** step for usage instructions.
 
-### JSON to XML
-Provides an input where a user provides a JSONata expression that should evaluate to an object to convert to JSON.
-See [Requirements & Conversion Behavior](#requirements-and-conversion-behavior) for details on conversion logic.
-The following options are supported:
-* **Upload XML as file to attachments**: When checked, the resulting XML will be placed directly into an attachment.
-The attachment information will be provided in both the message's attachments section as well as `attachmentUrl` and `attachmentSize`
-will be populated. The attachment size will be described in bytes.
-When this box is not checked, the resulting XML will be provided in the `xmlString` field.
-* **Exclude XML Header/Description**: When checked, no XML header of the form `<?xml version="1.0" encoding="UTF-8" standalone="no"?>` will be prepended to the XML output.
-* **Is the XML file standalone**: When checked, the xml header/description will have a value of `yes` for standalone. Otherwise, the value will be `no`. Has no effect when XML header/description is excluded.
+### jsonToXmlV2
+Converts JSON from the message, specified by a JSONata expression, into an XML string.
 
-The incoming message should have a single field `input`. When using integrator mode, this appears as the input **JSON to convert** When building mappings in developper mode, one must set the `input` property. E.g.:
-```
+Note: the jsonToXml function should not be used for new implementations, but it has been left in the component for backwards compatibility. jsonToXmlV2 has updated functionality.
+
+This function uses the [Node library xml2Js](https://www.npmjs.com/package/xml2js) to perform XML-JSON conversion. Reviiew that documentation for details on how to structure JSON to produce the desired XML output.
+
+Note the following xml2Js options, which are hardcoded into this function's logic.
+- trim: false
+- normalize: false
+- explicitArray: false
+- normalizeTags: false
+- attrkey: '_attr'
+- explicitRoot: false
+
+The component expects the incoming message to have a single field `input` set to the JSON that will be converted to XML. For example:
+```json
 {
   "input": {
              "someTag": {
@@ -187,23 +159,31 @@ The incoming message should have a single field `input`. When using integrator m
 }
 ```
 
-### Attachment Storage Service Interaction
+The following configuration options are supported:
 
-The url for the Attachment Storage Service can be supplied, in descending order of precedence:
+- **attachmentStorageUrl**: Override the environment variable that defines the attachment service's URL. This is not recommended for most use cases.
+- **excludeXmlHeader**: When true, no XML header of the form `<?xml version="1.0" encoding="UTF-8" standalone="no"?>` will be prepended to the XML output.
+- **filenameJsonata**: When outputting as an attachment, specify a JSONata expression that creates a dynamic filename for the attachment. The JSONata executes relative to `msg`. If this is not specified, the component will output the file as `jsonToXml.xml`.
+- **headerStandalone**: Specify whether to set the `standalone` attribute to `true` in the XML header for the output.
+- **uploadToAttachment**: When true, the output XML will be placed directly into the attachment service. The attachment information will be provided in both the message's attachments section as well as `attachmentUrl` and `attachmentSize` will be populated. The attachment size will be described in bytes. When this value is false or not specified, the resulting XML will be provided in the `xmlString` field on the message.
 
-- specifying a `attachmentServiceUrl` value in the node's fields object
-- environment variable `ELASTICIO_ATTACHMENT_STORAGE_SERVICE_BASE_URL`
-- default value of `http://attachment-storage-service.oih-prod-ns.svc.cluster.local:3002`
+## Attachment Storage Service Interaction
+
+The url for the Attachment Storage Service will resolved with the following, in descending order of precedence:
+
+- The `attachmentServiceUrl` value set on the flow step's field
+- The environment variable `ELASTICIO_ATTACHMENT_STORAGE_SERVICE_BASE_URL`
+- A default value of `http://attachment-storage-service.oih-prod-ns.svc.cluster.local:3002`
+
+## Environment variables
+* `MAX_FILE_SIZE`: *optional* - Controls the maximum size of an attachment to be written in MB.
+Defaults to 10 MB where 1 MB = 1024 * 1024 bytes.
+
 
 ## Known limitations
- - The maximum size of incoming file for processing is 5 MiB. If the size of incoming file will be more than 5 MiB,
- action will throw error `Attachment *.xml is to large to be processed by XML component. File limit is: 5242880 byte,
- file given was: * byte.`.
+ - The maximum size of incoming file for processing is 5 MB. If the size of incoming file will be more than 5 MB, the function will throw error `Attachment *.xml is to large to be processed by XML component. File limit is: 5242880 byte, file given was: * byte.`.
  - All actions involving attachments are not supported on local agents due to current platform limitations.
  - When creating XML files with invalid XML tags, the name of the potentially invalid tag will not be reported.
-
-## Additional Info
-Icon made by Freepik from www.flaticon.com
 
 ## License
 
