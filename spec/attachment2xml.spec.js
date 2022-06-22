@@ -115,14 +115,14 @@ describe('should convert XML attachment 2 JSON', function () {
         attachments: {
           'po.xml': {
             url: mockSever,
-            size: '26214473',
+            size: '66214473',
           },
         },
       }, cfg);
     } catch (e) {
       error = e;
     }
-    expect(error.message).to.include('File limit is: 20971520 byte, file given was: 26214473 byte.');
+    expect(error.message).to.include('File limit is: 52428800 byte, file given was: 66214473 byte.');
   });
 
   it('Lower Max File Size - XML too large', async () => {
