@@ -52,7 +52,7 @@
     "eslint-plugin-mocha": "6.3.0",
     "mocha": "7.1.2",
     "nock": "12.0.3",
-    "nyc": "13.1.0",
+    "nyc": "15.1.0",
     "sinon": "9.0.2",
     "stream-string": "2.0.1"
   },
