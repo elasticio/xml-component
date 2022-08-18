@@ -166,6 +166,12 @@ The following configuration options are supported:
 - **filenameJsonata**: When outputting as an attachment, specify a JSONata expression that creates a dynamic filename for the attachment. The JSONata executes relative to `msg`. If this is not specified, the component will output the file as `jsonToXml.xml`.
 - **headerStandalone**: Specify whether to set the `standalone` attribute to `true` in the XML header for the output.
 - **uploadToAttachment**: When true, the output XML will be placed directly into the attachment service. The attachment information will be provided in both the message's attachments section as well as `attachmentUrl` and `attachmentSize` will be populated. The attachment size will be described in bytes. When this value is false or not specified, the resulting XML will be provided in the `xmlString` field on the message.
+- **cData**: A boolean indicating whether or not there is CDATA contained in the JSON object that should be ignored by the parser. False by default
+- **docType**: Specify the system doc type by providing a link to a dtd file. `null` by default.
+- **renderOpts**: An object containing 3 properties, `pretty`, `newline`, and `indent`. 
+  - **pretty**: A boolean that is true by default. Pretty prints the XML output with indentation and new lines. 
+  - **newline**: A string value to use for the new line character. Can only be used in conjunction with `pretty: true`. Defaults to `\n`. 
+  - **indent**: A string value to use for the indentation/white space characters. Can only be used in conjunction with `pretty:true`. Defaults to `  `. 
 
 ## Attachment Storage Service Interaction
 

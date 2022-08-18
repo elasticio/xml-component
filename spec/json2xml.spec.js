@@ -219,4 +219,141 @@ describe('JSON to XML', () => {
       xmlString: '<someTag id="my id">my inner text</someTag>',
     });
   });
+
+  describe('Render Options Config', () => {
+    afterEach(() => {
+      context.emit.resetHistory();
+    });
+
+    it('Pretty false', async () => {
+      const msg = {
+        data: {
+          input: inputMessage,
+        },
+      };
+
+      const cfg = {
+        renderOpts: {
+          pretty: false,
+        },
+      };
+
+      const expectedOutput = '<?xml version="1.0" encoding="UTF-8"?><data><input><ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1"><ORDERRESPONSE_HEADER><ORDERRESPONSE_INFO><ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE><ORDER_ID>1234</ORDER_ID></ORDERRESPONSE_INFO></ORDERRESPONSE_HEADER><ORDERRESPONSE_ITEM_LIST/></ORDERRESPONSE></input></data>';
+
+      await json2xml.process.call(context, msg, cfg, {});
+      expect(context.emit.getCalls().length).to.be.eql(1);
+      expect(context.emit.getCall(0).args[1].data.xmlString).to.deep.eql(expectedOutput);
+    });
+
+    it('Not provided', async () => {
+      const msg = {
+        data: {
+          input: inputMessage,
+        },
+      };
+
+      const cfg = {};
+
+      const expectedOutput = '<?xml version="1.0" encoding="UTF-8"?>\n<data>\n  <input>\n    <ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n      <ORDERRESPONSE_HEADER>\n        <ORDERRESPONSE_INFO>\n          <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n          <ORDER_ID>1234</ORDER_ID>\n        </ORDERRESPONSE_INFO>\n      </ORDERRESPONSE_HEADER>\n      <ORDERRESPONSE_ITEM_LIST/>\n    </ORDERRESPONSE>\n  </input>\n</data>';
+
+      await json2xml.process.call(context, msg, cfg, {});
+      expect(context.emit.getCalls().length).to.be.eql(1);
+      expect(context.emit.getCall(0).args[1].data.xmlString).to.deep.eql(expectedOutput);
+    });
+
+    it('Pretty true, different new line char and additional indent spaces', async () => {
+      const msg = {
+        data: {
+          input: inputMessage,
+        },
+      };
+
+      const cfg = {
+        renderOpts: {
+          pretty: true,
+          newline: 'NEWLINE',
+          indent: 'INDENT',
+        },
+      };
+
+      const expectedOutput = '<?xml version="1.0" encoding="UTF-8"?>NEWLINE<data>NEWLINEINDENT<input>NEWLINEINDENTINDENT<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">NEWLINEINDENTINDENTINDENT<ORDERRESPONSE_HEADER>NEWLINEINDENTINDENTINDENTINDENT<ORDERRESPONSE_INFO>NEWLINEINDENTINDENTINDENTINDENTINDENT<ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>NEWLINEINDENTINDENTINDENTINDENTINDENT<ORDER_ID>1234</ORDER_ID>NEWLINEINDENTINDENTINDENTINDENT</ORDERRESPONSE_INFO>NEWLINEINDENTINDENTINDENT</ORDERRESPONSE_HEADER>NEWLINEINDENTINDENTINDENT<ORDERRESPONSE_ITEM_LIST/>NEWLINEINDENTINDENT</ORDERRESPONSE>NEWLINEINDENT</input>NEWLINE</data>';
+
+      await json2xml.process.call(context, msg, cfg, {});
+      expect(context.emit.getCalls().length).to.be.eql(1);
+      expect(context.emit.getCall(0).args[1].data.xmlString).to.deep.eql(expectedOutput);
+    });
+  });
+
+  describe('CData Config Options', () => {
+    afterEach(() => {
+      context.emit.resetHistory();
+    });
+
+    it('True', async () => {
+      const msg = {
+        data: {
+          input: {
+            nested: {
+              xml: '<?xml version="1.0" encoding="UTF-8"?><parent><child>value</child></parent>',
+            },
+          },
+        },
+      };
+
+      const cfg = {
+        cData: true,
+      };
+
+      const expectedOutput = '<?xml version="1.0" encoding="UTF-8"?>\n<nested>\n  <xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?><parent><child>value</child></parent>]]></xml>\n</nested>';
+
+      await json2xml.process.call(context, msg, cfg, {});
+      expect(context.emit.getCalls().length).to.be.eql(1);
+      expect(context.emit.getCall(0).args[1].data.xmlString).to.deep.eql(expectedOutput);
+    });
+
+    it('False', async () => {
+      const msg = {
+        data: {
+          input: {
+            nested: {
+              xml: '<?xml version="1.0" encoding="UTF-8"?><parent><child>value</child></parent>',
+            },
+          },
+        },
+      };
+
+      const cfg = {
+        cData: false,
+      };
+
+      const expectedOutput = '<?xml version="1.0" encoding="UTF-8"?>\n<nested>\n  <xml>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;parent&gt;&lt;child&gt;value&lt;/child&gt;&lt;/parent&gt;</xml>\n</nested>';
+
+      await json2xml.process.call(context, msg, cfg, {});
+      expect(context.emit.getCalls().length).to.be.eql(1);
+      expect(context.emit.getCall(0).args[1].data.xmlString).to.deep.eql(expectedOutput);
+    });
+  });
+
+  describe('DocType Config Options', async () => {
+    afterEach(() => {
+      context.emit.resetHistory();
+    });
+
+    it('CXML', async () => {
+      const msg = {
+        data: {
+          input: inputMessage,
+        },
+      };
+
+      const cfg = {
+        docType: 'http://xml.cxml.org/schemas/cXML/1.2.014/cXML.dtd',
+        excludeXmlHeader: false,
+      };
+
+      await json2xml.process.call(context, msg, cfg, {});
+      expect(context.emit.getCalls().length).to.be.eql(1);
+      expect(context.emit.getCall(0).args[1].data.xmlString).to.contain('<!DOCTYPE data SYSTEM "http://xml.cxml.org/schemas/cXML/1.2.014/cXML.dtd">');
+    });
+  });
 });
