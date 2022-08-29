@@ -55,7 +55,6 @@ describe('should convert XML attachment 2 JSON', function () {
     };
   });
 
-
   it('FileName undefined ', async () => {
     await attachmentToJson.process.bind(self)({
       attachments: {
@@ -66,7 +65,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
-
 
   it('FileName does not match pattern ', async () => {
     cfg = {
@@ -81,7 +79,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
-
 
   it('fileName is not .xml ', async () => {
     cfg = {
@@ -150,7 +147,6 @@ describe('should convert XML attachment 2 JSON', function () {
     // eslint-disable-next-line no-unused-expressions
     expect(error.message).to.be.equal('Empty attachment received for file po.xml');
   });
-
 
   it('Convert attachment to JSON', async () => {
     await attachmentToJson.process.bind(self)({

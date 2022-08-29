@@ -35,7 +35,9 @@ const inputMessage = {
     },
   },
 };
+// eslint-disable-next-line max-len
 const expectedOutputStringWithHeaders = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
+// eslint-disable-next-line max-len
 const expectedOutputStringWithoutHeaders = '<ORDERRESPONSE xmlns:ns2="http://www.bmecat.org/bmecat/2005" version="2.1">\n  <ORDERRESPONSE_HEADER>\n    <ORDERRESPONSE_INFO>\n      <ORDERRESPONSE_DATE>2020-04-07T09:07:45.188Z</ORDERRESPONSE_DATE>\n      <ORDER_ID>1234</ORDER_ID>\n    </ORDERRESPONSE_INFO>\n  </ORDERRESPONSE_HEADER>\n  <ORDERRESPONSE_ITEM_LIST/>\n</ORDERRESPONSE>';
 
 describe('JSON to XML', () => {
@@ -68,20 +70,15 @@ describe('JSON to XML', () => {
       headerStandalone: false,
     };
 
-    const attachmentStub = sinon.stub(AttachmentProcessor.prototype, 'uploadAttachment').returns({
-      config: {
-        url: 'http://example.com/get_url/',
-      },
-      data: { objectId: 'id' },
-    });
+    const attachmentStub = sinon.stub(AttachmentProcessor.prototype, 'uploadAttachment').returns('id');
 
     await json2xml.process.call(context, msg, cfg, {});
     expect(context.emit.getCalls().length).to.be.eql(1);
     expect(context.emit.getCall(0).args[1].body).to.deep.eql({
-      attachmentUrl: 'http://example.com/get_url/id?storage_type=maester',
+      attachmentUrl: '/objects/id?storage_type=maester',
       attachmentSize: 327,
     });
-    expect(attachmentStub.getCall(0).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
+    expect(attachmentStub.getCall(0).args[0]()).to.be.eql(expectedOutputStringWithoutHeaders);
   });
 
   it('Too Long Attachment', async () => {
@@ -100,7 +97,9 @@ describe('JSON to XML', () => {
       headerStandalone: false,
     };
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('XML data is 15728713 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes');
+    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith(
+      'XML data is 15728713 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes',
+    );
   });
 
   it('Non object input', async () => {
