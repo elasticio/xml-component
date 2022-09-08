@@ -108,6 +108,23 @@ describe('should convert XML attachment 2 JSON', function () {
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
 
+  it('fileName is not .xml but pattern provided', async () => {
+    cfg = {
+      pattern: '(.cxml)',
+    };
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.cxml': {
+          url: mockSever,
+        },
+      },
+    }, cfg);
+
+    const results = produceString(self.logger, self.emit.getCalls());
+
+    expect(results).to.deep.eql(JSON.stringify(json));
+  });
+
   it('XML too large', async () => {
     let error;
     try {
