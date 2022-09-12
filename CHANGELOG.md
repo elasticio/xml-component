@@ -1,3 +1,7 @@
+## 1.3.7 (September 12, 2022)
+
+* Deleted buildType from component.json to fix component build
+
 ## 1.3.6 (September 09, 2022)
 
 * Update Sailor version to 2.6.29
