@@ -38,7 +38,7 @@ is equivalent to
 ```
 
 #### Environment variables 
-* `MAX_FILE_SIZE`: *optional* - Controls the maximum size of an attachment to be written in MB. 
+* `MAX_FILE_SIZE`: *optional* - Controls the maximum size of an attachment to be read or written in MB. 
 Defaults to 10 MB where 1 MB = 1024 * 1024 bytes.
 
 ## Actions
@@ -74,9 +74,22 @@ will be converted into:
 ```
 
 ### XML Attachment to JSON
-Looks at the JSON array of attachments passed in to component and converts all XML that it finds to generic JSON objects 
-and produces one outbound message per matching attachment. As input, the user can enter a patter pattern for filtering 
-files by name or leave this field empty for processing all incoming *.xml files.  
+#### Configuration Fields
+
+* **Pattern** - (string, optional): RegEx for filtering files by name provided via old attachment mechanism (outside message body)
+* **Upload single file** - (checkbox, optional): Use this option if you want to upload a single file
+
+#### Input Metadata
+If `Upload single file` checked, there will be 2 fields:
+* **URL** - (string, required): link to file on Internet or platform
+
+If `Upload single file` unchecked:
+* **Attachments** - (array, required): Collection of files to upload, each record contains object with two keys:
+  * **URL** - (string, required): link to file on Internet or platform
+
+#### Output Metadata
+
+Resulting JSON object
 
 ### JSON to XML 
 Provides an input where a user provides a JSONata expression that should evaluate to an object to convert to JSON. 
@@ -104,9 +117,6 @@ The incoming message should have a single field `input`. When using integrator m
 ```
 
 ## Known limitations
- - The maximum size of incoming file for processing is 5 MiB. If the size of incoming file will be more than 5 MiB, 
- action will throw error `Attachment *.xml is to large to be processed by XML component. File limit is: 5242880 byte, 
- file given was: * byte.`. 
  - All actions involving attachments are not supported on local agents due to current platform limitations.
  - When creating XML files with invalid XML tags, the name of the potentially invalid tag will not be reported.
  

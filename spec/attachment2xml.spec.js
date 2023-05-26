@@ -101,14 +101,14 @@ describe('should convert XML attachment 2 JSON', function () {
         attachments: {
           'po.xml': {
             url: mockSever,
-            size: '5242881',
+            size: '15242881',
           },
         },
       }, cfg);
     } catch (e) {
       error = e;
     }
-    expect(error.message).to.include('File limit is: 5242880 byte, file given was: 5242881 byte.');
+    expect(error.message).to.include('File limit is: 10485760 byte, file given was: 15242881 byte.');
   });
 
   it('Response Error', async () => {

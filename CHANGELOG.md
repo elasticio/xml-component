@@ -1,3 +1,8 @@
+## 1.4.0 (May 25, 2023)
+* Implemented support `attachments` inside message body for `XML Attachment to JSON` action
+* Update Sailor version to 2.7.1
+* Removed old dependencies
+
 ## 1.3.7 (September 12, 2022)
 
 * Deleted buildType from component.json to fix component build
