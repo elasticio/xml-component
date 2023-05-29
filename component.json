@@ -1,6 +1,6 @@
 {
   "title": "XML",
-  "version": "1.4.0-dev.4",
+  "version": "1.4.0-dev.5",
   "description": "Component to convert between XML and JSON data",
   "actions": {
     "xmlToJson": {
