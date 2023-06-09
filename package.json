@@ -29,10 +29,14 @@
     "@elastic.io/component-commons-library": "3.0.2",
     "elasticio-node": "0.0.9",
     "elasticio-sailor-nodejs": "2.7.1",
+    "genson-js": "^0.0.8",
+    "json-schema-faker": "0.5.3",
     "lodash": "4.17.21",
+    "object-sizeof": "2.6.1",
     "xml2js": "0.5.0"
   },
   "devDependencies": {
+    "@elastic.io/component-logger": "0.0.1",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "code-quality-js": "2.0.2",
@@ -42,8 +46,7 @@
     "eslint-plugin-import": "2.23.3",
     "mocha": "10.0.0",
     "nock": "12.0.3",
-    "sinon": "9.0.2",
-    "@elastic.io/component-logger": "0.0.1"
+    "sinon": "9.0.2"
   },
   "repository": {
     "type": "git",
