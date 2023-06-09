@@ -148,7 +148,7 @@ describe('should convert XML attachment 2 JSON', function () {
     expect(error.message).to.be.equal('Empty attachment received for file po.xml');
   });
 
-  xit('Convert attachment to JSON', async () => {
+  it('Convert attachment to JSON', async () => {
     await attachmentToJson.process.bind(self)({
       attachments: {
         'po.xml': {

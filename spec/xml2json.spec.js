@@ -27,7 +27,7 @@ describe('XML 2 JSON parser', () => {
     expect(body).to.deep.equal(result);
   });
 
-  xit('should fail due to an invalid JSON', async () => {
+  it('should fail due to an invalid JSON', async () => {
     const xml = fs.readFileSync('./spec/data/invalidXml.xml', 'utf-8');
 
     const message = {
@@ -35,8 +35,7 @@ describe('XML 2 JSON parser', () => {
         xmlString: xml,
       },
     };
-    const messageText = 'Given XML is not valid or the file can not be read. '
-      + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
+    const messageText = 'Unencoded <\nLine: 2\nColumn: 4\nChar: 3';
 
     await xmlToJson.process.bind(self)(message, {}).catch((error) => {
       expect(error.message).to.equal(messageText);
