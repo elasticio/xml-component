@@ -119,7 +119,8 @@ The incoming message should have a single field `input`. When using integrator m
 ## Known limitations
  - All actions involving attachments are not supported on local agents due to current platform limitations.
  - When creating XML files with invalid XML tags, the name of the potentially invalid tag will not be reported.
- 
+ - When you try to retrieve sample in `XML Attachment to JSON` action and it's size is more then 500Kb, there will be generated new smaller sample with same structure as original
+
 ## Additional Info
 Icon made by Freepik from www.flaticon.com 
 
