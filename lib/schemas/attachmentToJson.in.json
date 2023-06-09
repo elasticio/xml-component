@@ -1,11 +1,19 @@
 {
   "type": "object",
   "properties": {
-    "pattern": {
-      "type": "string",
-      "required": false,
-      "title": "Pattern to Match Files",
-      "placeholder": "Pattern"
+    "attachments": {
+      "type": "array",
+      "title": "Attachments",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "required": true
+          }
+        }
+      }
     }
   }
 }
