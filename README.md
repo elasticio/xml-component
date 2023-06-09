@@ -38,8 +38,12 @@ is equivalent to
 ```
 
 #### Environment variables 
-* `MAX_FILE_SIZE`: *optional* - Controls the maximum size of an attachment to be read or written in MB. 
-Defaults to 10 MB where 1 MB = 1024 * 1024 bytes.
+* `MAX_FILE_SIZE`: *optional* - Controls the maximum size of an attachment to be read or written in MB.
+
+  Defaults to 10 MB where 1 MB = 1024 * 1024 bytes.
+* `EIO_REQUIRED_RAM_MB`: *optional* - You can increase memory usage limit for component if you going to work with big files
+
+  Defaults to 256 MB where 1 MB = 1024 * 1024 bytes.
 
 ## Actions
 
@@ -86,6 +90,25 @@ If `Upload single file` checked, there will be 2 fields:
 If `Upload single file` unchecked:
 * **Attachments** - (array, required): Collection of files to upload, each record contains object with two keys:
   * **URL** - (string, required): link to file on Internet or platform
+
+  If you going to use this option with static data, you need to switch to Developer mode
+    <details><summary>Sample</summary>
+  <p>
+
+  ```json
+  {
+    "attachments": [
+      {
+        "url": "https://example.com/files/file1.xml"
+      },
+      {
+        "url": "https://example.com/files/file2.xml"
+      }
+    ]
+  }
+  ```
+  </p>
+  </details>
 
 #### Output Metadata
 
