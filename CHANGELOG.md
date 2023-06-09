@@ -1,4 +1,4 @@
-## 1.4.0 (May 25, 2023)
+## 1.4.0 (June 09, 2023)
 * Implemented support `attachments` inside message body for `XML Attachment to JSON` action
 * Updated Sailor version to 2.7.1
 * Removed old dependencies
