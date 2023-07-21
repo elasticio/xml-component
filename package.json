@@ -27,7 +27,7 @@
     "test": "NODE_ENV=test mocha --recursive spec"
   },
   "dependencies": {
-    "@blendededge/ferryman-extensions": "^1.3.1",
+    "@blendededge/ferryman-extensions": "^1.2.1",
     "@openintegrationhub/ferryman": "~2.1.1",
     "await-lock": "1.1.3",
     "bluebird": "3.5.3",

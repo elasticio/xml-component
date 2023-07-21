@@ -25,7 +25,6 @@ describe('XML 2 JSON parser', () => {
       data: {
         xmlString: xml,
       },
-      metadata: {},
     };
     const { data } = await xmlToJson.process.bind(self)(message, {});
     expect(data).to.deep.equal(result);
@@ -38,7 +37,6 @@ describe('XML 2 JSON parser', () => {
       data: {
         xmlString: xml,
       },
-      metadata: {},
     };
     const messageText = 'Given XML is not valid or the file can not be read. '
       + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
