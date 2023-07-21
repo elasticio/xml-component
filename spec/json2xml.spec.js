@@ -47,7 +47,7 @@ describe('JSON to XML', () => {
 
   it('Send as body', async () => {
     const msg = JSON.parse(JSON.stringify(inputMessage));
-
+    msg.metadata = {};
     const cfg = {
       uploadToAttachment: false,
       excludeXmlHeader: false,
@@ -69,7 +69,7 @@ describe('JSON to XML', () => {
 
   it('Send as Attachment', async () => {
     const msg = JSON.parse(JSON.stringify(inputMessage));
-
+    msg.metadata = {};
     const cfg = {
       uploadToAttachment: true,
       excludeXmlHeader: true,
@@ -88,7 +88,7 @@ describe('JSON to XML', () => {
 
   it('Send as Attachment with custom file name', async () => {
     const msg = JSON.parse(JSON.stringify(inputMessage));
-
+    msg.metadata = {};
     const cfg = {
       uploadToAttachment: true,
       excludeXmlHeader: true,
@@ -113,6 +113,7 @@ describe('JSON to XML', () => {
           example: reallyLongString,
         },
       },
+      metadata: {},
     };
 
     const cfg = {
@@ -133,6 +134,7 @@ describe('JSON to XML', () => {
           foo: 'bar',
         }],
       },
+      metadata: {},
     };
     const cfg = {};
 
@@ -147,6 +149,7 @@ describe('JSON to XML', () => {
           bar: 'baz',
         },
       },
+      metadata: {},
     };
     const cfg = {};
 
@@ -164,6 +167,7 @@ describe('JSON to XML', () => {
           },
         },
       },
+      metadata: {},
     };
     const cfg = {};
 
@@ -178,6 +182,7 @@ describe('JSON to XML', () => {
       data: {
         input: json,
       },
+      metadata: {},
     };
 
     const cfg = {
@@ -205,6 +210,7 @@ describe('JSON to XML', () => {
           },
         },
       },
+      metadata: {},
     };
 
     const cfg = {
@@ -230,6 +236,7 @@ describe('JSON to XML', () => {
         data: {
           input: inputMessage,
         },
+        metadata: {},
       };
 
       const cfg = {
@@ -250,6 +257,7 @@ describe('JSON to XML', () => {
         data: {
           input: inputMessage,
         },
+        metadata: {},
       };
 
       const cfg = {};
@@ -266,6 +274,7 @@ describe('JSON to XML', () => {
         data: {
           input: inputMessage,
         },
+        metadata: {},
       };
 
       const cfg = {
@@ -298,6 +307,7 @@ describe('JSON to XML', () => {
             },
           },
         },
+        metadata: {},
       };
 
       const cfg = {
@@ -320,6 +330,7 @@ describe('JSON to XML', () => {
             },
           },
         },
+        metadata: {},
       };
 
       const cfg = {
@@ -344,6 +355,7 @@ describe('JSON to XML', () => {
         data: {
           input: inputMessage,
         },
+        metadata: {},
       };
 
       const cfg = {
