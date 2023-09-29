@@ -1,4 +1,7 @@
 FROM node:18-alpine AS base
+
+ENV ELASTICIO_OTEL_SERVICE_NAME=COMPONENT:XML
+
 RUN apk --no-cache add \
     python3 \
     make \

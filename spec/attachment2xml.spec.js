@@ -74,6 +74,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
@@ -88,6 +89,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
@@ -102,6 +104,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
@@ -116,6 +119,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
@@ -133,6 +137,7 @@ describe('should convert XML attachment 2 JSON', function () {
             size: '66214473',
           },
         },
+        metadata: {},
       }, cfg);
     } catch (e) {
       error = e;
@@ -151,6 +156,7 @@ describe('should convert XML attachment 2 JSON', function () {
             size: '16214473',
           },
         },
+        metadata: {},
       }, cfg);
     } catch (e) {
       error = e;
@@ -167,6 +173,7 @@ describe('should convert XML attachment 2 JSON', function () {
           size: '26214473',
         },
       },
+      metadata: {},
     }, cfg);
     const results = produceString(self.logger, self.emit.getCalls());
     expect(JSON.parse(results)).to.deep.equal(json);
@@ -187,6 +194,7 @@ describe('should convert XML attachment 2 JSON', function () {
             url: failURL,
           },
         },
+        metadata: {},
       }, cfg);
     } catch (e) {
       error = e;
@@ -205,6 +213,7 @@ describe('should convert XML attachment 2 JSON', function () {
             url: `${mockSever}/EmptyFile`,
           },
         },
+        metadata: {},
       }, cfg);
     } catch (e) {
       error = e;
@@ -221,6 +230,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
@@ -235,6 +245,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());
@@ -252,6 +263,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: `${mockSever}/Split`,
         },
       },
+      metadata: {},
     }, cfg);
 
     const results = await self.emit.getCalls();
@@ -272,6 +284,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: `${mockSever}/Split`,
         },
       },
+      metadata: {},
     }, cfg);
 
     const results = self.emit.getCalls();
@@ -285,6 +298,7 @@ describe('should convert XML attachment 2 JSON', function () {
           url: mockSever,
         },
       },
+      metadata: {},
     }, cfg);
 
     const results = produceString(self.logger, self.emit.getCalls());

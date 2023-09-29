@@ -22,6 +22,7 @@ describe('JSON 2 XML converter (Old)', () => {
     const json = require('./data/po.json');
     const message = {
       data: json,
+      metadata: {},
     };
     const { xmlString } = (await jsonToXml.process.bind(self)(message, {})).data;
     expect(xmlString).to.deep.equal(xml);
@@ -38,6 +39,7 @@ describe('JSON 2 XML converter (Old)', () => {
 
     const message = {
       data: json,
+      metadata: {},
     };
 
     const messageText = 'Can\'t create XML element from prop that starts with digit.'
