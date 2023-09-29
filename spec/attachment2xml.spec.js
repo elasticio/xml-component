@@ -58,6 +58,7 @@ describe('should convert XML attachment 2 JSON', function () {
         info: sinon.spy(),
         debug: sinon.spy(),
         error: sinon.spy(),
+        child: () => self.logger,
       },
     };
 
@@ -65,7 +66,6 @@ describe('should convert XML attachment 2 JSON', function () {
       pattern: '(.xml)',
     };
   });
-
 
   it('FileName undefined ', async () => {
     await attachmentToJson.process.bind(self)({
@@ -77,7 +77,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
-
 
   it('FileName does not match pattern ', async () => {
     cfg = {
@@ -92,7 +91,6 @@ describe('should convert XML attachment 2 JSON', function () {
     }, cfg);
     expect(self.emit.getCalls()).to.deep.eql([]);
   });
-
 
   it('fileName is not .xml ', async () => {
     cfg = {
@@ -279,7 +277,6 @@ describe('should convert XML attachment 2 JSON', function () {
     const results = self.emit.getCalls();
     expect(results[0].args[1].data).to.deep.equal(jsonSplit.batchGiven);
   });
-
 
   it('Convert attachment to JSON', async () => {
     await attachmentToJson.process.bind(self)({

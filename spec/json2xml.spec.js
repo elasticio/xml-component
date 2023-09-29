@@ -15,6 +15,7 @@ const context = {
   logger: {
     debug: () => {},
     info: () => {},
+    child: () => context.logger,
   },
 };
 
@@ -84,7 +85,6 @@ describe('JSON to XML', () => {
     });
     expect(attachmentStub.getCall(0).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
   });
-
 
   it('Send as Attachment with custom file name', async () => {
     const msg = JSON.parse(JSON.stringify(inputMessage));
