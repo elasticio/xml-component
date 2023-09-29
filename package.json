@@ -9,7 +9,7 @@
     "url": "https://elastic.io"
   },
   "engines": {
-    "node": "12"
+    "node": ">=12"
   },
   "files": [
     "lib"
@@ -27,38 +27,32 @@
     "test": "NODE_ENV=test mocha --recursive spec"
   },
   "dependencies": {
-    "@blendededge/ferryman-extensions": "^1.3.1",
-    "@openintegrationhub/ferryman": "~2.1.1",
-    "await-lock": "1.1.3",
-    "bluebird": "3.5.3",
-    "co": "4.6.0",
-    "jsonix": "2.4.1",
-    "jsonix-schema-compiler": "2.3.9",
-    "lodash": "4.17.21",
-    "object-sizeof": "1.3.0",
-    "promised-exec": "1.0.1",
-    "request": "2.88.2",
-    "request-promise": "4.2.2",
-    "xml2js": "0.4.23"
+    "@blendededge/ferryman-extensions": "^2.0.3",
+    "@openintegrationhub/ferryman": "^2.3.0",
+    "await-lock": "^2.2.2",
+    "co": "^4.6.0",
+    "jsonix": "^3.0.0",
+    "jsonix-schema-compiler": "^2.3.9",
+    "lodash": "^4.17.21",
+    "object-sizeof": "^2.6.3",
+    "promised-exec": "^1.0.1",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
-    "@elastic.io/component-logger": "0.0.1",
-    "chai": "4.2.0",
-    "chai-as-promised": "7.1.1",
-    "code-quality-js": "2.0.2",
-    "eslint": "7.0.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-plugin-import": "2.20.2",
-    "eslint-plugin-mocha": "6.3.0",
-    "mocha": "7.1.2",
-    "nock": "12.0.3",
-    "nyc": "15.1.0",
-    "sinon": "9.0.2",
-    "stream-string": "2.0.1"
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-mocha": "^10.2.0",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.3",
+    "nyc": "^15.1.0",
+    "sinon": "^16.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:elasticio/xml-component.git"
+    "url": "git@github.com:blendededge/xml-component.git"
   },
   "license": "Apache-2.0"
 }

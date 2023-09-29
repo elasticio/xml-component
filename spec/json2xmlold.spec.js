@@ -11,11 +11,12 @@ describe('JSON 2 XML converter (Old)', () => {
       logger: {
         debug: () => {},
         info: () => {},
+        child: () => self.logger,
       },
     };
   });
 
-  it('should convert JSON to XML 1', () => {
+  it('should convert JSON to XML 1', async () => {
     const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim();
     // eslint-disable-next-line global-require
     const json = require('./data/po.json');
@@ -23,11 +24,11 @@ describe('JSON 2 XML converter (Old)', () => {
       data: json,
       metadata: {},
     };
-    const { xmlString } = (jsonToXml.process.bind(self)(message, {})).data;
+    const { xmlString } = (await jsonToXml.process.bind(self)(message, {})).data;
     expect(xmlString).to.deep.equal(xml);
   });
 
-  it('should convert JSON to XML 2', () => {
+  it('should convert JSON to XML 2', async () => {
     const json = {
       archs: {
         arm: true,
@@ -44,7 +45,8 @@ describe('JSON 2 XML converter (Old)', () => {
     const messageText = 'Can\'t create XML element from prop that starts with digit.'
       + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
 
-    expect(jsonToXml.process.bind(self, message, {}))
-      .to.throw(Error, `Prop name is invalid for XML tag: 386. ${messageText}`);
+    await jsonToXml.process.call(self, message, {}).catch((error) => {
+      expect(error.message).to.equal(`Prop name is invalid for XML tag: 386. ${messageText}`);
+    });
   });
 });
