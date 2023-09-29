@@ -11,6 +11,7 @@ describe('XML 2 JSON parser', () => {
     self = {
       logger: {
         info: sinon.spy(),
+        child: () => self.logger,
       },
       emit: sinon.spy(),
     };
