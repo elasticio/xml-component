@@ -11,6 +11,7 @@ describe('XML 2 JSON parser', () => {
     self = {
       logger: {
         info: sinon.spy(),
+        error: sinon.spy(),
         child: () => self.logger,
       },
       emit: sinon.spy(),
@@ -28,7 +29,9 @@ describe('XML 2 JSON parser', () => {
       },
       metadata: {},
     };
-    const { data } = await xmlToJson.process.bind(self)(message, {});
+    await xmlToJson.process.bind(self)(message, {});
+    expect(self.emit.getCalls().length).to.be.eql(2);
+    const { data } = self.emit.getCalls()[0].args[1];
     expect(data).to.deep.equal(result);
   });
 

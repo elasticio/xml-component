@@ -1,6 +1,7 @@
 /* eslint-env node, jasmine */
 const { expect } = require('chai');
 const fs = require('fs');
+const sinon = require('sinon');
 const jsonToXml = require('../lib/actions/jsonToXmlOld');
 
 describe('JSON 2 XML converter (Old)', () => {
@@ -13,6 +14,7 @@ describe('JSON 2 XML converter (Old)', () => {
         info: () => {},
         child: () => self.logger,
       },
+      emit: sinon.spy(),
     };
   });
 
@@ -24,8 +26,9 @@ describe('JSON 2 XML converter (Old)', () => {
       data: json,
       metadata: {},
     };
-    const { xmlString } = (await jsonToXml.process.bind(self)(message, {})).data;
-    expect(xmlString).to.deep.equal(xml);
+    await jsonToXml.process.bind(self)(message, {});
+    expect(self.emit.getCalls()[0].args[1].data.xmlString).to.deep.equal(xml);
+    expect(self.emit.getCalls().length).to.be.eql(2);
   });
 
   it('should convert JSON to XML 2', async () => {

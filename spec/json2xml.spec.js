@@ -78,7 +78,8 @@ describe('JSON to XML', () => {
     };
 
     await json2xml.process.call(context, msg, cfg, {});
-    expect(context.emit.getCalls().length).to.be.eql(1);
+    // Should emit data and end
+    expect(context.emit.getCalls().length).to.be.eql(2);
     expect(context.emit.getCall(0).args[1].data).to.deep.eql({
       attachmentUrl: 'someUrl',
       attachmentSize: 327,
@@ -101,7 +102,8 @@ describe('JSON to XML', () => {
       url: 'someUrl',
       size: 327,
     });
-    expect(context.emit.getCalls().length).to.be.eql(1);
+    // Should emit data and end
+    expect(context.emit.getCalls().length).to.be.eql(2);
     expect(attachmentStub.getCall(1).args[0]).to.be.eql(expectedOutputStringWithoutHeaders);
   });
 
