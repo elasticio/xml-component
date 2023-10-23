@@ -12,6 +12,7 @@ describe('JSON 2 XML converter (Old)', () => {
       logger: {
         debug: () => {},
         info: () => {},
+        error: () => {},
         child: () => self.logger,
       },
       emit: sinon.spy(),
@@ -48,8 +49,9 @@ describe('JSON 2 XML converter (Old)', () => {
     const messageText = 'Can\'t create XML element from prop that starts with digit.'
       + 'See XML naming rules https://www.w3schools.com/xml/xml_elements.asp';
 
-    await jsonToXml.process.call(self, message, {}).catch((error) => {
-      expect(error.message).to.equal(`Prop name is invalid for XML tag: 386. ${messageText}`);
-    });
+    await jsonToXml.process.call(self, message, {});
+    const result = self.emit.getCalls();
+    expect(result[0].args[0]).to.equal('error');
+    expect(result[0].args[1].message).to.equal(`Prop name is invalid for XML tag: 386. ${messageText}`);
   });
 });
