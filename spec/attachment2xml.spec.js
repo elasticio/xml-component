@@ -130,40 +130,35 @@ describe('should convert XML attachment 2 JSON', function () {
   });
 
   it('XML too large', async () => {
-    let error;
-    try {
-      await attachmentToJson.process.bind(self)({
-        attachments: {
-          'po.xml': {
-            url: mockSever,
-            size: '66214473',
-          },
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+          size: '66214473',
         },
-        metadata: {},
-      }, cfg);
-    } catch (e) {
-      error = e;
-    }
-    expect(error.message).to.include('File limit is: 52428800 byte, file given was: 66214473 byte.');
+      },
+      metadata: {},
+    }, cfg);
+    const result = self.emit.getCalls();
+    expect(result[0].args[0]).to.eql('error');
+    expect(result[0].args[1].message).to.include('File limit is: 52428800 byte, file given was: 66214473 byte.');
   });
 
   it('Lower Max File Size - XML too large', async () => {
-    let error;
     cfg.maxFileSize = 10971520;
-    try {
-      await attachmentToJson.process.bind(self)({
-        attachments: {
-          'po.xml': {
-            url: mockSever,
-            size: '16214473',
-          },
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: mockSever,
+          size: '16214473',
         },
-        metadata: {},
-      }, cfg);
-    } catch (e) {
-      error = e;
-    }
-    expect(error.message).to.include('File limit is: 10971520 byte, file given was: 16214473 byte.');
+      },
+      metadata: {},
+    }, cfg);
+
+    const result = self.emit.getCalls();
+    expect(result[0].args[0]).to.eql('error');
+    expect(result[0].args[1].message).to.include('File limit is: 10971520 byte, file given was: 16214473 byte.');
   });
 
   it('Higher Max File Size - Convert attachment to JSON', async () => {
@@ -206,22 +201,17 @@ describe('should convert XML attachment 2 JSON', function () {
   });
 
   it('Empty attachment', async () => {
-    let error;
-
-    try {
-      await attachmentToJson.process.bind(self)({
-        attachments: {
-          'po.xml': {
-            url: `${mockSever}/EmptyFile`,
-          },
+    await attachmentToJson.process.bind(self)({
+      attachments: {
+        'po.xml': {
+          url: `${mockSever}/EmptyFile`,
         },
-        metadata: {},
-      }, cfg);
-    } catch (e) {
-      error = e;
-    }
-    // eslint-disable-next-line no-unused-expressions
-    expect(error.message).to.be.equal('Empty attachment received for file po.xml');
+      },
+      metadata: {},
+    }, cfg);
+    const result = self.emit.getCalls();
+    expect(result[0].args[0]).to.eql('error');
+    expect(result[0].args[1].message).to.be.equal('Empty attachment received for file po.xml');
   });
 
   it('Custom JSONata transformation', async () => {

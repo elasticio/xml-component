@@ -15,6 +15,7 @@ const context = {
   logger: {
     debug: () => {},
     info: () => {},
+    error: () => {},
     child: () => context.logger,
   },
 };
@@ -124,7 +125,10 @@ describe('JSON to XML', () => {
       headerStandalone: false,
     };
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('XML data is 15728713 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes');
+    await json2xml.process.call(context, msg, cfg, {});
+    const result = context.emit.getCalls();
+    expect(result[0].args[0]).to.equal('error');
+    expect(result[0].args[1].message).to.equal('XML data is 15728713 bytes, and is too large to upload as an attachment. Max attachment size is 10485760 bytes');
   });
 
   it('Non object input', async () => {
@@ -140,7 +144,10 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with exactly one key.');
+    await json2xml.process.call(context, msg, cfg, {});
+    const result = context.emit.getCalls();
+    expect(result[0].args[0]).to.equal('error');
+    expect(result[0].args[1].message).to.equal('Input must be an object with exactly one key.');
   });
 
   it('Too many keys input', async () => {
@@ -155,7 +162,10 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Input must be an object with exactly one key.');
+    await json2xml.process.call(context, msg, cfg, {});
+    const result = context.emit.getCalls();
+    expect(result[0].args[0]).to.equal('error');
+    expect(result[0].args[1].message).to.equal('Input must be an object with exactly one key.');
   });
 
   it('Invalid xml tag name', async () => {
@@ -173,7 +183,10 @@ describe('JSON to XML', () => {
     };
     const cfg = {};
 
-    await expect(json2xml.process.call(context, msg, cfg, {})).to.be.rejectedWith('Invalid character in name');
+    await json2xml.process.call(context, msg, cfg, {});
+    const result = context.emit.getCalls();
+    expect(result[0].args[0]).to.equal('error');
+    expect(result[0].args[1].message).to.equal('Invalid character in name');
   });
 
   it('should convert JSON to XML 1', async () => {
