@@ -29,7 +29,7 @@
     "@elastic.io/component-commons-library": "4.0.0",
     "elasticio-sailor-nodejs": "2.7.6",
     "genson-js": "^0.0.8",
-    "json-schema-faker": "0.5.3",
+    "json-schema-faker": "0.5.9",
     "lodash": "4.17.21",
     "object-sizeof": "2.6.1",
     "xml2js": "0.5.0"
