@@ -1,4 +1,4 @@
-## 1.4.1 (November 13, 2025)
+## 1.4.1 (November 14, 2025)
 * Fix: support maester attachments in `XML Attachment to JSON` action
 * Updated `Sailor` version to 2.7.6
 * Updated `@elastic.io/component-commons-library` version to 4.0.0
