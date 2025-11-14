@@ -14,7 +14,7 @@ describe('JSON 2 XML converter (Old)', () => {
   });
 
   it('should convert JSON to XML 1', () => {
-    const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim();
+    const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim().replace(/\r\n/g, '\n');
     // eslint-disable-next-line global-require
     const json = require('./data/po.json');
     const message = {

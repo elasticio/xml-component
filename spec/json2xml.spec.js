@@ -147,7 +147,7 @@ describe('JSON to XML', () => {
   });
 
   it('should convert JSON to XML 1', async () => {
-    const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim();
+    const xml = fs.readFileSync('./spec/data/po.xml', 'utf-8').trim().replace(/\r\n/g, '\n');
     // eslint-disable-next-line global-require
     const json = require('./data/po.json');
     const msg = {
