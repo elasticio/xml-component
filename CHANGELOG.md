@@ -1,3 +1,6 @@
+## 1.4.2 (December 04, 2025)
+* Updated `Sailor` version to 2.7.7
+
 ## 1.4.1 (November 14, 2025)
 * Fix: support maester attachments in `XML Attachment to JSON` action
 * Updated `Sailor` version to 2.7.6
